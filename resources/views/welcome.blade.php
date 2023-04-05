@@ -53,6 +53,20 @@
                                         <span class="icon-shopping-cart"></span>
                                     </button>    
                                 </a>
+
+                                <a href="{{ url('/profile') }}">
+                                    <button class="navbar-button-icon">
+                                        <span class="icon-user"></span>
+                                    </button>    
+                                </a>
+
+                                <form id="navbar-form" method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
+                                        <button class="navbar-button">Logout</button>        
+                                    </a>
+                                </form>
                             @else
                                 <a href="{{ route('login') }}" class="navbar-button">
                                     <button class="navbar-button">Login</button>        
