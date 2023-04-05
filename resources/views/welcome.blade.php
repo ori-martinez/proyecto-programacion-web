@@ -7,6 +7,7 @@
 
         <link rel="icon" type="image/ico" href="./img/Favicon.ico" />
         <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/welcome.css">
         <link rel="stylesheet" href="./css/styles.css" />
 
         <title>ReyRey Sports</title>
@@ -25,7 +26,7 @@
                     
                     <!-- Links -->
                     <li class="navbar-link">
-                        <a href="#">HOMBRES</a>
+                        <a href="#"><span class="icon-cheveron-right"></span>HOMBRES</a>
                     </li>
                     <li class="navbar-link">
                         <a href="#">MUJERES</a>
@@ -89,6 +90,101 @@
             </nav>
         </header>
         <!-- Header (End) -->
+
+        <!-- Body (Start) -->
+        <main> 
+            <!-- carousel (Inicio) -->
+            <div class="carousel">
+                <div class="div-carousel">
+                    <div id="item-carousel-1" class="item-carousel">
+                        <div class="item-carousel-card">
+                            <img src="./img/banners/1.png" alt="Promoción de Semana Santa">
+                        </div>
+                        <div class="item-carousel-arrows">
+                            <a href="#item-carousel-3">
+                            <span class="icon-cheveron-left"></span>
+                            </a>
+                            <a href="#item-carousel-2">
+                                <span class="icon-cheveron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="item-carousel-2" class="item-carousel">
+                        <div class="item-carousel-card">
+                            <img src="./img/banners/3.png" alt="Publicidad de ReyRey Sports">
+                        </div>
+                        <div class="item-carousel-arrows">
+                            <a href="#item-carousel-1">
+                                <span class="fas fa-chevron-left"></span>
+                            </a>
+                            <a href="#item-carousel-3">
+                                <span class="fas fa-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="item-carousel-3" class="item-carousel">
+                        <div class="item-carousel-card">
+                            <img src="./img/banners/2.png" alt="Moda de ReyRey Sports">
+                        </div>
+                        <div class="item-carousel-arrows">
+                            <a href="#item-carousel-2">
+                                <span class="fas fa-chevron-left"></span>
+                            </a>
+                            <a href="#item-carousel-1">
+                                <span class="fas fa-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="div-carousel-controller">
+                    <a href="#item-carousel-1">&#10625;</a>
+                    <a href="#item-carousel-2">&#10625;</a>
+                    <a href="#item-carousel-3">&#10625;</a>
+                </div>
+            </div>
+            <!-- carousel (Fin) -->
+        </main>
+        <!-- Body (End) -->
+
+        <!-- Footer (Start) -->
+        <footer>
+            <!-- Social Media -->
+            <div id="footer-social-media">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                    <span class="icon-facebook2"></span>
+                </a>
+                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                    <span class="icon-instagram"></span>
+                </a>
+                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                    <span class="icon-twitter"></span>
+                </a>
+            </div>
+
+            <div id="footer-texts">
+                <!-- Links -->
+                <ul id="footer-links">
+                    <li class="footer-link">
+                        <a href="#">Términos de Uso</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">Políticas de Privacidad</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">Contáctanos</a>
+                    </li>
+                </ul>
+
+                <p id="footer-copyright">Copyright &#169; 2023, ReyRey Sports</p>
+            </div>
+
+            <!-- Logo -->
+            <img id="footer-logo" src="./img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+        </footer>
+        <!-- Footer (End) -->
 
         <!-- Scripts -->
         <script src="./js/index.js"></script>

@@ -39,10 +39,13 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial;
     font-size: 1.1rem;
     margin: 0;
-    width: 100%;
+    min-height: 100%;
+    padding-top: 4.4rem;
 }
 
 a {
@@ -59,6 +62,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 /* Navbar */
@@ -82,7 +86,7 @@ nav {
 
 #navbar li a {
     color: #FFFFFF;
-    transition: .5s ease-out;
+    transition: all .5s ease-out;
 }
 
 #navbar li a:hover {
@@ -127,7 +131,7 @@ nav {
     cursor: pointer;
     margin: 0 .4rem;
     padding: .6rem;
-    transition: .5s ease-out;
+    transition: all .5s ease-out;
 }
 
 .navbar-button-icon:hover {
@@ -166,9 +170,99 @@ a .navbar-button:hover {
     display: none;
 }
 
+/* BODY */
+
+main {
+    flex: 1;
+}
+
+/* FOOTER */
+
+footer {
+    align-items: center;
+    background-color: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#footer-social-media, #footer-links, #footer-texts {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-social-media {
+    width: 10rem;
+}
+
+#footer-texts {
+    flex-direction: column;
+}
+
+/* Social Media */
+
+.footer-social-media-icon {
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;   
+    font-size: 1.4rem; 
+}
+
+.footer-social-media-icon span {
+    margin: .6rem;
+    transition: all .2s ease-in-out;
+}
+
+.footer-social-media-icon span:hover {
+    font-size: 1.8rem;
+}
+
+/* Links */
+
+.footer-link {
+    list-style: none;
+    margin: .8rem .8rem .2rem;
+}
+
+.footer-link a {
+    color: var(--golden);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+.footer-link a:hover {
+    color:#FFFFFF;
+}
+
+/* Copyright */
+
+#footer-copyright {
+    color: var(--light);
+    font-size: .9rem;
+    margin: .4rem 0 1.6rem;
+}
+
+/* Logo */
+
+#footer-logo {
+    height: 6rem;
+    width: 6rem;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media all and (max-width: 1024px) {
+    /* GENERALES */
+
+    body {
+        padding-top: 5.4rem;
+    }
+
     /* HEADER */
 
     header {
@@ -213,6 +307,8 @@ a .navbar-button:hover {
         display: block;
     }
 
+    /* Actions Buttons */
+
     #navbar-buttons {
         display: none;
         margin: 1rem 0 0;
@@ -234,16 +330,60 @@ a .navbar-button:hover {
         font-size: 1.2rem;
     }
 
+    /* Toggle Menu */
+
     .navbar-toggle {
         display: flex;
         order: 2;
         text-align: right;
     }
 
-    a .navbar-button {
-        margin: 0;
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
     }
 
-    /* FOOTER */
+    /* Social Media */
     
+    #footer-social-media {
+        order: 1;
+    }
+
+    .footer-social-media-icon {
+        font-size: 1.2rem; 
+        margin: .6rem 0;
+    }
+
+    /* Links */
+
+    #footer-texts {
+        order: 2;
+    }
+
+    #footer-links {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    .footer-link {
+        margin: .2rem 0;
+    }
+
+    .footer-link a {
+        font-size: .9rem;
+    }
+
+    /* Copyright */
+    
+    #footer-copyright {
+        font-size: .8rem;
+    }
+
+    /* Logo */
+
+    #footer-logo {
+        display: flex;
+        order: -1;
+    }
 }

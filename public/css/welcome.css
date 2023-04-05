@@ -1,0 +1,74 @@
+/* COLORES */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* carousel */
+
+.carousel {
+    width: 100%;
+}
+  
+.div-carousel {
+    height: 32.5rem;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.item-carousel {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+  
+.item-carousel-card {
+    height: 100%;
+    width: 100%;
+}
+
+.item-carousel-card img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}  
+
+.item-carousel-arrows {
+    align-items: center;
+    bottom: 0; 
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 900;
+}
+
+.item-carousel-arrows a {
+    color: white;
+    font-size: 2.5rem;
+}
+  
+.div-carousel-controller {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.div-carousel-controller > a {
+    color: var(--dark);
+    font-size: 2.6rem;
+    transition: all .5s ease-out;
+}
+
+.div-carousel-controller a:hover {
+    color: var(--wine);
+}
