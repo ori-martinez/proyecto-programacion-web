@@ -1,7 +1,9 @@
+const d = document;
+
 /* Responsive Navbar */
 
-const toggle = document.querySelector('.navbar-toggle');
-const navbar = document.querySelector('#navbar');
+const toggle = d.querySelector('.navbar-toggle');
+const navbar = d.querySelector('#navbar');
 
 const toggleNavbar = () => {
     if (navbar.classList.contains('active')) {

@@ -26,7 +26,7 @@
                     
                     <!-- Links -->
                     <li class="navbar-link">
-                        <a href="#"><span class="icon-cheveron-right"></span>HOMBRES</a>
+                        <a href="#">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
                         <a href="#">MUJERES</a>
