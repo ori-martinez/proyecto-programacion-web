@@ -95,17 +95,15 @@
 
         <!-- Body (Start) -->
         <main>
-            <!-- Error Message -->
-            <div id="div-error"></div>
-
             <div class="div-form">
+                <!-- Error Message -->
+                <div id="div-error"></div>
+                
                 <!-- Session Status -->
                 <x-auth-session-status :status="session('status')" />
 
                 <!-- Login Form -->
                 <form id="login-form" method="POST" action="{{ route('login') }}">
-                    <h2> Login </h2>
-
                     @csrf
                     
                     <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
@@ -119,9 +117,9 @@
                     </div>
                     
                     <button id="form-button">Login</button>
-                </form>
 
-                <p id="text">¿No tienes cuenta? <a href="{{ route('register') }}">Regístrate</a> </p>
+                    <p id="text">¿No tienes cuenta? <a href="{{ route('register') }}">Regístrate</a> </p>
+                </form>
             </div>   
         </main>
 

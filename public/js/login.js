@@ -68,8 +68,8 @@ const validPassword = (e) => {
 const submitForm = (e) => {
     e.preventDefault();
 
-    if (inputEmail.value.length === 0 || inputPass.value.length === 0) {
-        errorDiv.innerHTML = '<span class="error-message">Completa los campos para logearte</span>';
+    if (inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail) || inputPass.value.length === 0) {
+        errorDiv.innerHTML = '<span class="error-message">Completa correctamente todos los campos para logearte</span>';
     }
     else {
         loginForm.submit();

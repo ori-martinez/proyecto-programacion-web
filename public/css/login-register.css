@@ -2,7 +2,7 @@
 
 :root {
     --dark: #15121A;
-    --dark-opacity: #15121A66;
+    --dark-opacity: #15121ACC;
     --light: #DFDDD5;
     --wine: #860038;
     --golden: #FDBB30;
@@ -35,7 +35,7 @@
 
 form {
     align-items: center;
-    background-color: var(--golden);
+    background-color: var(--wine);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -45,35 +45,38 @@ form {
 
 /* Texts */
 
-form h2 {
-    color: var(--dark);
-    font-family: 'Vanem';
-    font-size: 2.2rem;
-    margin-bottom: 1.6rem;
-    text-align: center;
-}
-
 #div-error {
     margin: 4rem 0 2rem;
     width: 100%;
 }
 
 .error-message {
-    background: #FA2828;
+    background: #EF4444;
     color: #FFFFFF;
     display: block;
+    font-weight: bold;
     padding: .2rem;
     text-align: center;
 }
 
-#text {
+form h2 {
+    color: var(--dark);
+    font-family: 'AmbraSans';
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
     text-align: center;
+}
+
+#text {
+    color: #FFFFFF;
     font-size: 1.2rem;
-    padding: 2rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 #text a {
-    color: var(--wine);
+    color: var(--golden);
     font-weight: bold;
 }
 
@@ -98,7 +101,7 @@ input {
 #password button {
     background: none;
     border: none;
-    color: var(--wine);
+    color: var(--dark);
     cursor: pointer;
     position: absolute;
     right: .8rem;
@@ -112,22 +115,16 @@ input {
 /* Button */
 
 #form-button {
-    background: transparent;
-    border: solid .188rem var(--dark);
+    background: var(--dark);
+    border: none;
     border-radius: 2rem;
-    color: var(--dark);
+    color: #FFFFFF;
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
     margin-top: 1.6rem;
-    padding: .4rem 1.8rem;
+    padding: .5rem 2.2rem;
     outline: none;
-    transition: all 300ms;
-}
-
-#form-button:hover {
-    background: var(--dark);
-    color: #FFFFFF;
 }
 
 /* RESPONSIVE DESIGN */
@@ -136,7 +133,8 @@ input {
     /* FORM */
 
     form {
-        padding: 1rem;
+        padding: 2rem 1.6rem;
+        margin-bottom: 2rem;
     } 
 
     /* Texts */
@@ -145,9 +143,13 @@ input {
         margin: 1.6rem 0;
     }
 
+    #text {
+        font-size: 1rem;
+    }
+
     /* Input */
 
     input {
-        width: 14rem;
+        width: 13.6rem;
     }
 }
