@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('last_name')->nullable();
             $table->unsignedBigInteger('rol_id')->nullable();
-            $table->timestamp('birthdate')->nullable();
+            $table->date('birthdate')->nullable();
             $table->enum('gender', ['F', 'M'])->nullable();
             $table->text('address')->nullable();
             $table->string('email')->unique()->nullable();

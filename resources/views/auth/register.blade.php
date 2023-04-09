@@ -1,52 +1,186 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!DOCTYPE html>
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        <link rel="icon" type="image/ico" href="./img/Favicon.ico" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/login-register.css">
+        <link rel="stylesheet" href="./css/styles.css" />
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <title>Register | ReyRey Sports</title>
+    </head>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+    <body>
+        <!-- Header (Start) -->
+        <header>
+            <!-- Navbar -->
+            <nav>  
+                <ul id="navbar">
+                    <!-- Logo -->
+                    <li id="navbar-logo">
+                        <a href="/">
+                            <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                        </a>
+                    </li>
+                    
+                    <!-- Links -->
+                    <li class="navbar-link">
+                        <a href="#">HOMBRES</a>
+                    </li>
+                    <li class="navbar-link">
+                        <a href="#">MUJERES</a>
+                    </li>
+                    <li class="navbar-link">
+                        <a href="#">ARTÍCULOS</a>
+                    </li>
+                    <li class="navbar-link">
+                        <a href="#">BLOG</a>
+                    </li>
+                    <li class="navbar-link">
+                        <a href="#">AYUDA</a>
+                    </li>
+                    
+                    @if (Route::has('login'))
+                        <!-- Actions Buttons -->
+                        <li id="navbar-buttons">
+                            <button class="navbar-button-icon">
+                                <span class="icon-search"></span>
+                            </button>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+                            @auth
+                                <a href="{{ url('/dashboard') }}">
+                                    <button class="navbar-button-icon">
+                                        <span class="icon-shopping-cart"></span>
+                                    </button>    
+                                </a>
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                                <a href="{{ url('/profile') }}">
+                                    <button class="navbar-button-icon">
+                                        <span class="icon-user"></span>
+                                    </button>    
+                                </a>
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+                                <form id="navbar-form" method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
+                                        <button class="navbar-button">Logout</button>        
+                                    </a>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}" class="navbar-button">
+                                    <button class="navbar-button">Login</button>        
+                                </a>
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}">
+                                        <button class="navbar-button">Register</button>
+                                    </a>
+                                @endif
+                            @endauth
+                        </li>
+                    @endif      
+                    
+                    <!-- Toggle Menu -->
+                    <li class="navbar-toggle">
+                        <img id="open" src="./img/menu-open-icon.svg" alt="Menú">
+                    </li>
+                </ul>                   
+            </nav>
+        </header>
+        <!-- Header (End) -->
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
+        <!-- Body (Start) -->
+        <main>
+            <div class="div-form">
+                <!-- Error Message -->
+                <div id="div-error"></div>
+                
+                <!-- Session Status -->
+                <x-auth-session-status :status="session('status')" />
 
-            <x-primary-button class="ml-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+                <!-- Login Form -->
+                <form id="register-form" method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <input type="hidden" name="rol_id" value=2>
+
+                    <input id="input-name" type="text" name="name" placeholder="Nombre">
+                    <input id="input-lastname" type="text" name="last_name" placeholder="Apellido">
+                    
+                    <input id="input-birthdate" type="date" name="birthdate">
+
+                    <select id="input-gender" name="gender">
+                        <option value="0">Género...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    
+                    <input id="input-address" type="text" name="address" placeholder="Dirección">
+                    <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
+
+                    <div class="password">
+                        <input id="input-password" type="password" name="password" placeholder="Contraseña">
+
+                        <button type="button" id="toggle-password">
+                            <span class="icon-eye"></span>
+                        </button>
+                    </div>
+                    <div class="password">
+                        <input id="input-password-confirmation" type="password" name="password" placeholder="Confirmación">
+
+                        <button type="button" id="toggle-password-confirmation">
+                            <span class="icon-eye"></span>
+                        </button>
+                    </div>
+                    
+                    <button id="form-button">Register</button>
+
+                    <p id="text">¿Ya tienes cuenta? <a href="{{ route('login') }}">Logueate</a> </p>
+                </form>
+            </div>   
+        </main>
+
+        <!-- Footer (Start) -->
+        <footer>
+            <!-- Social Media -->
+            <div id="footer-social-media">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                    <span class="icon-facebook2"></span>
+                </a>
+                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                    <span class="icon-instagram"></span>
+                </a>
+                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                    <span class="icon-twitter"></span>
+                </a>
+            </div>
+
+            <div id="footer-texts">
+                <!-- Links -->
+                <ul id="footer-links">
+                    <li class="footer-link">
+                        <a href="#">Términos de Uso</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">Políticas de Privacidad</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#">Contáctanos</a>
+                    </li>
+                </ul>
+
+                <p id="footer-copyright">Copyright &#169; 2023, ReyRey Sports</p>
+            </div>
+
+            <!-- Logo -->
+            <img id="footer-logo" src="./img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+        </footer>
+        <!-- Footer (End) -->
+
+        <!-- Scripts -->
+        <script src="./js/register.js"></script>
+    </body>
+</html>

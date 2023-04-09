@@ -53,10 +53,9 @@ const validEmail = (e) => {
         errorDiv.innerHTML = '<span class="error-message">El campo Correo Electrónico es requerido</span>';
     }
     else if (!e.target.value.match(regexEmail)) {
-        errorDiv.innerHTML = '<span class="error-message">Ingresa un correo electrónico válido</span>';
+        errorDiv.innerHTML = '<span class="info-message">Ingresa un correo electrónico válido, que incluya un @ y un .</span>';
     }
 }
-
 const validPassword = (e) => {
     errorDiv.innerHTML = '';
 
@@ -64,11 +63,13 @@ const validPassword = (e) => {
         errorDiv.innerHTML = '<span class="error-message">El campo Contraseña es requerido</span>';
     }
 }
-
 const submitForm = (e) => {
     e.preventDefault();
 
-    if (inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail) || inputPass.value.length === 0) {
+    if (
+        inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail) || 
+        inputPass.value.length === 0
+    ) {
         errorDiv.innerHTML = '<span class="error-message">Completa correctamente todos los campos para logearte</span>';
     }
     else {

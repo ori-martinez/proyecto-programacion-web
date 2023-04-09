@@ -108,7 +108,7 @@
                     
                     <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
 
-                    <div id="password">
+                    <div class="password">
                         <input id="input-password" type="password" name="password" placeholder="Contraseña">
 
                         <button type="button" id="toggle-password">
