@@ -97,7 +97,17 @@
         <main>
             <div class="div-form">
                 <!-- Error Message -->
-                <div id="div-error"></div>
+                <div id="div-error">
+                    @if ($errors->any())
+                        @foreach($errors->all() as $error)
+                            @if ($error === "The email has already been taken.")
+                                <p class="error-message">El correo electrónico ya esta registrado</p>
+                            @else
+                                <p class="error-message">{{ $error }}</p>
+                            @endif
+                        @endforeach
+                    @endif
+                </div>
                 
                 <!-- Session Status -->
                 <x-auth-session-status :status="session('status')" />

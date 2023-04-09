@@ -159,11 +159,11 @@ const submitForm = (e) => {
     if (
         inputName.value.length === 0 || !inputName.value.match(regexName) || 
         inputLastname.value.length === 0 || !inputLastname.value.match(regexName) ||
-        new Date(inputBirthdate.value) < new Date() || getAge(inputBirthdate.value) < 18 ||
+        new Date(inputBirthdate.value) > new Date() || getAge(inputBirthdate.value) < 18 ||
         inputGender.value === '0' ||
         inputAddress.value.length === 0 ||
         inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail) || 
-        inputPass.value.length === 0 || !e.target.value.match(regexPass) ||
+        inputPass.value.length === 0 || !inputPass.value.match(regexPass) ||
         inputPassCon.value.length === 0 || inputPass.value !== inputPassCon.value
     ) {
         errorDiv.innerHTML = '<span class="error-message">Completa correctamente todos los campos para registrarte</span>';

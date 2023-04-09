@@ -93,11 +93,17 @@
         </header>
         <!-- Header (End) -->
 
-        <!-- Body (Start) -->
+        <!-- Body -->
         <main>
             <div class="div-form">
                 <!-- Error Message -->
-                <div id="div-error"></div>
+                <div id="div-error">
+                    @if ($errors->any())
+                        @foreach($errors->all() as $error)
+                            <p class="error-message">{{ $error }}</p>
+                        @endforeach
+                    @endif
+                </div>
                 
                 <!-- Session Status -->
                 <x-auth-session-status :status="session('status')" />
