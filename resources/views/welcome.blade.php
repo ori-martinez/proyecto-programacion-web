@@ -17,16 +17,15 @@
         <!-- Header (Start) -->
         <header>
             <!-- Navbar -->
-            <nav>  
+            <nav>
                 <ul id="navbar">
                     <!-- Logo -->
                     <li id="navbar-logo">
                         <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                     </li>
-                    
                     <!-- Links -->
                     <li class="navbar-link">
-                        <a href="#">HOMBRES</a>
+                        <a href="">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
                         <a href="#">MUJERES</a>
@@ -40,7 +39,7 @@
                     <li class="navbar-link">
                         <a href="#">AYUDA</a>
                     </li>
-                    
+
                     @if (Route::has('login'))
                         <!-- Actions Buttons -->
                         <li id="navbar-buttons">
@@ -53,28 +52,28 @@
                                     <button class="navbar-button-icon">
                                         @if (Auth::user()->rol_id === 1)
                                             <span class="icon-dashboard"></span>
-                                        @else            
+                                        @else
                                             <span class="icon-shopping-cart"></span>
                                         @endif
-                                    </button> 
+                                    </button>
                                 </a>
 
                                 <a href="{{ url('/profile') }}">
                                     <button class="navbar-button-icon">
                                         <span class="icon-user"></span>
-                                    </button>    
+                                    </button>
                                 </a>
 
                                 <form id="navbar-form" method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    
+
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
-                                        <button class="navbar-button">Logout</button>        
+                                        <button class="navbar-button">Logout</button>
                                     </a>
                                 </form>
                             @else
                                 <a href="{{ route('login') }}" class="navbar-button">
-                                    <button class="navbar-button">Login</button>        
+                                    <button class="navbar-button">Login</button>
                                 </a>
 
                                 @if (Route::has('register'))
@@ -84,21 +83,21 @@
                                 @endif
                             @endauth
                         </li>
-                    @endif      
-                    
+                    @endif
+
                     <!-- Toggle Menu -->
                     <li class="navbar-toggle">
                         <img id="open" src="./img/menu-open-icon.svg" alt="Menú">
                     </li>
-                </ul>                   
+                </ul>
             </nav>
         </header>
         <!-- Header (End) -->
 
         <!-- Body (Start) -->
-        <main> 
+        <main>
             <!-- Carousel (Start) -->
-            <section id="section-carousel">	
+            <section id="section-carousel">
                 <!-- Arrows -->
                 <a href="javascript: executeCarousel('prev');" class="arrow-prev">
                     <span class="icon-cheveron-left"></span>
@@ -106,7 +105,7 @@
                 <a href="javascript: executeCarousel('next');" class="arrow-next">
                     <span class="icon-cheveron-right"></span>
                 </a>
-                
+
                 <!-- Selectors -->
                 <ul class="list-carousel">
                     <li><a itlist="itList_0" href="#" class="item-selected"></a></li>
@@ -123,7 +122,7 @@
 
                                 <span class="banner-high-text-1">¡No dejes pasar estas ofertas!</span>
                             </div>
-                        </div> 
+                        </div>
                     </li>
                     <li style="background-image: url('./img/banners/2.svg');">
                         <div class="content-banner" >
@@ -134,7 +133,7 @@
 
                                 <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
                             </div>
-                        </div> 
+                        </div>
                     </li>
                     <li style="background-image: url('./img/banners/3.svg');">
                         <div class="content-banner" >
@@ -199,12 +198,12 @@
                 links.forEach((link) => {
                     link.addEventListener('click', function (e) {
                         e.preventDefault();
-                        
+
                         let list = this.getAttribute('itlist');
                         let arrayList = list.split("_");
-                    
+
                         executeCarousel(arrayList[1]);
-                    
+
                         return false;
                     });
                 });
@@ -234,9 +233,9 @@
                     nextItem = side;
                     side = (currentItem > nextItem) ? 'prev' : 'next';
                 }
-                
+
                 let selectedItem = document.getElementsByClassName('list-carousel')[0].getElementsByTagName('a');
-                
+
                 selectedItem[currentItem].classList.remove('item-selected');
                 selectedItem[nextItem].classList.add('item-selected');
                 items[currentItem].style.opacity = 0;
