@@ -51,8 +51,12 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}">
                                     <button class="navbar-button-icon">
-                                        <span class="icon-shopping-cart"></span>
-                                    </button>    
+                                        @if (Auth::user()->rol_id === 1)
+                                            <span class="icon-dashboard"></span>
+                                        @else            
+                                            <span class="icon-shopping-cart"></span>
+                                        @endif
+                                    </button> 
                                 </a>
 
                                 <a href="{{ url('/profile') }}">
@@ -97,10 +101,10 @@
             <section id="section-carousel">	
                 <!-- Arrows -->
                 <a href="javascript: executeCarousel('prev');" class="arrow-prev">
-                    <span class="icon-chevron-left"></span>
+                    <span class="icon-cheveron-left"></span>
                 </a>
                 <a href="javascript: executeCarousel('next');" class="arrow-next">
-                    <span class="icon-chevron-right"></span>
+                    <span class="icon-cheveron-right"></span>
                 </a>
                 
                 <!-- Selectors -->

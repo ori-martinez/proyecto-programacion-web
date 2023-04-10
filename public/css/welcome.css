@@ -102,9 +102,9 @@
 }
 
 #banner-title-2 {
-    margin-top: 2rem;
     color: var(--wine);
     font-size: 4rem;
+    margin-top: 2rem;
     text-shadow: .4rem .4rem .4rem #000000;
 }
 
@@ -189,12 +189,43 @@
         height: 26rem;
     }
 	
+    /* Contents */
+
+    .content-banner {
+        padding: .625rem 1.4rem;
+    }
+
     .content-banner div h2 {
         font-size: 2rem;
     }
     
     .content-banner div p {
         font-size: 1.6rem;
+    }
+
+    #banner-title-1 {
+        font-size: 2rem;
+        margin: 6rem 0 1.4rem;
+    }
+    
+    #banner-title-2 {
+        color: #FFFFFF;
+        font-size: 2rem;
+        margin: 0 0 1.6rem;
+    }
+    
+    .banner-high-text-1 {
+        font-size: 1.6rem;
+    }
+
+    .banner-high-text-2:first-child {
+        display: none;
+    }
+
+    .banner-high-text-2:last-child {
+        color: var(--wine);
+        font-size: 1.4rem;
+        text-shadow: .2rem .2rem .2rem #FFFFFF;
     }
 
     /* Arrows */

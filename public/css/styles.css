@@ -25,22 +25,25 @@
     -moz-osx-font-smoothing: grayscale;
 }
   
-.icon-chevron-right:before {
-    content: "\e900";
-}
-.icon-chevron-left:before {
-    content: "\e902";
-}
 .icon-user:before {
     content: "\e903";
 }
 .icon-shopping-cart:before {
+    content: "\e900";
+}
+.icon-dashboard:before {
+    content: "\e904";
+}
+.icon-cheveron-left:before {
+    content: "\e902";
+}
+.icon-cheveron-right:before {
     content: "\e901";
 }
 .icon-search:before {
     content: "\e986";
 }
-.icon-eye:before {
+  .icon-eye:before {
     content: "\e9ce";
 }
 .icon-eye-blocked:before {
@@ -55,4 +58,3 @@
 .icon-twitter:before {
     content: "\ea96";
 }
-  
