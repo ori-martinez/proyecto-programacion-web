@@ -2,73 +2,187 @@
 
 :root {
     --dark: #15121A;
-    --dark-opacity: #15121A66;
+    --dark-opacity: #15121ABF;
     --light: #DFDDD5;
     --wine: #860038;
     --golden: #FDBB30;
 }
 
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* CAROUSEL */
 
-.carousel {
-    width: 100%;
-}
-  
-.div-carousel {
-    height: 32.5rem;
-    overflow: hidden;
-    width: 100%;
-}
-  
-.item-carousel {
-    height: 100%;
+#section-carousel {
+    display: block;
     position: relative;
     width: 100%;
 }
-  
-.item-carousel-card {
-    height: 100%;
+
+/* Banners */
+
+#banners {
+    display: block;
+    height: 35rem;
+    position: relative;
     width: 100%;
 }
 
-.item-carousel-card img {
+#banners li {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    left: 0 !important;
     height: 100%;
-    object-fit: cover;
+    opacity: 0;
+    position: absolute !important;
+    top: 0 !important;
+    transition: opacity 1s;
     width: 100%;
-}  
+    z-index: -1;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+}
 
-.item-carousel-arrows {
+.content-banner {
     align-items: center;
-    bottom: 0; 
     display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-flex;
     height: 100%;
-    justify-content: space-between;
-    left: 0;
-    padding: 1rem;
-    position: absolute;
-    right: 0;
-    top: 0;
+    justify-content: center;
+    padding: .625rem 7.813rem;
     width: 100%;
-    z-index: 900;
 }
 
-.item-carousel-arrows a {
-    color: white;
+.content-banner div {
+    text-align: center;
+}
+
+.content-banner div h2 {
+    font-family: 'Vanem';
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.content-banner div p {
+    font-family: 'AmbraSans';
+    font-size: 2rem;
+}
+
+/* Arrows */
+
+#section-carousel .arrow-prev, #section-carousel .arrow-next{
+    color: var(--dark-opacity);
+    cursor: pointer;
     font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    z-index: 2; 
 }
-  
-.div-carousel-controller {
+
+#section-carousel .arrow-prev {
+    left: 1rem;
+}
+
+#section-carousel .arrow-next {
+    left: initial;
+    right: 1rem;
+}
+
+/* Selectors */
+
+.list-carousel {
+    align-items: center;
+    bottom: 5%;
     display: flex;
-    justify-content: space-evenly;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    left: 50%;
+    list-style: none;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.list-carousel li {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1rem;
+    margin: 0 .5rem;
+    width: 1rem;
+}
+
+.list-carousel li a {
+    background: var(--light);
+    border-radius: 50%;
+    display: block;
+    height: 100%;
     width: 100%;
 }
 
-.div-carousel-controller > a {
-    color: var(--dark);
-    font-size: 2.6rem;
-    transition: all .5s ease-out;
+.item-selected {
+    background: var(--dark)  !important;
 }
 
-.div-carousel-controller a:hover {
-    color: var(--wine);
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 460px){
+    /* CAROUSEL */
+
+    /* Banners */
+
+    #banners {
+        height: 26rem;
+    }
+	
+    .content-banner div h2 {
+        font-size: 2rem;
+    }
+    
+    .content-banner div p {
+        font-size: 1.6rem;
+    }
+
+    /* Arrows */
+
+	#section-carousel .arrow-prev, #section-carousel .arrow-next {
+		font-size: 1.5rem;
+	}
+
+	#section-carousel .arrow-prev {
+		left: .6rem;
+	}
+
+	#section-carousel .arrow-next {
+		right: .6rem;
+	}
+
+    /* Selectors */
+	
+    .list-carousel li {
+        height: .6rem;
+        width: .6rem;
+    }
 }

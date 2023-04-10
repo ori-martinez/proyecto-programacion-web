@@ -93,59 +93,39 @@
 
         <!-- Body (Start) -->
         <main> 
-            <!-- carousel (Inicio) -->
-            <div class="carousel">
-                <div class="div-carousel">
-                    <div id="item-carousel-1" class="item-carousel">
-                        <div class="item-carousel-card">
-                            <img src="./img/banners/1.png" alt="Promoción de Semana Santa">
-                        </div>
-                        <div class="item-carousel-arrows">
-                            <a href="#item-carousel-3">
-                            <span class="icon-cheveron-left"></span>
-                            </a>
-                            <a href="#item-carousel-2">
-                                <span class="icon-cheveron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="item-carousel-2" class="item-carousel">
-                        <div class="item-carousel-card">
-                            <img src="./img/banners/3.png" alt="Publicidad de ReyRey Sports">
-                        </div>
-                        <div class="item-carousel-arrows">
-                            <a href="#item-carousel-1">
-                                <span class="fas fa-chevron-left"></span>
-                            </a>
-                            <a href="#item-carousel-3">
-                                <span class="fas fa-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="item-carousel-3" class="item-carousel">
-                        <div class="item-carousel-card">
-                            <img src="./img/banners/2.png" alt="Moda de ReyRey Sports">
-                        </div>
-                        <div class="item-carousel-arrows">
-                            <a href="#item-carousel-2">
-                                <span class="fas fa-chevron-left"></span>
-                            </a>
-                            <a href="#item-carousel-1">
-                                <span class="fas fa-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Carousel (Start) -->
+            <section id="section-carousel">	
+                <!-- Arrows -->
+                <a href="javascript: executeCarousel('prev');" class="arrow-prev">
+                    <span class="icon-chevron-left"></span>
+                </a>
+                <a href="javascript: executeCarousel('next');" class="arrow-next">
+                    <span class="icon-chevron-right"></span>
+                </a>
                 
-                <div class="div-carousel-controller">
-                    <a href="#item-carousel-1">&#10625;</a>
-                    <a href="#item-carousel-2">&#10625;</a>
-                    <a href="#item-carousel-3">&#10625;</a>
-                </div>
-            </div>
-            <!-- carousel (Fin) -->
+                <!-- Selectors -->
+                <ul class="list-carousel">
+                    <li><a itlist="itList_0" href="#" class="item-selected"></a></li>
+                    <li><a itlist="itList_1" href="#"></a></li>
+                    <li><a itlist="itList_2" href="#"></a></li>
+                </ul>
+
+                <!-- Banners -->
+                <ul id="banners">
+                    <li style="background-image: url('./img/banners/1.svg'); z-index:0; opacity: 1;">
+                        <div class="content-banner" >
+                            <div>
+                                <h2>Encuentra lo mejor en deportes</h2>
+
+                                <p>¡SÉ LO QUE USAS Y USA SIEMPRE LO MEJOR!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url('./img/banners/2.png');"></li>
+                    <li style="background-image: url('./img/banners/3.png');"></li>
+                </ul>
+            </section>
+            <!-- Carousel (End) -->
         </main>
         <!-- Body (End) -->
 
@@ -187,6 +167,63 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="./js/index.js"></script>
+        <script src="./js/welcome.js"></script>
+        <script type="text/javascript">
+            if (document.querySelector('#section-carousel')) {
+                setInterval('executeCarousel("next")', 10000);
+            }
+
+            //------------------------------ LIST banners -------------------------
+            if (document.querySelector('.list-carousel')) {
+                let link = document.querySelectorAll(".list-carousel li a");
+
+                link.forEach(function(link) {
+                    link.addEventListener('click', function(e){
+                        e.preventDefault();
+                        
+                        let item = this.getAttribute('itlist');
+                        let arrItem = item.split("_");
+                    
+                        executeCarousel(arrItem[1]);
+                    
+                        return false;
+                    });
+                });
+            }
+
+            function executeCarousel(side){
+                let parentTarget = document.getElementById('banners');
+                let elements = parentTarget.getElementsByTagName('li');
+                let curElement, nextElement;
+
+                for(var i=0; i<elements.length;i++){
+
+                    if(elements[i].style.opacity==1){
+                        curElement = i;
+                        break;
+                    }
+                }
+                if(side == 'prev' || side == 'next'){
+
+                    if(side=="prev"){
+                        nextElement = (curElement == 0)?elements.length -1:curElement -1;
+                    }else{
+                        nextElement = (curElement == elements.length -1)?0:curElement +1;
+                    }
+                }else{
+                    nextElement = side;
+                    side = (curElement > nextElement)?'prev':'next';
+
+                }
+                //RESALTA LOS PUNTOS
+                let elementSel = document.getElementsByClassName("list-carousel")[0].getElementsByTagName("a");
+                elementSel[curElement].classList.remove("item-selected");
+                elementSel[nextElement].classList.add("item-selected");
+                elements[curElement].style.opacity=0;
+                elements[curElement].style.zIndex =0;
+                elements[nextElement].style.opacity=1;
+                elements[nextElement].style.zIndex =1;
+            }
+        </script>
     </body>
 </html>
