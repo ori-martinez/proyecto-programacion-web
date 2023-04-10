@@ -1,0 +1,93 @@
+/* COLORS */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GREETING */
+
+.div-greeting {
+    margin: 3rem 5rem;
+}
+
+/* Texts */
+
+.div-greeting h3 {
+    font-family: 'AmbraSans';
+    font-size: 1.8rem;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    background: var(--light);
+    border-radius: 1rem;
+    margin: 0 3rem ;
+    padding: 2rem;
+}
+
+/* Texts */
+
+.dashboard h2 {
+    font-family: 'Vanem';
+    font-size: 2rem;
+    color: var(--wine);
+    margin-bottom: 2rem;
+}
+
+.dashboard p {
+    font-size: 1.2rem;
+}
+
+@media all and (max-width: 1024px) {
+    /* GREETING */
+
+    .div-greeting {
+        margin: 3rem 2rem 1.5rem;
+    }
+
+    /* Texts */
+
+    .div-greeting h3 {
+        font-family: 'AmbraSans';
+        font-size: 1.4rem;
+    }
+
+    /* DASHBOARD */
+
+    .dashboard {
+        margin: 0;
+        padding: 1.2rem;
+    }
+
+    /* Texts */
+
+    .dashboard h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .dashboard p {
+        font-size: 1rem;
+    }
+}
