@@ -60,6 +60,8 @@
     -webkit-transition: opacity 1s;
 }
 
+/* Contents */
+
 .content-banner {
     align-items: center;
     display: flex;
@@ -86,6 +88,36 @@
 .content-banner div p {
     font-family: 'AmbraSans';
     font-size: 2rem;
+}
+
+#banner-title-1 {
+    color: var(--dark);
+    font-size: 3.6rem;
+    margin: 8rem 0 2rem;
+}
+
+#banner-title-1 span {
+    color: var(--wine);
+    font-family: 'Vanem';
+}
+
+#banner-title-2 {
+    margin-top: 2rem;
+    color: var(--wine);
+    font-size: 4rem;
+    text-shadow: .4rem .4rem .4rem #000000;
+}
+
+.banner-high-text-1 {
+    color: var(--wine);
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.banner-high-text-2 {
+    color: #FFFFFF;
+    font-size: 3.6rem;
+    text-shadow: .35rem .35rem .35rem var(--dark);
 }
 
 /* Arrows */
@@ -135,7 +167,7 @@
 }
 
 .list-carousel li a {
-    background: var(--light);
+    background: var(--dark-opacity);
     border-radius: 50%;
     display: block;
     height: 100%;

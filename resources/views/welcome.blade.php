@@ -115,14 +115,32 @@
                     <li style="background-image: url('./img/banners/1.svg'); z-index:0; opacity: 1;">
                         <div class="content-banner" >
                             <div>
+                                <p id="banner-title-1">HASTA <span>30</span>% DE DESCUENTO</p>
+
+                                <span class="banner-high-text-1">¡No dejes pasar estas ofertas!</span>
+                            </div>
+                        </div> 
+                    </li>
+                    <li style="background-image: url('./img/banners/2.svg');">
+                        <div class="content-banner" >
+                            <div>
+                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+
+                                <h2 id="banner-title-2">Están en pleno apogeo</h2>
+
+                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li style="background-image: url('./img/banners/3.svg');">
+                        <div class="content-banner" >
+                            <div>
                                 <h2>Encuentra lo mejor en deportes</h2>
 
                                 <p>¡SÉ LO QUE USAS Y USA SIEMPRE LO MEJOR!</p>
                             </div>
                         </div>
                     </li>
-                    <li style="background-image: url('./img/banners/2.png');"></li>
-                    <li style="background-image: url('./img/banners/3.png');"></li>
                 </ul>
             </section>
             <!-- Carousel (End) -->
@@ -169,60 +187,58 @@
         <!-- Scripts -->
         <script src="./js/welcome.js"></script>
         <script type="text/javascript">
-            if (document.querySelector('#section-carousel')) {
-                setInterval('executeCarousel("next")', 10000);
-            }
+            if (document.querySelector('#section-carousel')) setInterval('executeCarousel("next")', 10000);
 
-            //------------------------------ LIST banners -------------------------
             if (document.querySelector('.list-carousel')) {
-                let link = document.querySelectorAll(".list-carousel li a");
+                let links = document.querySelectorAll('.list-carousel li a');
 
-                link.forEach(function(link) {
-                    link.addEventListener('click', function(e){
+                links.forEach((link) => {
+                    link.addEventListener('click', function (e) {
                         e.preventDefault();
                         
-                        let item = this.getAttribute('itlist');
-                        let arrItem = item.split("_");
+                        let list = this.getAttribute('itlist');
+                        let arrayList = list.split("_");
                     
-                        executeCarousel(arrItem[1]);
+                        executeCarousel(arrayList[1]);
                     
                         return false;
                     });
                 });
             }
 
-            function executeCarousel(side){
-                let parentTarget = document.getElementById('banners');
-                let elements = parentTarget.getElementsByTagName('li');
-                let curElement, nextElement;
+            function executeCarousel (side) {
+                let banners = document.getElementById('banners');
+                let items = banners.getElementsByTagName('li');
+                let currentItem, nextItem;
 
-                for(var i=0; i<elements.length;i++){
-
-                    if(elements[i].style.opacity==1){
-                        curElement = i;
+                for (let i = 0; i < items.length; i++) {
+                    if (items[i].style.opacity === '1'){
+                        currentItem = i;
                         break;
                     }
                 }
-                if(side == 'prev' || side == 'next'){
 
-                    if(side=="prev"){
-                        nextElement = (curElement == 0)?elements.length -1:curElement -1;
-                    }else{
-                        nextElement = (curElement == elements.length -1)?0:curElement +1;
+                if (side === 'prev' || side === 'next') {
+                    if (side === 'prev') {
+                        nextItem = (currentItem === 0) ? items.length - 1 : currentItem - 1;
                     }
-                }else{
-                    nextElement = side;
-                    side = (curElement > nextElement)?'prev':'next';
-
+                    else {
+                        nextItem = (currentItem === items.length - 1) ? 0 : currentItem + 1;
+                    }
                 }
-                //RESALTA LOS PUNTOS
-                let elementSel = document.getElementsByClassName("list-carousel")[0].getElementsByTagName("a");
-                elementSel[curElement].classList.remove("item-selected");
-                elementSel[nextElement].classList.add("item-selected");
-                elements[curElement].style.opacity=0;
-                elements[curElement].style.zIndex =0;
-                elements[nextElement].style.opacity=1;
-                elements[nextElement].style.zIndex =1;
+                else {
+                    nextItem = side;
+                    side = (currentItem > nextItem) ? 'prev' : 'next';
+                }
+                
+                let selectedItem = document.getElementsByClassName('list-carousel')[0].getElementsByTagName('a');
+                
+                selectedItem[currentItem].classList.remove('item-selected');
+                selectedItem[nextItem].classList.add('item-selected');
+                items[currentItem].style.opacity = 0;
+                items[currentItem].style.zIndex = 0;
+                items[nextItem].style.opacity = 1;
+                items[nextItem].style.zIndex = 1;
             }
         </script>
     </body>

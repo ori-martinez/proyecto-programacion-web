@@ -34,6 +34,9 @@
 .icon-user:before {
     content: "\e903";
 }
+.icon-shopping-cart:before {
+    content: "\e901";
+}
 .icon-search:before {
     content: "\e986";
 }
@@ -52,3 +55,4 @@
 .icon-twitter:before {
     content: "\ea96";
 }
+  
