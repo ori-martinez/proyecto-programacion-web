@@ -115,6 +115,27 @@
     flex-direction: column;
 }
 
+#div-error {
+    margin: .5rem 0;
+    width: 100%;
+}
+
+.error-message, .info-message {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: .3rem 0;
+    text-align: center;
+}
+
+.error-message {
+    background: #EF4444;
+}
+
+.info-message {
+    background: #60A5FA;
+}
+
 /* Form */
 
 #commentaries-section form {

@@ -24,7 +24,7 @@ class ProductWomenController extends Controller
     public function show(string $id)
     {
         $commentaries = Commentary::orderBy('commentaries.id', 'desc')
-            ->select('users.name', 'commentaries.description')
+            ->select('users.name',  'users.last_name', 'commentaries.description')
             ->join('users', 'users.id', '=', 'commentaries.user_id')
             ->where('commentaries.product_id', $id)
             ->get();

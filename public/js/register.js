@@ -117,7 +117,7 @@ const validAddress = (e) => {
     if (e.target.value.length === 0) {
         errorDiv.innerHTML = '<span class="error-message">El campo Dirección es requerido</span>';
     } 
-    else if (e.target.value.lenght > 255) {
+    else if (e.target.value.length > 255) {
         errorDiv.innerHTML = '<span class="info-message">La dirección no debe sobrepasar los 255 caracteres</span>';
     }
 }
@@ -164,7 +164,7 @@ const submitForm = (e) => {
         inputLastname.value.length === 0 || !inputLastname.value.match(regexName) ||
         new Date(inputBirthdate.value) > new Date() || getAge(inputBirthdate.value) < 18 ||
         inputGender.value === '0' ||
-        inputAddress.value.length === 0 || inputAddress.value.lenght > 255 ||
+        inputAddress.value.length === 0 || inputAddress.value.length > 255 ||
         inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail) || 
         inputPass.value.length === 0 || !inputPass.value.match(regexPass) ||
         inputPassCon.value.length === 0 || inputPass.value !== inputPassCon.value

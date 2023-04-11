@@ -120,6 +120,9 @@
 
             <!-- Commentary Section -->
             <section id="commentaries-section">
+                <!-- Error Message -->
+                <div id="div-error"></div>
+
                 <form  method="POST" action="{{ route('commentary') }}">
                     @csrf
 
@@ -128,7 +131,7 @@
                         <input id="input-product" type="hidden" name="product_id" value="{{ $product->id }}">
                     @endauth
                     
-                    <input id="input-product" type="text" name="description" placeholder="Escribe un comentario...">
+                    <input id="input-commentary" type="text" name="description" placeholder="Escribe un comentario...">
                     
                     @auth
                         <button id="commentary-button" type="submit">Comentar</button>
@@ -147,7 +150,7 @@
                         @else
                             @foreach ($commentaries as $commentary)
                                 <li>
-                                    <span>{{ $commentary->name}} dice:</span> {{ $commentary->description }}
+                                    <span>{{ $commentary->name }} {{ $commentary->last_name }} dice:</span> {{ $commentary->description }}
                                 </li>
                             @endforeach
                         @endif

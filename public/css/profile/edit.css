@@ -31,6 +31,7 @@
     border-radius: 1rem;
     margin: 3rem 5rem 2rem;
     padding: 2rem;
+    box-shadow: .6rem .6rem .6rem var(--dark-opacity);
 }
 
 .header-section {
