@@ -64,7 +64,9 @@ const regexPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 const getAge = (date) => {
     const today = new Date();
     const birthdate = new Date(date);
-    const age = today.getFullYear() - birthdate.getFullYear();
+    
+    let age = today.getFullYear() - birthdate.getFullYear();
+    
     const m = today.getMonth() - birthdate.getMonth();
 
     if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {

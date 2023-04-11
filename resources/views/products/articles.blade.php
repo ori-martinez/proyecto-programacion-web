@@ -99,7 +99,7 @@
         
         <!-- Body -->
         <main>
-            <h1 id="title-products">Productos Unisex</h1>
+            <h1 id="title-products">Artículos</h1>
 
             <section id="grid-cards">
                 @foreach ($products as $product)

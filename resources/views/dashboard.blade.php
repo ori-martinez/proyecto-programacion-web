@@ -25,21 +25,17 @@
                             <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                         </a>
                     </li>
+
+                    <!-- Separators -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     
                     @if (Route::has('login'))
                         <!-- Actions Buttons -->
                         <li id="navbar-buttons">
-                            <button class="navbar-button-icon">
-                                <span class="icon-search"></span>
-                            </button>
-
-                            <!-- Separators -->
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-
                             @auth
                                 <a href="{{ url('/dashboard') }}">
                                     <button class="navbar-button-icon">
