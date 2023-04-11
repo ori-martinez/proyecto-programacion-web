@@ -28,13 +28,13 @@
                     
                     <!-- Links -->
                     <li class="navbar-link">
-                        <a href="#">HOMBRES</a>
+                        <a href="{{ url('/productos/hombres') }}">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">MUJERES</a>
+                        <a href="{{ url('/productos/mujeres') }}">MUJERES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">ARTÍCULOS</a>
+                        <a href="{{ url('/productos/articulos') }}">ARTÍCULOS</a>
                     </li>
                     <li class="navbar-link">
                         <a href="#">BLOG</a>

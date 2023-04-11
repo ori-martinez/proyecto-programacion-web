@@ -33,6 +33,13 @@
                                 <span class="icon-search"></span>
                             </button>
 
+                            <!-- Separators -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+
                             @auth
                                 <a href="{{ url('/dashboard') }}">
                                     <button class="navbar-button-icon">

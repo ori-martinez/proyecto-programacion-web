@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="../img/Favicon.ico" />
+        <link rel="icon" type="image/ico" href="../../img/Favicon.ico" />
         <link rel="stylesheet" href="../../css/index.css" />
         <link rel="stylesheet" href="../../css/products/product.css">
         <link rel="stylesheet" href="../../css/styles.css" />
@@ -31,10 +31,10 @@
                         <a href="{{ url('/productos/hombres') }}">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">MUJERES</a>
+                        <a href="{{ url('/productos/mujeres') }}">MUJERES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">ARTÍCULOS</a>
+                        <a href="{{ url('/productos/articulos') }}">ARTÍCULOS</a>
                     </li>
                     <li class="navbar-link">
                         <a href="#">BLOG</a>
@@ -99,8 +99,9 @@
         
         <!-- Body -->
         <main>
-            <section>
-                <div id="product-section">
+            <!-- Product Section -->
+            <section id="product-section">
+                <div id="div-product-section">
                     <div class="product-img">
                         <img src="../../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
                     </div>
@@ -110,9 +111,47 @@
 
                         <p><span>Deporte:</span> @if($product->sport_id === 1) Fútbol @elseif ($product->sport_id === 2) Básquetbol @else Béisbol @endif </p>
                         <p><span>Precio:</span> {{ $product->price }} $</p>
+                        <p><span>Oferta:</span> {{ $product->price * 0.7 }} $</p>
 
                         <button>Agregar al <span class="icon-shopping-cart"></span></button>
                     </div>
+                </div>
+            </section>
+
+            <!-- Commentary Section -->
+            <section id="commentaries-section">
+                <form  method="POST" action="{{ route('commentary') }}">
+                    @csrf
+
+                    @auth
+                        <input id="input-user" type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                        <input id="input-product" type="hidden" name="product_id" value="{{ $product->id }}">
+                    @endauth
+                    
+                    <input id="input-product" type="text" name="description" placeholder="Escribe un comentario...">
+                    
+                    @auth
+                        <button id="commentary-button" type="submit">Comentar</button>
+                    @else
+                        <a href="{{ route('login') }}">Comentar</a>
+                    @endauth
+                </form>
+
+                <!-- Commentaries -->
+                <div id="commentaries">
+                    <h2> Opiniones de Otros Usuarios</h2>
+
+                    <ul id="commentaries-list">
+                        @if ($commentaries === null) 
+                            <li class="commentaries-message">Aún no hay comentarios, sé el primero en hacer uno</li>
+                        @else
+                            @foreach ($commentaries as $commentary)
+                                <li>
+                                    <span>{{ $commentary->name}} dice:</span> {{ $commentary->description }}
+                                </li>
+                            @endforeach
+                        @endif
+                    </ul>
                 </div>
             </section>
         </main>

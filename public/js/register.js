@@ -128,7 +128,7 @@ const validEmail = (e) => {
         errorDiv.innerHTML = '<span class="error-message">El campo Correo Electrónico es requerido</span>';
     }
     else if (!e.target.value.match(regexEmail)) {
-        errorDiv.innerHTML = '<span class="info-message">Ingresa un correo electrónico válido, que incluya un @ y un .</span>';
+        errorDiv.innerHTML = '<span class="info-message">Ingresa un correo electrónico válido, todo en minúsculas que incluya un @ y un .</span>';
     }
 }
 const validPassword = (e) => {

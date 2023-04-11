@@ -7,14 +7,14 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProductMenController extends Controller
+class ProductWomenController extends Controller
 {
     /**
      * Show the view with all the products for men.
      */
     public function index()
     {
-        return view('products.men', ['products' => Product::all()->where('category_id', 1)]);
+        return view('products.women', ['products' => Product::all()->where('category_id', 2)]);
     }
 
     /**
