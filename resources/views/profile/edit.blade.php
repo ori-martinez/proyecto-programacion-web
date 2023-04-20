@@ -106,6 +106,7 @@
                     @endif
                 </div>
 
+                <!-- Update Info Form -->
                 <form id="update-profile-form" method="POST" action="{{ route('profile.update') }}">
                     @csrf
                     @method('patch')
@@ -149,6 +150,7 @@
                     @endif
                 </div>
 
+                <!-- Update Password Form -->
                 <form id="update-password-form" method="POST" action="{{ route('password.update') }}">
                     @csrf
                     @method('put')
@@ -185,6 +187,47 @@
                             </p>
                         </span>
                     @endif
+                </div>
+            </section>
+
+            <!-- Delete Profile -->
+            <section  id="delete-profile">
+                <div class="header-section">
+                    <h2>ELIMINACIÓN DEL PERFIL</h2>
+
+                    <p>Una vez que se elimine su cuenta, todos sus datos se eliminarán de forma permanente</p>
+                </div>
+
+                <!-- Delete Button -->
+                <button id="open-modal" class="delete-profile-button">Eliminar Perfil</button>
+
+                <div id="delete-modal">
+                    <!-- Delete Modal -->
+                    <div id="content-delete-modal">
+                        <h3>¿ESTÁ SEGURO DE ELIMINAR SU PERFIL?</h3>
+
+                        <p>Una vez que se elimine su cuenta, todos sus datos se eliminarán de forma permanente. Ingrese su contraseña para confirmar que desea eliminar su cuenta de forma permanente</p>
+
+                        <!-- Delete Form -->
+                        <form method="post" action="{{ route('profile.destroy') }}">
+                            @csrf
+                            @method('delete')
+
+                            <div class="password">
+                                <x-text-input id="input-password-delete" name="password" type="password"  placeholder="Contraseña" />
+
+                                <button type="button" id="toggle-password-delete">
+                                    <span class="icon-eye"></span>
+                                </button>
+                            </div>
+
+                            <div id="modal-buttons">
+                                <button type="button" id="cancel-modal">Cancelar</button>
+
+                                <button type="submit" id="submit-modal" class="delete-profile-button">Eliminar Perfil</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
