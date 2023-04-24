@@ -1,4 +1,5 @@
 const d = document;
+const w = window;
 
 /* Responsive Navbar */
 
@@ -171,3 +172,35 @@ const submitPassForm = (e) => {
 inputPass.addEventListener('change', (e) => validPassword(e), false);
 inputPassCon.addEventListener('change', (e) => validPasswordCon(e), false);
 buttonPass.addEventListener('click', (e) => submitPassForm(e), false);
+
+/* Delete Profile Modal */
+
+const modal = d.querySelector("#delete-modal");
+const buttonModal = d.querySelector("#open-modal");
+const buttonCancelModal = d.querySelector("#cancel-modal");
+
+buttonModal.addEventListener('click', () => modal.style.display = 'block', false);
+buttonCancelModal.addEventListener('click', () => modal.style.display = 'none', false);
+window.addEventListener('click', (e) => { if (e.target == modal) modal.style.display = 'none'; }, false);
+
+/* Toggle Password Delete Profile */
+
+const inputPassDelete = d.querySelector('#input-password-delete');
+const togglePassDelete = d.querySelector('#toggle-password-delete');
+
+const togglePasswordDelete = () => {
+    if (inputPassDelete.getAttribute('type') === 'password') {
+        inputPassDelete.setAttribute('type', 'text');
+        togglePassDelete.innerHTML = '<span class="icon-eye-blocked"></span>';
+    }
+    else {
+        inputPassDelete.setAttribute('type', 'password');
+        togglePassDelete.innerHTML = '<span class="icon-eye"></span>';
+    }
+}
+
+togglePassDelete.addEventListener('click', togglePasswordDelete, false);
+
+/* Validations (Update Password Profile) */
+
+

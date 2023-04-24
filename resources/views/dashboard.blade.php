@@ -25,21 +25,17 @@
                             <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                         </a>
                     </li>
+
+                    <!-- Separators -->
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     
                     @if (Route::has('login'))
                         <!-- Actions Buttons -->
                         <li id="navbar-buttons">
-                            <button class="navbar-button-icon">
-                                <span class="icon-search"></span>
-                            </button>
-
-                            <!-- Separators -->
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-
                             @auth
                                 <a href="{{ url('/dashboard') }}">
                                     <button class="navbar-button-icon">
@@ -113,13 +109,13 @@
         <footer>
             <!-- Social Media -->
             <div id="footer-social-media">
-                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/profile.php?id=100091871862034" target="_blank">
                     <span class="icon-facebook2"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.instagram.com/reyreysports/" target="_blank">
                     <span class="icon-instagram"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports" target="_blank">
                     <span class="icon-twitter"></span>
                 </a>
             </div>

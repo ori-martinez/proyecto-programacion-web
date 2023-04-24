@@ -29,7 +29,6 @@ Route::get('/productos/mujeres/{id}', [ProductMenController::class, 'show'])->na
 Route::get('/productos/articulos', [ProductArticlesController::class, 'index'])->name('products.articles');
 Route::get('/productos/articulos/{id}', [ProductArticlesController::class, 'show'])->name('products.product');
 
-
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
 
 Route::get('/dashboard', function () {
