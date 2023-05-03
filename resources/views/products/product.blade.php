@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="../../img/Favicon.ico" />
-        <link rel="stylesheet" href="../../css/index.css" />
-        <link rel="stylesheet" href="../../css/products/product.css">
-        <link rel="stylesheet" href="../../css/styles.css" />
+        <link rel="icon" type="image/ico" href="../img/Favicon.ico" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/products/product.css">
+        <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
     </head>
@@ -22,7 +22,7 @@
                     <!-- Logo -->
                     <li id="navbar-logo">
                         <a href="/">
-                            <img src="../../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                            <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                         </a>
                     </li>
 
@@ -40,7 +40,7 @@
                         <a href="#">BLOG</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">AYUDA</a>
+                        <a href="{{ url('/ayuda') }}">AYUDA</a>
                     </li>
 
                     @if (Route::has('login'))
@@ -90,7 +90,7 @@
 
                     <!-- Toggle Menu -->
                     <li class="navbar-toggle">
-                        <img id="open" src="../../img/menu-open-icon.svg" alt="Menú">
+                        <img id="open" src="../img/menu-open-icon.svg" alt="Menú">
                     </li>
                 </ul>
             </nav>
@@ -103,15 +103,22 @@
             <section id="product-section">
                 <div id="div-product-section">
                     <div class="product-img">
-                        <img src="../../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
+                        <img src="../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
                     </div>
                     
                     <div class="product-info">
                         <h2>{{ $product->name }}</h2>
 
-                        <p><span>Deporte:</span> @if($product->sport_id === 1) Fútbol @elseif ($product->sport_id === 2) Básquetbol @else Béisbol @endif </p>
+                        <p>
+                            <span>Deporte:</span> 
+                            
+                            @if ($product->sport_id === 2) Fútbol 
+                            @elseif ($product->sport_id === 3) Básquetbol 
+                            @elseif ($product->sport_id === 4) Béisbol 
+                            @else Fútbol / Básquetbol / Béisbol 
+                            @endif 
+                        </p>
                         <p><span>Precio:</span> {{ $product->price }} $</p>
-                        <p><span>Oferta:</span> {{ $product->price * 0.7 }} $</p>
 
                         <button>Agregar al <span class="icon-shopping-cart"></span></button>
                     </div>
@@ -163,13 +170,13 @@
         <footer>
             <!-- Social Media -->
             <div id="footer-social-media">
-                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/profile.php?id=100091871862034" target="_blank">
                     <span class="icon-facebook2"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.instagram.com/reyreysports/" target="_blank">
                     <span class="icon-instagram"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports/following" target="_blank">
                     <span class="icon-twitter"></span>
                 </a>
             </div>
@@ -178,13 +185,13 @@
                 <!-- Links -->
                 <ul id="footer-links">
                     <li class="footer-link">
-                        <a href="#">Términos de Uso</a>
+                        <a href="{{ url('/terminos') }}">Términos de Uso</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Políticas de Privacidad</a>
+                        <a href="{{ url('/politicas') }}">Políticas de Privacidad</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Contáctanos</a>
+                        <a href="{{ url('/contacto') }}">Contáctanos</a>
                     </li>
                 </ul>
 
@@ -192,7 +199,7 @@
             </div>
 
             <!-- Logo -->
-            <img id="footer-logo" src="../../img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+            <img id="footer-logo" src="../img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
         </footer>
         <!-- Footer (End) -->
 

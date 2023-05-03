@@ -17,7 +17,7 @@
         <!-- Header (Start) -->
         <header>
             <!-- Navbar -->
-            <nav>  
+            <nav>
                 <ul id="navbar">
                     <!-- Logo -->
                     <li id="navbar-logo">
@@ -26,13 +26,13 @@
                         </a>
                     </li>
 
-                    <!-- Separators -->
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    
+                    <!-- Links -->
+                    <li class="navbar-link"></li>
+                    <li class="navbar-link"></li>
+                    <li class="navbar-link"></li>
+                    <li class="navbar-link"></li>
+                    <li class="navbar-link"></li>
+
                     @if (Route::has('login'))
                         <!-- Actions Buttons -->
                         <li id="navbar-buttons">
@@ -41,28 +41,28 @@
                                     <button class="navbar-button-icon">
                                         @if (Auth::user()->rol_id === 1)
                                             <span class="icon-dashboard"></span>
-                                        @else            
+                                        @else
                                             <span class="icon-shopping-cart"></span>
                                         @endif
-                                    </button> 
+                                    </button>
                                 </a>
 
                                 <a href="{{ url('/profile') }}">
                                     <button class="navbar-button-icon">
                                         <span class="icon-user"></span>
-                                    </button>    
+                                    </button>
                                 </a>
 
                                 <form id="navbar-form" method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    
+
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
-                                        <button class="navbar-button">Logout</button>        
+                                        <button class="navbar-button">Logout</button>
                                     </a>
                                 </form>
                             @else
                                 <a href="{{ route('login') }}" class="navbar-button">
-                                    <button class="navbar-button">Login</button>        
+                                    <button class="navbar-button">Login</button>
                                 </a>
 
                                 @if (Route::has('register'))
@@ -72,13 +72,13 @@
                                 @endif
                             @endauth
                         </li>
-                    @endif      
-                    
+                    @endif
+
                     <!-- Toggle Menu -->
                     <li class="navbar-toggle">
                         <img id="open" src="./img/menu-open-icon.svg" alt="Menú">
                     </li>
-                </ul>                   
+                </ul>
             </nav>
         </header>
         <!-- Header (End) -->
@@ -194,13 +194,13 @@
         <footer>
             <!-- Social Media -->
             <div id="footer-social-media">
-                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/profile.php?id=100091871862034" target="_blank">
                     <span class="icon-facebook2"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.instagram.com/reyreysports/" target="_blank">
                     <span class="icon-instagram"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports/following" target="_blank">
                     <span class="icon-twitter"></span>
                 </a>
             </div>
@@ -209,13 +209,13 @@
                 <!-- Links -->
                 <ul id="footer-links">
                     <li class="footer-link">
-                        <a href="#">Términos de Uso</a>
+                        <a href="{{ url('/terminos') }}">Términos de Uso</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Políticas de Privacidad</a>
+                        <a href="{{ url('/politicas') }}">Políticas de Privacidad</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Contáctanos</a>
+                        <a href="{{ url('/contacto') }}">Contáctanos</a>
                     </li>
                 </ul>
 

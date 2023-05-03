@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\CommentaryController;
-use App\Http\Controllers\ProductArticlesController;
-use App\Http\Controllers\ProductMenController;
-use App\Http\Controllers\ProductWomenController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ViewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,15 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/productos/hombres', [ProductMenController::class, 'index'])->name('products.men');
-Route::get('/productos/hombres/{id}', [ProductMenController::class, 'show'])->name('products.product');
-Route::get('/productos/mujeres', [ProductWomenController::class, 'index'])->name('products.women');
-Route::get('/productos/mujeres/{id}', [ProductMenController::class, 'show'])->name('products.product');
-Route::get('/productos/articulos', [ProductArticlesController::class, 'index'])->name('products.articles');
-Route::get('/productos/articulos/{id}', [ProductArticlesController::class, 'show'])->name('products.product');
-
-
+Route::get('/productos/hombres', [ProductsController::class, 'indexMen'])->name('products.men');
+Route::get('/productos/mujeres', [ProductsController::class, 'indexWomen'])->name('products.women');
+Route::get('/productos/articulos', [ProductsController::class, 'indexArticles'])->name('products.articles');
+Route::get('/productos/{id}', [ProductsController::class, 'show'])->name('products.product');
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
+
+Route::get('/ayuda', [ViewsController::class, 'indexHelp'])->name('extras.help');
+Route::get('/terminos', [ViewsController::class, 'indexTerms'])->name('extras.terms');
+Route::get('/politicas', [ViewsController::class, 'indexPolicies'])->name('extras.policies');
+Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

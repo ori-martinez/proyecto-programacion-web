@@ -7,12 +7,28 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProductArticlesController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Show the view with all the products for men.
      */
-    public function index()
+    public function indexMen()
+    {
+        return view('products.men', ['products' => Product::all()->where('category_id', 1)]);
+    }
+
+    /**
+     * Show the view with all the products for women.
+     */
+    public function indexWomen()
+    {
+        return view('products.women', ['products' => Product::all()->where('category_id', 2)]);
+    }
+
+    /**
+     * Show the view with all the products for articles.
+     */
+    public function indexArticles()
     {
         return view('products.articles', ['products' => Product::all()->where('category_id', 3)]);
     }
@@ -28,9 +44,9 @@ class ProductArticlesController extends Controller
             ->join('users', 'users.id', '=', 'commentaries.user_id')
             ->where('commentaries.product_id', $id)
             ->get();
-
+ 
         if ($commentaries->isEmpty()) $commentaries = null;
-
+ 
         return view('products.product', [
             'product' => Product::findOrFail($id),
             'commentaries' => $commentaries,

@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="./img/Favicon.ico" />
-        <link rel="stylesheet" href="./css/index.css" />
-        <link rel="stylesheet" href="./css/welcome.css">
-        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" type="image/ico" href="../img/Favicon.ico" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/extras/help.css">
+        <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
     </head>
@@ -22,7 +22,7 @@
                     <!-- Logo -->
                     <li id="navbar-logo">
                         <a href="/">
-                            <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                            <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                         </a>
                     </li>
 
@@ -90,68 +90,17 @@
 
                     <!-- Toggle Menu -->
                     <li class="navbar-toggle">
-                        <img id="open" src="./img/menu-open-icon.svg" alt="Menú">
+                        <img id="open" src="../img/menu-open-icon.svg" alt="Menú">
                     </li>
                 </ul>
             </nav>
         </header>
         <!-- Header (End) -->
-
-        <!-- Body (Start) -->
+        
+        <!-- Body -->
         <main>
-            <!-- Carousel (Start) -->
-            <section id="section-carousel">
-                <!-- Arrows -->
-                <a href="javascript: executeCarousel('prev');" class="arrow-prev">
-                    <span class="icon-cheveron-left"></span>
-                </a>
-                <a href="javascript: executeCarousel('next');" class="arrow-next">
-                    <span class="icon-cheveron-right"></span>
-                </a>
-
-                <!-- Selectors -->
-                <ul class="list-carousel">
-                    <li><a itlist="itList_0" href="#" class="item-selected"></a></li>
-                    <li><a itlist="itList_1" href="#"></a></li>
-                    <li><a itlist="itList_2" href="#"></a></li>
-                </ul>
-
-                <!-- Banners -->
-                <ul id="banners">
-                    <li style="background-image: url('./img/banners/1.svg'); z-index:0; opacity: 1;">
-                        <div class="content-banner" >
-                            <div>
-                                <p id="banner-title-1">HASTA <span>30</span>% DE DESCUENTO</p>
-
-                                <span class="banner-high-text-1">¡No dejes pasar estas ofertas!</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url('./img/banners/2.svg');">
-                        <div class="content-banner" >
-                            <div>
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
-
-                                <h2 id="banner-title-2">Están en pleno apogeo</h2>
-
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url('./img/banners/3.svg');">
-                        <div class="content-banner" >
-                            <div>
-                                <h2>Encuentra lo mejor en deportes</h2>
-
-                                <p>¡SÉ LO QUE USAS Y USA SIEMPRE LO MEJOR!</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <!-- Carousel (End) -->
+            <h2>Pagina de Ayuda y Preguntas Frecuentes</h2>
         </main>
-        <!-- Body (End) -->
 
         <!-- Footer (Start) -->
         <footer>
@@ -186,66 +135,11 @@
             </div>
 
             <!-- Logo -->
-            <img id="footer-logo" src="./img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+            <img id="footer-logo" src="../img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
         </footer>
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="./js/index.js"></script>
-        <script type="text/javascript">
-            if (document.querySelector('#section-carousel')) setInterval('executeCarousel("next")', 10000);
-
-            if (document.querySelector('.list-carousel')) {
-                let links = document.querySelectorAll('.list-carousel li a');
-
-                links.forEach((link) => {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault();
-
-                        let list = this.getAttribute('itlist');
-                        let arrayList = list.split("_");
-
-                        executeCarousel(arrayList[1]);
-
-                        return false;
-                    });
-                });
-            }
-
-            function executeCarousel (side) {
-                let banners = document.getElementById('banners');
-                let items = banners.getElementsByTagName('li');
-                let currentItem, nextItem;
-
-                for (let i = 0; i < items.length; i++) {
-                    if (items[i].style.opacity === '1'){
-                        currentItem = i;
-                        break;
-                    }
-                }
-
-                if (side === 'prev' || side === 'next') {
-                    if (side === 'prev') {
-                        nextItem = (currentItem === 0) ? items.length - 1 : currentItem - 1;
-                    }
-                    else {
-                        nextItem = (currentItem === items.length - 1) ? 0 : currentItem + 1;
-                    }
-                }
-                else {
-                    nextItem = side;
-                    side = (currentItem > nextItem) ? 'prev' : 'next';
-                }
-
-                let selectedItem = document.getElementsByClassName('list-carousel')[0].getElementsByTagName('a');
-
-                selectedItem[currentItem].classList.remove('item-selected');
-                selectedItem[nextItem].classList.add('item-selected');
-                items[currentItem].style.opacity = 0;
-                items[currentItem].style.zIndex = 0;
-                items[nextItem].style.opacity = 1;
-                items[nextItem].style.zIndex = 1;
-            }
-        </script>
+        <script src="../../js/extras/help.js"></script>
     </body>
 </html>

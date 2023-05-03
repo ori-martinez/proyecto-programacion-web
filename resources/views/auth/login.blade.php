@@ -40,7 +40,7 @@
                         <a href="#">BLOG</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="#">AYUDA</a>
+                        <a href="{{ url('/ayuda') }}">AYUDA</a>
                     </li>
                     
                     @if (Route::has('login'))
@@ -133,13 +133,13 @@
         <footer>
             <!-- Social Media -->
             <div id="footer-social-media">
-                <a class="footer-social-media-icon" href="https://www.facebook.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.facebook.com/profile.php?id=100091871862034" target="_blank">
                     <span class="icon-facebook2"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://www.instagram.com/" target="_blank">
+                <a class="footer-social-media-icon" href="https://www.instagram.com/reyreysports/" target="_blank">
                     <span class="icon-instagram"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://twitter.com/?lang=es" target="_blank">
+                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports/following" target="_blank">
                     <span class="icon-twitter"></span>
                 </a>
             </div>
@@ -148,13 +148,13 @@
                 <!-- Links -->
                 <ul id="footer-links">
                     <li class="footer-link">
-                        <a href="#">Términos de Uso</a>
+                        <a href="{{ url('/terminos') }}">Términos de Uso</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Políticas de Privacidad</a>
+                        <a href="{{ url('/politicas') }}">Políticas de Privacidad</a>
                     </li>
                     <li class="footer-link">
-                        <a href="#">Contáctanos</a>
+                        <a href="{{ url('/contacto') }}">Contáctanos</a>
                     </li>
                 </ul>
 
