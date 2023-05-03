@@ -96,7 +96,7 @@
             </nav>
         </header>
         <!-- Header (End) -->
-        
+
         <!-- Body -->
         <main>
             <h1 id="title-products">Productos para Mujeres</h1>
@@ -110,12 +110,38 @@
 
                         <div class="card-content">
                             <h3>{{ $product->name }}</h3>
-                            
+
                             <a href="/productos/hombres/{{ $product->id }}" class="card-button">Detalles</a>
                         </div>
                     </div>
                 @endforeach
             </section>
+            <!-- prueba de las burbujas para el fondo
+                <div class="balones">
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+             <div class="balon"></div>
+            </div>-->
+
+            <div class="fondo">
+                <h1 id = "text">reyrey-sports--------</h1>
+            </div>
+            <script >
+                const text = document.getElementById('text');
+                text.innerHTML = text.textContent.replace (/\S/g, "<span >$&</span >");
+                const ele =document.querySelectorAll ('span');
+                for(var i =1 ; i<ele.length; i++){
+                    ele[i].style.transform ="rotate("+i*18.5+"deg)";
+                }
+            </script>
         </main>
 
         <!-- Footer (Start) -->
@@ -157,5 +183,6 @@
 
         <!-- Scripts -->
         <script src="../js/products/index.js"></script>
+        <script src="../js/products/bg.js"></script>
     </body>
 </html>

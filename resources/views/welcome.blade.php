@@ -150,6 +150,55 @@
                 </ul>
             </section>
             <!-- Carousel (End) -->
+            <br>
+
+             <!-- contenido dividido -->
+
+             <section class="cajas-pimg animated fadeInDown ">
+                 <!-- contenedor -->
+                <div class="selec-general">
+                     <!-- caja de mujeres  -->
+                    <div class="imagen-columna">
+
+                        <div class="cus-text">
+                            <h1>MUJERES</h1>
+                            <a href="{{ url('/productos/mujeres') }}" class="boton"> Comprar</a>
+                        </div>
+                        <!-- link de la imagen -->
+                        <a href="{{ url('/productos/mujeres') }}"       class="imagen-link">
+                            <div class="imagen-elemento">
+                                <img alt="imagen deportivas" class="redireccion" src="{{ url('./img/deporte1.png')}}" sizes="582px">
+                            </div>
+                            <noscript class="noscript">
+
+                            </noscript>
+                        </a>
+
+
+                    </div>
+                    <!-- Caja de hombres -->
+                    <div class="imagen-columna">
+
+                        <div class="cus-text">
+                            <h1>HOMBRES</h1>
+                            <a href="{{ url('/productos/hombres') }}" class="boton"> Comprar</a>
+                        </div>
+                        <!-- link de la imagen -->
+                        <a href="{{ url('/productos/hombres') }}" class="imagen-link">
+                            <div class="imagen-elemento">
+                                <img alt="imagen deportiva" class="redireccion" src
+                                ="{{ url('./img/deporte.png')}}" sizes="582px">
+                            </div>
+                            <noscript class="noscript">
+
+                            </noscript>
+                        </a>
+                    </div>
+                </div>
+
+
+
+             </section>
         </main>
         <!-- Body (End) -->
 

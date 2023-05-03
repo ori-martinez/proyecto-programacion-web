@@ -44,16 +44,18 @@
 }
 
 /* CARD */
-
+.card{
+    animation: movimiento 2.5s linear infinite;
+}
 .card {
-    background: var(--dark-opacity);
+    background: var(--dark);
     border-radius: 1rem;
     height: 30rem;
     overflow: hidden;
     position: relative;
     width: 20rem;
 }
-  
+
 .card::before {
     background: var(--wine);
     content: '';
@@ -64,12 +66,12 @@
     transition: 0.5s;
     width: 100%;
   }
-  
+
 .card:hover::before {
     top: -70%;
     transform: skewY(390deg);
 }
-  
+
 /* Image */
 
 .card-img {
@@ -98,7 +100,7 @@
     position: relative;
     z-index: 2;
 }
-  
+
 .card-content h3 {
     color: white;
     font-family: 'AmbraSans';
@@ -122,4 +124,186 @@
 .card-content a:hover {
     background-color: var(--golden);
     color: #FFFFFF;
+}
+
+/*balones ejemplo de prueba */
+/*tamaño y animacion de los balones */
+.balon
+ {
+    background: var(--dark);
+    opacity: var(--dark-opacity);
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: -150px;
+
+    animation: balones 3s linear infinite ;
+}
+/*configuración de cadabalon*/
+.balon:nth-child(1)
+{
+    width: 120px;
+    height: 120px;
+    left: 35%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+
+}
+.balon:nth-child(2)
+{
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+
+}
+.balon:nth-child(3)
+{
+    width: 80px;
+    height: 80px;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 8s;
+
+}
+.balon:nth-child(4)
+{
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 2s;
+    animation-delay: 7s;
+
+}
+.balon:nth-child(5)
+{
+    width: 120px;
+    height: 120px;
+    left: 90%;
+    animation-duration: 4s;
+    animation-delay: 7s;
+
+}
+.balon:nth-child(6)
+{
+    width: 20px;
+    height: 20px;
+    left: 75%;
+    animation-duration: 9s;
+    animation-delay: 9s;
+
+}
+.balon:nth-child(7)
+{
+    width: 80px;
+    height: 80px;
+    left: 82%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+
+}
+.balon:nth-child(8)
+{
+    width: 120px;
+    height: 120px;
+    left: 61%;
+    animation-duration: 7s;
+    animation-delay: 5s;
+
+}
+.balon:nth-child(9)
+{
+    width: 20px;
+    height: 20px;
+    left: 40%;
+    animation-duration: 3s;
+    animation-delay: 8s;
+
+}
+.balon:nth-child(10)
+{
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+
+}
+
+
+/*intervalos de opacidad */
+@keyframes balones
+
+{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    25%{
+        transform: translateX(-30px);
+    }
+    50%{
+        opacity: .3;
+    }
+
+    75%{
+        transform: translateX(30px);
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+
+}
+/*intervalo de movimiento*/
+@keyframes movimiento{
+
+
+0%{
+    transform: translateZ(0);
+}
+
+50%{
+    transform: translateZ(50px);
+}
+
+100%{
+    transform: translateZ(0);
+}
+}
+
+
+/* prueba numero 3 */
+.fondo{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+height: 100vh;
+display: grid;
+place-items: center;
+background: var(--dark-opacity);
+}
+#text{
+
+    font-family: 'Vanem';
+    place-items: center;
+    height: 160px;
+    font-size: 30px;
+    animation: animate 5s linear infinite;
+    color: #860038;
+
+}
+span{
+
+position: absolute;
+transform-origin: 0 80px;
+}
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
