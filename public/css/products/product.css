@@ -193,7 +193,6 @@ input {
 #commentaries-list li {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .commentaries-message, #commentaries-list li span {
