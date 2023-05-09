@@ -103,6 +103,7 @@
 
     font-size: 32px;
     line-height: 40px;
+
     margin-bottom: 24px;
 
     color: var(--dark-opacity);
@@ -170,4 +171,37 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*intento de acerca de nosotros */
+.global{
+    padding-left: 142px;
+    padding-right: 142px;
+
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+.global-coco{
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: baseline;
+}
+
+.global-cuerpo{
+
+}
+.gcuerpoA{
+    display: block;
+}
+.acuerdo-item{
+    border-bottom: 1px solid #e5e5e5;
+
+    background-color: #fff;
+
+    padding: 8px;
+    margin-bottom: 4px;
 }

@@ -108,6 +108,50 @@
                         </div>
                         <div class="espacio derch"></div>
                     </div >
+                    <!-- intento de acerca de nosotros-->
+                    <div class="content-general">
+                        <div class="global">
+                            <div class="global-coco">
+                                <h2 class="content-header">  </h2 >
+                            </div >
+
+                            <div class="global-cuerpo">
+                                <div class="gcuerpoA">
+                                    <div class="acuerdo-item">
+                                        <h3 class="">¿Quién es ReyRey sports?
+                                            <i class="">  </i >
+                                        </h3 >
+                                        <div class="">
+                                            <div class="">
+                                                <div class="">  </div >
+                                            </div >
+                                        </div >
+                                    </div >
+                                    <div class="acuerdo-item">
+                                        <h3 class="">¿Cómo funciona ReyRey sports?
+                                            <i class="">  </i >
+                                        </h3 >
+                                        <div class="">
+                                            <div class="">
+                                                <div class="">  </div >
+                                            </div >
+                                        </div >
+                                    </div >
+                                    <div class="acuerdo-item">
+                                        <h3 class="">¿Es ReyRey sports un servicio gratuito?
+                                            <i class="">  </i >
+                                        </h3 >
+                                        <div class="">
+                                            <div class="">
+                                                <div class="">  </div >
+                                            </div >
+                                        </div >
+                                    </div >
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                    <!-- Fin de el intento -->
                     <!-- intento de sección de ayuda-->
                     <div class="Contenido-principal">
                         <h2 class="content-header">Una ayuda de como iniciar sesión </h2>
@@ -144,8 +188,6 @@
                     </div >
                     <!-- fin del intento -->
                 </div >
-                <div class="">  </div >
-
             </div >
         </main>
 
