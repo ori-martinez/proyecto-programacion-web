@@ -96,10 +96,57 @@
             </nav>
         </header>
         <!-- Header (End) -->
-        
+
         <!-- Body -->
         <main>
-            <h2>Pagina de Ayuda y Preguntas Frecuentes</h2>
+            <div class="privacy-policy">
+                <div class="common-policy contenido">
+                    <div class="cont-encabezado">
+                        <div class="espacio izq"></div>
+                        <div class="centro">
+                         <div class="contenido-centro">Ayuda y preguntas frecuentes</div>
+                        </div>
+                        <div class="espacio derch"></div>
+                    </div >
+                    <!-- intento de sección de ayuda-->
+                    <div class="Contenido-principal">
+                        <h2 class="content-header">Una ayuda de como iniciar sesión </h2>
+                        <div class="content-step">
+                            <div class="content-stepU">
+                                <div class="stepHeader">
+                                    <div class="StepHeader-numb">
+                                        <div class="numb">1</div>
+                                    </div>
+                                    <div class="StepHeader-tex">registro</div>
+                                </div>
+                                <div class="undefined">Da click en el botón register y completa los datos solicitados</div>
+                            </div>
+                            <div class="content-stepU">
+                                <div class="stepHeader">
+                                    <div class="StepHeader-numb">
+                                        <div class="numb">2</div>
+                                    </div>
+                                    <div class="StepHeader-tex"> registro verificado</div>
+                                </div>
+                                <div class="undefined">Después de llenar los datos toca el register y sus datos serán validados si son correctos </div>
+                            </div>
+                            <div class="content-stepU">
+                                <div class="stepHeader">
+                                    <div class="StepHeader-numb">
+                                        <div class="numb">3</div>
+                                    </div>
+                                    <div class="StepHeader-tex">inicio de sesión</div>
+                                </div>
+                                <div class="undefined">Ya con ello se tendrá un usuario dando click al botón login y llenar los datos preveiamente validados iniciara sesión</div>
+                            </div>
+                        </div>
+                        <div class="pie-step"></div>
+                    </div >
+                    <!-- fin del intento -->
+                </div >
+                <div class="">  </div >
+
+            </div >
         </main>
 
         <!-- Footer (Start) -->

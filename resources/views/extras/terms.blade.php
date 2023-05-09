@@ -117,7 +117,7 @@
                                 <b>Fecha de entrada en vigor: 3 de mayo de 2023</b>
                             </p>
                             <p>
-                            Por favor, lea lo siguiente detenidamente. Los términos siguientes forman un contrato vinculante entre usuarios de este servicio (“usuario” o “usted”) y ReyRey sports, que rige el uso de los servicios de Rakuten. Empezaremos a prestarle los Servicios de inmediato contra su aceptación del presente Acuerdo. Usted de forma expresa certifica y pacta que no podrá retirarse de este Acuerdo de un modo distinto al especificado a continuación una vez se hayan iniciado los Servicios.
+                            Por favor, lea lo siguiente detenidamente. Los términos siguientes forman un contrato vinculante entre usuarios de este servicio (“usuario” o “usted”) y ReyRey sports, que rige el uso de los servicios de ReyRey sports. Empezaremos a prestarle los Servicios de inmediato contra su aceptación del presente Acuerdo. Usted de forma expresa certifica y pacta que no podrá retirarse de este Acuerdo de un modo distinto al especificado a continuación una vez se hayan iniciado los Servicios.
                             </p>
                         </div>
                         <div >
