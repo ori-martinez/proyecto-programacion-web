@@ -112,38 +112,38 @@
                     <div class="content-general">
                         <div class="global">
                             <div class="global-coco">
-                                <h2 class="content-header">  </h2 >
+                                <h2 class="content-header">Acerca de ReyRey sports  </h2 >
                             </div >
 
                             <div class="global-cuerpo">
                                 <div class="gcuerpoA">
                                     <div class="acuerdo-item">
-                                        <h3 class="">¿Quién es ReyRey sports?
-                                            <i class="">  </i >
+                                        <h3 class="acuerdo-coco">¿Quién es ReyRey sports? <img src="../img/suma.svg" alt="abrir respuesta" >
+                                            <i class="menu-icon">  </i >
                                         </h3 >
-                                        <div class="">
-                                            <div class="">
-                                                <div class="">  </div >
+                                        <div class="acuerdo-cuerpo">
+                                            <div class="cuerpo-item">
+                                                <div class=""> ReyRey sports es una empresa Venezolana con sede en La Guaira y ofrece una amplia gama de servicios en muchas áreas diferentes. ReyRey sports es una plataforma , que te permite comprar online una gama de artículos deportivos. </div >
                                             </div >
                                         </div >
                                     </div >
                                     <div class="acuerdo-item">
-                                        <h3 class="">¿Cómo funciona ReyRey sports?
-                                            <i class="">  </i >
+                                        <h3 class="acuerdo-coco" >¿Cómo funciona ReyRey sports? <img src="../img/suma.svg" alt="abrir respuesta" >
+                                            <i class="menu-icon">  </i >
                                         </h3 >
-                                        <div class="">
-                                            <div class="">
-                                                <div class="">  </div >
+                                        <div class="acuerdo-cuerpo">
+                                            <div class="cuerpo-item">
+                                                <div class=""> Por cada compra que realices a través de Rakuten.es en una de nuestras tiendas asociadas, recibimos una comisión de la tienda. Te pasamos parte de la comisión en forma de cashback - ¡así es como recuperas el dinero de tus compras con Rakuten! </div >
                                             </div >
                                         </div >
                                     </div >
                                     <div class="acuerdo-item">
-                                        <h3 class="">¿Es ReyRey sports un servicio gratuito?
-                                            <i class="">  </i >
+                                        <h3 class="acuerdo-coco">¿Es ReyRey sports un servicio gratuito? <img src="../img/suma.svg" alt="abrir respuesta" >
+                                            <i class="menu-icon">  </i >
                                         </h3 >
-                                        <div class="">
-                                            <div class="">
-                                                <div class="">  </div >
+                                        <div class="acuerdo-cuerpo">
+                                            <div class="cuerpo-item">
+                                                <div class=""> Sí, ReyRey es un servicio completamente gratuito. </div >
                                             </div >
                                         </div >
                                     </div >

@@ -205,3 +205,42 @@ h2 {
     padding: 8px;
     margin-bottom: 4px;
 }
+.acuerdo-coco{
+
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.gcuerpoA .acuerdo-item .acuerdo-coco{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'AmbraSans';
+}
+.acuerdo-coco img{
+ width: 14px;
+}
+h3{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ .menu-icon{
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+
+    position: relative;
+    display: block;
+ }
+i{
+    font-style: italic;
+}
+.acuerdo-cuerpo{
+    display: none;
+}
+.cuerpo-item{
+
+}
