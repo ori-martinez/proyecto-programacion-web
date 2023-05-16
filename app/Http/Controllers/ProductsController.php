@@ -36,7 +36,6 @@ class ProductsController extends Controller
     /**
      * Show the view for a given product.
      */
-
     public function show(string $id)
     {
         $commentaries = Commentary::orderBy('commentaries.id', 'desc')

@@ -31,6 +31,7 @@ Route::get('/ayuda', [ViewsController::class, 'indexHelp'])->name('extras.help')
 Route::get('/terminos', [ViewsController::class, 'indexTerms'])->name('extras.terms');
 Route::get('/politicas', [ViewsController::class, 'indexPolicies'])->name('extras.policies');
 Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');
+Route::get('/blog', [ViewsController::class, 'indexBlog'])->name('blog.blog');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -37,4 +37,12 @@ class ViewsController extends Controller
     {
         return view('extras.contact');
     }
+
+    /**
+     * Show the view with the blog
+     */
+    public function indexBlog()
+    {
+        return view('blog.blog');
+    }
 }

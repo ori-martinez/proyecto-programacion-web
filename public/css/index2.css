@@ -67,60 +67,52 @@ header {
 
 /* Navbar */
 
-#navbar {
+nav, #navbar {
     align-items: center;
     display: flex;
-    flex-direction: column;
+}
+
+nav {
     justify-content: center;
-    padding: 0 0 1rem;
+    margin: .4rem 0;
     width: 100%;
 }
 
-.navbar-links, #user-menu {
-    list-style: none;
-}
-
-/* Toggle Button */
-
-.navbar-toggle {
-    display: block;
-    padding: .5rem 1rem;
+#navbar {
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0 2rem;
     width: 100%;
 }
 
-.toggle-button {
-    background: transparent;
-    border: none;
+#navbar li a {
+    color: #FFFFFF;
+    transition: all .5s ease-out;
 }
 
-.toggle-button img {
-    cursor: pointer;
+#navbar li a:hover {
+    color: var(--golden);
 }
 
 /* Logo */
 
-#navbar-logo a img {
-    height: 3rem;
-    width: 12.6rem;
-    margin-bottom: .6rem;
+#navbar-logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+#navbar-logo  img {
+    height: 3.5rem;
+    width: 14.7rem;
 }
 
 /* Links */
 
 .navbar-link {
     font-family: 'AmbraSans';
-    text-align: center;
-    padding: .4rem 0;
-}
-
-.navbar-link a {
-    color: #FFFFFF;
-    font-size: 1.25rem;
-    transition: all .5s ease-out;
-}
-
-.navbar-link a:hover {
-    color: var(--golden);
+    padding: 0 .8rem;
 }
 
 /* Actions Buttons */
@@ -128,17 +120,17 @@ header {
 #navbar-buttons {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
-    width: 100%;
+    margin-left: 10%;
+    padding: .6rem .8rem;
 }
 
 .navbar-button-icon {
     background-color: #000000;
-    border: transparent;
-    border-radius: 20%;  
+    border: none;  
     cursor: pointer;
-    margin: .4rem 0 0;
+    margin: 0 .4rem;
     padding: .6rem;
     transition: all .5s ease-out;
 }
@@ -153,7 +145,7 @@ header {
     color: #FFFFFF;
     font-size: 1.3rem;
 }
-
+ 
 a .navbar-button {
     background: transparent;
     border: solid .165rem var(--golden);
@@ -173,61 +165,11 @@ a .navbar-button:hover {
     color: #000000;
 }
 
-/* Searcher & User Menu */
+/* Toggle Menu */
 
-#navbar-searcher, #navbar-user-menu {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
-
-#searcher-input, #user-menu {
-    background: #000000;
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-}
-
-#searcher-input input {
-    border: solid .2rem var(--wine);
-    border-radius: 2rem;
-    font-family: Arial;
-    font-size: 1rem;
-    outline: none;
-    padding: .4rem .8rem;
-    width: 16rem;
-}
-
-.user-menu-name, .user-menu-link {
-    padding: .25rem;
-}
-
-.user-menu-name {
-    color: var(--wine);
-    font-family: 'AmbraSans';
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.user-menu-link a {
-    color: #FFFFFF;
-    font-family: 'AmbraSans';
-    font-size: 1.2rem;   
-    transition: all 300ms;
-}
-
-.user-menu-link a:hover {
-    color: var(--golden);
-}
-
-#navbar-form {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: .8rem;
+.navbar-toggle {
+    cursor: pointer;
+    display: none;
 }
 
 /* BODY */
@@ -328,6 +270,76 @@ footer {
 
     header {
         padding: .2rem;
+    }
+
+    /* Navbar */
+
+    #navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 .4rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    #navbar li a {
+        display: block;
+        padding: .4rem;
+    }
+
+    /* Logo */
+
+    #navbar-logo {
+        margin: 0;
+    }
+
+    #navbar-logo img {
+        height: 2.5rem;
+        width: 10.5rem;
+    }
+
+    /* Links */
+
+    .navbar-link {
+        display: none;
+        order: 4;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .active .navbar-link {
+        display: block;
+    }
+
+    /* Actions Buttons */
+
+    #navbar-buttons {
+        display: none;
+        margin: 1rem 0 0;
+        order: 3;
+        width: 100%;
+    }
+
+    .active #navbar-buttons {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .navbar-button-icon {
+        margin: 0;
+    }
+
+    .navbar-button-icon span {
+        font-size: 1.2rem;
+    }
+
+    /* Toggle Menu */
+
+    .navbar-toggle {
+        display: flex;
+        order: 2;
+        text-align: right;
     }
 
     /* FOOTER */
