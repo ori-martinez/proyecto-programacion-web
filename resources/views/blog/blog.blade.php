@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="./img/Favicon.ico" />
-        <link rel="stylesheet" href="./css/index.css" />
-        <link rel="stylesheet" href="./css/blog/blog.css">
-        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" type="image/ico" href="../img/favicon.ico" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/blog/blog.css">
+        <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
     </head>
@@ -19,16 +19,16 @@
             <span class="navbar-toggle">
                 <!-- Toggle Button -->
                 <button class="toggle-button">
-                    <img src="./img/menu-icon.svg" alt="Menú">
+                    <img src="../img/menu-icon.svg" alt="Menú">
                 </button>
             </span>
 
             <!-- Navbar -->
-            <nav id="navbar">
+            <nav class="navbar">
                 <!-- Logo -->
                 <div id="navbar-logo">
                     <a href="/">
-                        <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                        <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                     </a>
                 </div>
 
@@ -121,7 +121,33 @@
 
         <!-- Body (Start) -->
         <main>
+            <section class="blog-articles">
+                <img src="" alt="">
 
+                <article>
+                    <h2 class="article-title">BIENVENIDOS AMANTES DEL DEPORTES</h2>
+
+                    <p></p>
+                </article>
+            </section>
+            <section class="blog-articles color">
+                <img src="" alt="">
+
+                <article>
+                    <h2 class="article-title">CONSEJOS DE HIDRATACIÓN</h2>
+
+                    <p></p>
+                </article>
+            </section>
+            <section class="blog-articles">
+                <img src="" alt="">
+
+                <article>
+                    <h2 class="article-title">TOP 3 DE TENDENCIAS DEPORTIVAS</h2>
+
+                    <p></p>
+                </article>
+            </section>
         </main>
         <!-- Body (End) -->
 
@@ -158,11 +184,11 @@
             </div>
 
             <!-- Logo -->
-            <img id="footer-logo" src="./img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+            <img id="footer-logo" src="../img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
         </footer>
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="./js/blog/index.js"></script>
+        <script src="../js/blog/index.js"></script>
     </body>
 </html>

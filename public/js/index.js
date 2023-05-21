@@ -1,19 +1,26 @@
 const d = document;
 
-/* Responsive Navbar */
+// FUNCTIONS
+/* Active Menu */
+const activeMenu = (menu) => menu.classList.toggle('active');
 
-const toggle = d.querySelector('.navbar-toggle');
-const navbar = d.querySelector('#navbar');
+/* Toggle Navbar */
 
-const toggleNavbar = () => {
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        toggle.innerHTML = '<img id="open" src="./img/menu-open-icon.svg" alt="Menú">';
-    }
-    else {
-        navbar.classList.add('active');
-        toggle.innerHTML = '<img id="close" src="./img/menu-close-icon.svg" alt="Menú">';
-    }
-}
+const toggleButton = d.querySelector('.toggle-button');
+const navbar = d.querySelector('.navbar');
 
-toggle.addEventListener('click', toggleNavbar, false);
+toggleButton.addEventListener('click', () => activeMenu(navbar), false);
+
+/* Toggle User Menu */
+
+const userButton = d.querySelector('#user-menu-button');
+const userMenu = d.querySelector('#user-menu');
+
+if (userButton) userButton.addEventListener('click', () => activeMenu(userMenu), false);
+
+/* Toggle Searcher Input */
+
+const searcherButton = d.querySelector('#searcher-button');
+const searcherInput = d.querySelector('#searcher-input');
+
+searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);

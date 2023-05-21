@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="./img/Favicon.ico" />
+        <link rel="icon" type="image/ico" href="./img/favicon.ico" />
         <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/profile/edit.css">
         <link rel="stylesheet" href="./css/styles.css" />
@@ -16,69 +16,87 @@
     <body>
         <!-- Header (Start) -->
         <header>
+            <span class="navbar-toggle">
+                <!-- Toggle Button -->
+                <button class="toggle-button">
+                    <img src="./img/menu-icon.svg" alt="Menú">
+                </button>
+            </span>
+
             <!-- Navbar -->
-            <nav>
-                <ul id="navbar">
-                    <!-- Logo -->
-                    <li id="navbar-logo">
-                        <a href="/">
-                            <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
-                        </a>
-                    </li>
+            <nav class="navbar">
+                <!-- Logo -->
+                <div id="navbar-logo">
+                    <a href="/">
+                        <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                    </a>
+                </div>
+                <div id="navbar-space"></div>
 
-                    <!-- Links -->
-                    <li class="navbar-link"></li>
-                    <li class="navbar-link"></li>
-                    <li class="navbar-link"></li>
-                    <li class="navbar-link"></li>
-                    <li class="navbar-link"></li>
+                @if (Route::has('login'))
+                    <!-- Actions Buttons -->
+                    <div id="navbar-buttons">
+                        <!-- Searcher -->
+                        <div id="navbar-searcher">
+                            <button id="searcher-button" class="navbar-button-icon">
+                                <span class="icon-search"></span>
+                            </button>
 
-                    @if (Route::has('login'))
-                        <!-- Actions Buttons -->
-                        <li id="navbar-buttons">
-                            @auth
-                                <a href="{{ url('/dashboard') }}">
-                                    <button class="navbar-button-icon">
-                                        @if (Auth::user()->rol_id === 1)
-                                            <span class="icon-dashboard"></span>
-                                        @else
-                                            <span class="icon-shopping-cart"></span>
-                                        @endif
-                                    </button>
+                            <div id="searcher-input">
+                                <input type="text" name="searcher">
+                            </div>
+                        </div>
+                        
+                        @auth
+                            <!-- Dashboard -->
+                            <a href="{{ url('/dashboard') }}">
+                                <button class="navbar-button-icon">
+                                    @if (Auth::user()->rol_id === 1)
+                                        <span class="icon-dashboard"></span>
+                                    @else
+                                        <span class="icon-shopping-cart"></span>
+                                    @endif
+                                </button>
+                            </a>
+
+                            <!-- User Menu -->
+                            <div id="navbar-user-menu">
+                                <button id="user-menu-button" class="navbar-button-icon">
+                                    <span class="icon-user"></span>
+                                </button>
+
+                                <ul id="user-menu">
+                                    <li class="user-menu-name">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</li>
+                                    
+                                    <li class="user-menu-link">
+                                        <a href="{{ url('/profile') }}">Editar Perfil</a>
+                                    </li>
+                                    <li class="user-menu-link">
+                                        <form id="navbar-form" method="POST" action="{{ route('logout') }}">
+                                            @csrf
+
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
+                                                <button class="navbar-button">Logout</button>
+                                            </a>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        @else
+                            <!-- Login -->
+                            <a href="{{ route('login') }}" class="navbar-button">
+                                <button class="navbar-button">Login</button>
+                            </a>
+
+                            @if (Route::has('register'))
+                                <!-- Register -->
+                                <a href="{{ route('register') }}">
+                                    <button class="navbar-button">Register</button>
                                 </a>
-
-                                <a href="{{ url('/profile') }}">
-                                    <button class="navbar-button-icon">
-                                        <span class="icon-user"></span>
-                                    </button>
-                                </a>
-
-                                <form id="navbar-form" method="POST" action="{{ route('logout') }}">
-                                    @csrf
-
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.querySelector('#navbar-form').submit();">
-                                        <button class="navbar-button">Logout</button>
-                                    </a>
-                                </form>
-                            @else
-                                <a href="{{ route('login') }}" class="navbar-button">
-                                    <button class="navbar-button">Login</button>
-                                </a>
-
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">
-                                        <button class="navbar-button">Register</button>
-                                    </a>
-                                @endif
-                            @endauth
-                        </li>
-                    @endif
-
-                    <!-- Toggle Menu -->
-                    <li class="navbar-toggle">
-                        <img id="open" src="./img/menu-open-icon.svg" alt="Menú">
-                    </li>
-                </ul>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </nav>
         </header>
         <!-- Header (End) -->
