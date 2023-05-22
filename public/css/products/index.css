@@ -24,7 +24,7 @@
     font-style: normal;
 }
 
-/* GENERALES */
+/* GENERALS */
 
 #title-products {
     color: var(--dark);
@@ -122,4 +122,40 @@
 .card-content a:hover {
     background-color: var(--golden);
     color: #FFFFFF;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* GENERALS */
+
+    #title-products {
+        font-size: 1.8rem;
+    }
+        
+    #grid-cards {
+        gap: 1.2rem 0;
+        grid-template-columns: 100%;
+        margin: 1rem;
+    }
+
+    /* CARD */
+
+    .card {
+        height: 27.4rem;
+        width: 16.8rem;
+    }
+
+    /* Image */
+
+    .card-img img {
+        height: 16.8rem;
+        width: auto;
+    }
+
+    /* Content */
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
 }

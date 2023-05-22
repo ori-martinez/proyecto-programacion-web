@@ -60,7 +60,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
 }
 
 /* Navbar */
@@ -325,7 +325,6 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
-
 
 @media all and (min-width: 1024px) {
     /* HEADER */
