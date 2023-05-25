@@ -88,7 +88,7 @@
     text-transform: uppercase;
     color: var(--wine);
 }
-/*estilos de intento de la primera sección de ayuda*/
+/*estilos de intento  sesión de ayuda*/
 .Contenido-principal{
 
     text-align: center;
@@ -236,7 +236,7 @@ h3{
     display: block;
  }
 i{
-    font-style: italic;
+    font-style: 'AmbraSans' ,italic;
 }
 .acuerdo-cuerpo{
     display: none;

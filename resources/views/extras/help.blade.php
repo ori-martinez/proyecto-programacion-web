@@ -64,7 +64,7 @@
                                 <input type="text" name="searcher">
                             </div>
                         </div>
-                        
+
                         @auth
                             <!-- Dashboard -->
                             <a href="{{ url('/dashboard') }}">
@@ -85,7 +85,7 @@
 
                                 <ul id="user-menu">
                                     <li class="user-menu-name">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</li>
-                                    
+
                                     <li class="user-menu-link">
                                         <a href="{{ url('/profile') }}">Editar Perfil</a>
                                     </li>
@@ -209,6 +209,9 @@
                         <div class="pie-step"></div>
                     </div >
                     <!-- fin del intento -->
+                    <!--  intento de adaptación-->
+
+                    <!-- fin del intento de adaptación -->
                 </div >
             </div >
         </main>
