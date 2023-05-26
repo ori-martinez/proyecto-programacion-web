@@ -64,7 +64,7 @@
                                 <input type="text" name="searcher">
                             </div>
                         </div>
-                        
+
                         @auth
                             <!-- Dashboard -->
                             <a href="{{ url('/dashboard') }}">
@@ -85,7 +85,7 @@
 
                                 <ul id="user-menu">
                                     <li class="user-menu-name">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</li>
-                                    
+
                                     <li class="user-menu-link">
                                         <a href="{{ url('/profile') }}">Editar Perfil</a>
                                     </li>
@@ -118,9 +118,34 @@
             </nav>
         </header>
         <!-- Header (End) -->
-        
+
         <!-- Body -->
         <main>
+            <div id="" class="content-wrapper">
+                <div id="" class="content">
+                    <div id="" class="sesions">
+                        <div id="" class="sesion page-sesion">
+                            <div id="" class="col sesion-1">
+                                <div id="" class="u-1 bloque bloque-texto">
+                                    <div id="" class="bloque-texto-content">
+                                        <div id="" class="u-1-texto"></div>
+                                    </div>
+                                </div>
+                                <div id="" class="u-2 bloque bloque-separador"></div>
+                                <div id="" class="u-3 bloque bloque-texto"></div>
+                            </div>
+                            <div id="" class="col sesion-2">
+                                <div id="" class="bloque bloque-space">
+                                    <div id="" class="bloque-space-content">kdlsladjkl</div>
+                            </div>
+                            </div>
+                            <div id="" class="col sesion-3">
+                                <div id="" class="bloque bloque-formulario"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h2>Pagina de Contacto</h2>
         </main>
 

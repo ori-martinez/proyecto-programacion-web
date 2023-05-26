@@ -1,0 +1,122 @@
+/* COLORS */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+/*definir el espacio en el contenedor general y el contenedor*/
+.content-wrapper{
+    padding-top: 6.6vmax;
+    padding-bottom: 6.6vmax;
+
+    justify-content: center;
+
+    padding-right: 4vw;
+    padding-left: 4vw;
+    margin: 0 auto;
+    box-sizing: content-box;
+
+    display: flex;
+
+    width: 100%;
+    position: relative;
+
+    max-width: 1500px;
+}
+.content{
+    width: 100%;
+}
+/*definir el espacio de las secciones de contenido */
+.page-sesion{
+
+    margin-left: -17px;
+    margin-right: -17px;
+
+    width: auto !important;
+}
+.sesion-1{
+    width: 41.6667%;
+
+    float: left;
+}
+.u-1{
+    padding-top: 0;
+}
+.u-2{
+    clear: both;
+}
+.u-3{
+    padding-bottom: 17px;
+}
+.bloque{
+    padding-left: 17px;
+    padding-right: 17px;
+
+    position: relative;
+    height: auto;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+.bloque-texto{
+    clear: none;
+}
+.bloque-texto-content{
+    outline: none;
+}
+.u-1-texto{
+    margin-bottom: 0;
+
+    margin-top: 0;
+
+    word-wrap: break-word;
+}
+.sesion-2{
+    width: 8.3333%;
+
+    float: left;
+}
+.bloque-space{
+    padding-top: 0;
+
+    clear: both;
+
+    padding-bottom: 0;
+}
+.bloque-space-content{
+    overflow: hidden;
+    height: 34px;
+    visibility: hidden;
+}
+.sesion-3{
+    padding-right: 0;
+
+    width: 50%;
+
+    float: left;
+}
+.bloque-formulario{
+    padding-top: 0;
+
+    clear: both;
+
+    padding-bottom: 0;
+}
