@@ -128,11 +128,26 @@
                             <div id="" class="col sesion-1">
                                 <div id="" class="u-1 bloque bloque-texto">
                                     <div id="" class="bloque-texto-content">
-                                        <div id="" class="u-1-texto"></div>
+                                        <div id="" class="u-1-texto">
+                                        <h1>CONTACTO</h1>
+                                        <p>Puede encontrar nuestro número de centralita a continuación. Desplácese hacia abajo para ponerse en contacto con el equipo responsable para preguntas más específicas.</p>
+                                        <ul></ul>
+                                        <p>¡Esperamos conectarnos!</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div id="" class="u-2 bloque bloque-separador"></div>
-                                <div id="" class="u-3 bloque bloque-texto"></div>
+                                <div id="" class="u-2 bloque bloque-separador">
+                                    <div class="separador-u2">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div id="" class="u-3 bloque bloque-texto">
+                                    <div class="separador-u3">
+                                        <div class="datos-u3">
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div id="" class="col sesion-2">
                                 <div id="" class="bloque bloque-space">
