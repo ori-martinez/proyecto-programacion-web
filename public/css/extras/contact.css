@@ -150,3 +150,131 @@
 
     padding-bottom: 0;
 }
+form {
+    display: block;
+    margin-top: 0em;
+}
+/*estilos del boton*/
+.form-contents .boton-form{
+
+    text-align: left;
+}
+.sistema-boton{
+
+    line-height: normal;
+    border-style: solid;
+
+    border-width: 2px;
+
+    padding: 1.2em 2.004em;
+
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: .02em;
+    font-size: 1rem;
+
+    background: transparent;
+
+    color: var(--dark);
+    border-color: var(--dark);
+
+    -moz-transition: 0.1s background-color linear, 0.1s color linear;
+    -o-transition: 0.1s background-color linear, 0.1s color linear;
+    transition: 0.1s background-color linear, 0.1s color linear;
+
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+    text-align: center;
+    cursor: pointer;
+
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+
+    text-decoration: none;
+
+    border-radius: 0;
+
+    margin: 0;
+
+    user-select: none;
+    white-space: pre;
+
+    box-sizing: border-box;
+
+    border-image: initial;
+}
+
+input{
+    writing-mode: horizontal-tb !important;
+
+
+    text-rendering: auto;
+
+    word-spacing: normal;
+
+    text-indent: 0px;
+    text-shadow: none;
+
+    -webkit-rtl-ordering: logical;
+}
+ /*estilos del formulario */
+ .field-list{
+    line-height: normal;
+ }
+.fields{
+    margin: 0;
+
+    column-gap: 10px;
+    display: flex;
+    flex-direction: row;
+
+    line-height: normal;
+}
+.content-form .field-list legend {
+
+    padding: 0;
+    border: 0;
+
+    padding-bottom: 4px;
+}
+.titulo{
+    color: var(--dark);
+
+    font-size: calc((1 - 1) * 1.2vw + 1rem) !important;
+
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
+
+    display: block;
+}
+
+fieldset{
+
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+}
+legend{
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+
+}
+.ZZZ{
+    align-items: center;
+    column-gap: 1ex;
+    display: flex;
+    flex-wrap: wrap;
+}

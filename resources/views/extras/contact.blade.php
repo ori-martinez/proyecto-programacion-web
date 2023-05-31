@@ -121,7 +121,7 @@
 
         <!-- Body -->
         <main>
-            <div id="" class="content-wrapper">
+        <div id="" class="content-wrapper">
                 <div id="" class="content">
                     <div id="" class="sesions">
                         <div id="" class="sesion page-sesion">
@@ -131,7 +131,11 @@
                                         <div id="" class="u-1-texto">
                                         <h1>CONTACTO</h1>
                                         <p>Puede encontrar nuestro número de centralita a continuación. Desplácese hacia abajo para ponerse en contacto con el equipo responsable para preguntas más específicas.</p>
-                                        <ul></ul>
+                                        <ul>
+                                            <li> <p>Nuestro equipo de atención al cliente está haciendo lo mejor que puede para ayudarlo.</p></li>
+                                            <li> <p>Le pedimos que espere de 7 a 10 días después de haber enviado su pregunta para recibir una respuesta</p></li>
+                                            <li> <p>Ponte en contacto con nuestro dedicado equipo de atención al cliente social en nuestras redes sociales </p></li>
+                                        </ul>
                                         <p>¡Esperamos conectarnos!</p>
                                         </div>
                                     </div>
@@ -144,7 +148,16 @@
                                 <div id="" class="u-3 bloque bloque-texto">
                                     <div class="separador-u3">
                                         <div class="datos-u3">
-                                            <p> </p>
+                                            <p>
+                                                Envíenos un correo electrónico a
+                                                <strong _istranslate="1">reyrey.sports.web@gmail.com
+                                                <br _istranslate="1">
+                                                </strong>
+                                                 O llámenos al
+                                                 <strong _istranslate="1">+58 (414) 260-3391
+                                                <br _istranslate="1">
+                                                </strong>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,13 +168,95 @@
                             </div>
                             </div>
                             <div id="" class="col sesion-3">
-                                <div id="" class="bloque bloque-formulario"></div>
+                                <div id="" class="bloque bloque-formulario">
+                                    <div>
+                                        <div>
+                                            <div class="content-content">
+                                            </div>
+                                            <div class="content-form">
+                                                <form class="form-contents">
+                                                    <div class="field-list">
+                                                        <fieldset class="item-form fields ">
+                                                            <legend class="titulo">
+                                                                <div class="ZZZ">
+                                                                    <span>Nombre</span>
+                                                                    <span class="descripcion">(requerido)</span>
+                                                                </div>
+                                                            </legend>
+                                                            <div class="field name">
+                                                                <label class="caption divisor">
+                                                                    <div class="title-sub">
+                                                                        <div class="sub">
+                                                                            <span class="caption-text">Nombre</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="nombre" aria-invalid="false" aria-required="true" autocomplete="given-name">
+                                                                </label>
+                                                            </div>
+                                                            <div class="field apellido">
+                                                                <label class="caption divisor">
+                                                                    <div class="title-sub">
+                                                                        <div class="sub">
+                                                                            <span class="caption-text">Apellido</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="text" class="nombre" aria-invalid="false" aria-required="true" autocomplete="family-name">
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="item-form field emails">
+                                                            <label class="title direcciones" aria-label="Correo electrónico">
+                                                                <div class="sub-direccion">
+                                                                    <div class="direccion">
+                                                                        <span>Correo electrónico</span>
+                                                                        <span class="descripcion">(requerido)</span>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <input type="email" class="nombre" aria-invalid="false" aria-label="Correo electrónico" aria-required="true" autocomplete="false">
+                                                        </div>
+                                                        <div class="item-form field textareas">
+                                                            <label class="title direcciones" aria-label="Área de texto">
+                                                                <div class="sub-direccion">
+                                                                    <div class="direccion">
+                                                                        <span>Motivo de contacto</span>
+                                                                        <span class="descripcion">(requerido)</span>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                            <textarea aria-invalid="false" classP="mensaje" placeholder></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-boton boton-form">
+                                                        <input type="submit" class="boton sistema-boton" value="enviar">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <h2>Pagina de Contacto</h2>
+            <!-- completado de reedirección hacia ayuda -->
+            <div class="contenido-principal principal">
+                <div class="divisores-principales principales">
+                    <div class="contenedor-exterior exterior">
+                        <div class="contenedor-interior interior">
+                            <img src="" alt="" />
+                            <div class="interior-contenido contedino">
+                                <h2 class="texto-contenido indicador">SERVICIO AL CLIENTE</h2>
+                                <h2 class="texto-contenido definicion">Tiene preguntas sobre nuestros servicios? Nuestra línea directa al cliente puede ayudar.</h2>
+                                <a class="enlace" href="#"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer (Start) -->
