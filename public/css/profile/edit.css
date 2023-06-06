@@ -184,7 +184,7 @@ input {
     align-content: center;
     display: flex;
     justify-content: flex-end;
-    margin-top: -1rem;
+    margin-top: -.6rem;
 }
 
 /* Texts */
@@ -262,7 +262,7 @@ input {
 @media all and (max-width: 1024px) {
     /* GENERAL */
 
-    #update-profile, #update-password {
+    #update-profile, #update-password, #delete-profile {
         margin: 3rem 0 1.6rem;
         padding: 1rem;
     }
@@ -280,5 +280,24 @@ input {
     /* UPDATE INFO PROFILE  */
     #div-update-profile-form {
         grid-template-columns: 100%;
+    }
+
+    /* DELETE PROFILE */
+
+    #delete-modal {
+        padding-top: 10rem;
+    }
+
+    #content-delete-modal {
+        width: 100%;
+    }
+
+    #cancel-modal, .delete-profile-button {
+        margin-top: 1rem;
+    }
+
+    #modal-buttons {
+        justify-content: center;
+        margin-top: .4rem;
     }
 }

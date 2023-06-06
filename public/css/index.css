@@ -199,7 +199,11 @@ a .navbar-button:hover {
     overflow: visible;
 }
 
-#searcher-input input {
+#search-form {
+    position: relative;
+}
+
+#search-form input {
     border: solid .2rem var(--wine);
     border-radius: 2rem;
     font-family: Arial;
@@ -207,6 +211,19 @@ a .navbar-button:hover {
     outline: none;
     padding: .4rem .8rem;
     width: 16rem;
+}
+
+#search-form button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+}
+
+#search-form button span {
+    font-size: 1.1rem;
 }
 
 .user-menu-name, .user-menu-link {

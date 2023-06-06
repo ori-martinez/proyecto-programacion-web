@@ -25,6 +25,8 @@ Route::get('/productos/hombres', [ProductsController::class, 'indexMen'])->name(
 Route::get('/productos/mujeres', [ProductsController::class, 'indexWomen'])->name('products.women');
 Route::get('/productos/articulos', [ProductsController::class, 'indexArticles'])->name('products.articles');
 Route::get('/productos/{id}', [ProductsController::class, 'show'])->name('products.product');
+Route::get('/productos', [ProductsController::class, 'search'])->name('products.search');
+Route::post('/productos', [ProductsController::class, 'search'])->name('products.search');
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
 
 Route::get('/ayuda', [ViewsController::class, 'indexHelp'])->name('extras.help');

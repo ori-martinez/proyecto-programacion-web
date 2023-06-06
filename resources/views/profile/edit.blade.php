@@ -43,7 +43,20 @@
                             </button>
 
                             <div id="searcher-input">
-                                <input type="text" name="searcher">
+                                <!-- Error Message -->
+                                <div id="div-error-search"></div>
+
+                                <form id="search-form" method="POST" action="{{ route('products.search') }}">
+                                    @csrf
+
+                                    <input type="text" name="search">
+                                    
+                                    <a href="{{ route('products.search') }}" onclick="event.preventDefault(); document.querySelector('#search-form').submit();">
+                                        <button>
+                                            <span class="icon-search"></span>
+                                        </button>
+                                    </a>
+                                </form>
                             </div>
                         </div>
                         
@@ -209,7 +222,7 @@
             </section>
 
             <!-- Delete Profile -->
-            <section  id="delete-profile">
+            <section id="delete-profile">
                 <div class="header-section">
                     <h2>ELIMINACIÓN DEL PERFIL</h2>
 
