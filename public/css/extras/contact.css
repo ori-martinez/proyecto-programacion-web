@@ -247,7 +247,7 @@ input{
 
     font-size: calc((1 - 1) * 1.2vw + 1rem) !important;
 
-    font-family: Poppins;
+    font-family: 'AmbraSans';
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0em;
@@ -256,16 +256,17 @@ input{
 
     display: block;
 }
-
 fieldset{
 
     margin-inline-start: 2px;
     margin-inline-end: 2px;
     padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;
+    /*padding-inline-start: 0.75em;*/
     padding-inline-end: 0.75em;
     padding-block-end: 0.625em;
     min-inline-size: min-content;
+
+    border-color: transparent;
 }
 legend{
     padding-inline-start: 2px;
@@ -277,4 +278,297 @@ legend{
     column-gap: 1ex;
     display: flex;
     flex-wrap: wrap;
+}
+.content-form .fields .titulo{
+
+
+
+    font-family: 'AmbraSans';
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
+}
+.descripcion{
+
+
+    line-height: 1em;
+    padding: 0;
+
+    margin: 0;
+
+    color: var(--dark-opacity);
+
+    font-size: calc((.9 - 1) * 1.2vw + 1rem) !important;
+
+    font-family: 'AmbraSans';
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+}
+.field{
+    width: 50%;
+
+    float: unset;
+
+    margin: 0 0 18px;
+
+    position: relative;
+}
+.caption{
+
+    color: var(--dark);
+
+    font-size: calc((.9 - 1) * 1.2vw + 1rem) !important;
+
+    font-family: 'AmbraSans';
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
+
+}
+.divisor{
+    height: 100%;
+}
+label {
+    cursor: default;
+}
+/*.title-sub{
+    display: inline-block;
+}*/
+.sub{
+    align-items: center;
+    column-gap: 1ex;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nombre{
+    background-color: #fafafa;
+    border: 1px solid #a9a9a9;
+    box-sizing: border-box;
+    color: #000;
+    height: 46px;
+    padding: 10px;
+    position: relative;
+    width: 85%;
+}
+input{
+
+    text-rendering: auto;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+}
+/*estilos del input email*/
+.sub-direccion{
+    display: inline-block;
+}.direccion{
+    align-items: center;
+    column-gap: 1ex;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*estilo del bloque de sms*/
+textarea{
+    width: 100%;
+    min-height: 5rem;
+    resize: vertical;
+
+    overflow: auto;
+    vertical-align: top;
+
+    text-rendering: auto;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+
+    cursor: text;
+    white-space-collapse: preserve;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+
+    column-count: initial !important;
+}
+.mensaje{
+
+    background-color: #fafafa;
+    border: 1px solid #a9a9a9;
+    box-sizing: border-box;
+    color: #000;
+    height: 46px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+/*estilos de la parte de abajo */
+.contenido-principal{
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    width: 100%;
+}
+.principal{
+    margin-top: 4rem;
+}
+.divisores-principales{
+
+    grid-template-columns: repeat(12,minmax(0,1fr));
+
+    grid-row-gap: .875rem;
+    row-gap: .875rem;
+
+    grid-column-gap: .875rem;
+
+    column-gap: .875rem;
+}
+.principales{
+    display: grid;
+}
+.contenedor-exterior{
+    -ms-grid-column-span: 12;
+    grid-column: span 12/span 12;
+
+}
+.contenedor-interior{
+    width: 100%;
+
+    position: relative;
+    --tw-bg-opacity: 1;
+    background-color: rgba(235,237,238,var(--dark-opacity));
+}
+.object-cover{
+
+    font-family: "object-fit: cover;";
+
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+
+    width: 100%;
+
+    position: relative;
+
+    object-fit: cover;
+
+    height: 15rem;
+}
+img{
+
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.interior-contenido{
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+.contedino{
+    max-width: 48rem;
+
+    margin-bottom: 30px;
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+@media (min-width: 960px)
+ {
+}
+.texto-contenido{
+    --tw-text-opacity: 1;
+    color: rgba(0,0,0,var(--dark));
+
+}
+.indicador{
+
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: .6px;
+
+    font-family: adineuePRO,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2{
+
+    font-style: normal;
+
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;}
+.definicion{
+    margin-bottom: 20px;
+
+    font-weight: 700;
+
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    text-transform: none;
+}
+.enlace{
+    transform: translate(-3px,-3px);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    letter-spacing: 2px;
+
+    background-color: #000;
+    border-color: #fff;
+    color: #fff;
+    height: 50px;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    line-height: 50px;
+    min-height: 50px;
+    padding: 0 21px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    width: auto;
+
 }

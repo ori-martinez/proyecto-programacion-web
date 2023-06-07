@@ -228,7 +228,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-boton boton-form">
-                                                        <input type="submit" class="boton sistema-boton" value="enviar">
+                                                        <input type="submit" class="boton sistema-boton" value="enviar" id="boton" onclick=" enviar()">
                                                     </div>
                                                 </form>
                                             </div>
@@ -240,17 +240,16 @@
                     </div>
                 </div>
             </div>
-            <h2>Pagina de Contacto</h2>
             <!-- completado de reedirección hacia ayuda -->
             <div class="contenido-principal principal">
                 <div class="divisores-principales principales">
                     <div class="contenedor-exterior exterior">
                         <div class="contenedor-interior interior">
-                            <img src="" alt="" />
+                            <img src="../img/golden.png" alt="mini fondo" class="fondo object-cover" />
                             <div class="interior-contenido contedino">
                                 <h2 class="texto-contenido indicador">SERVICIO AL CLIENTE</h2>
                                 <h2 class="texto-contenido definicion">Tiene preguntas sobre nuestros servicios? Nuestra línea directa al cliente puede ayudar.</h2>
-                                <a class="enlace" href="#"></a>
+                                <a class="enlace" href="{{ url('/ayuda') }}" target="_blank">reyrey sport/AYUDA</a>
                             </div>
 
                         </div>

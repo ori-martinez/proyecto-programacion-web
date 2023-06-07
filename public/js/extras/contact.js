@@ -24,3 +24,8 @@ const searcherButton = d.querySelector('#searcher-button');
 const searcherInput = d.querySelector('#searcher-input');
 
 searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);
+/* sms de mensaje ennviado */
+function enviar(){
+    window.alert('envio exitoso'),
+    icon
+}
