@@ -157,7 +157,7 @@
             <!-- Cards of Products -->
             <section id="grid-cards">
                 @if ($products === null) 
-                    <h3>No se encontraron coincidencia, trata realizando otra búsqueda</h3>
+                    <h3 id="grid-message">No se encontraron coincidencia, trata realizando otra búsqueda</h3>
                 @else
                     @foreach ($products as $product)
                         <div class="card">

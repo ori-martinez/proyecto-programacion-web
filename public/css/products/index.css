@@ -82,6 +82,15 @@
     background: #60A5FA;
 }
 
+#grid-message {
+    color: var(--wine);
+    font-family: 'AmbraSans';
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+    text-align: center;
+}
+
 /* Input */
 
 #main-search-form input {
@@ -106,8 +115,6 @@
 #main-search-form button span {
     font-size: 1.1rem;
 }
-
-/* Errors */
 
 /* CARD */
 
