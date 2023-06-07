@@ -199,6 +199,28 @@ a .navbar-button:hover {
     overflow: visible;
 }
 
+#div-error-search {
+    font-size: .9rem;
+    margin: .8rem 0 0;
+    width: 100%;
+}
+
+.error-message, .info-message {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: .3rem;
+    text-align: center;
+}
+
+.error-message {
+    background: #EF4444;
+}
+
+.info-message {
+    background: #60A5FA;
+}
+
 #search-form {
     position: relative;
 }
@@ -208,18 +230,22 @@ a .navbar-button:hover {
     border-radius: 2rem;
     font-family: Arial;
     font-size: 1rem;
+    margin-top: .6rem;
     outline: none;
     padding: .4rem .8rem;
     width: 16rem;
 }
 
-#search-form button {
-    background: transparent;
-    border: none;
+#search-form a {
     cursor: pointer;
     position: absolute;
     right: 1.2rem;
     top: 1.2rem;
+}
+
+#search-form a button {
+    background: transparent;
+    border: none;
 }
 
 #search-form button span {

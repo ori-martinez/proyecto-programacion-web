@@ -49,9 +49,9 @@
                                 <form id="search-form" method="POST" action="{{ route('products.search') }}">
                                     @csrf
 
-                                    <input type="text" name="search">
+                                    <input type="text" id="input-search" name="search" placeholder="Buscar...">
                                     
-                                    <a href="{{ route('products.search') }}" onclick="event.preventDefault(); document.querySelector('#search-form').submit();">
+                                    <a href="{{ route('products.search') }}">
                                         <button>
                                             <span class="icon-search"></span>
                                         </button>
