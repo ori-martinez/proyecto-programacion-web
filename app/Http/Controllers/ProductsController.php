@@ -48,7 +48,25 @@ class ProductsController extends Controller
  
         return view('products.product', [
             'product' => Product::findOrFail($id),
-            'commentaries' => $commentaries,
+            'commentaries' => $commentaries
         ]);
+    }
+
+    /**
+     * Show the view for a given search.
+     */
+    public function search(Request $request)
+    {   
+        $search = $request->get('search');
+        $products = Product::all();
+
+        if ($search !== null) {
+            $products = Product::where('name', 'LIKE', '%'.$search.'%')
+                ->get();
+
+            if ($products->isEmpty()) $products = null;
+        }
+ 
+        return view('products.search', ['products' => $products]);
     }
 }

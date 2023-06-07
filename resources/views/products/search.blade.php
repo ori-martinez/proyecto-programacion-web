@@ -134,22 +134,45 @@
         
         <!-- Body -->
         <main>
-            <h1 id="title-products">Productos para Hombres</h1>
+            <h1 id="title-products">Buscador de Productos</h1>
 
+            <!-- Error Message -->
+            <div id="main-div-error-search"></div>
+
+            <div id="div-search-form">
+                <!-- Searcher -->
+                <form id="main-search-form" method="POST" action="{{ route('products.search') }}">
+                    @csrf
+
+                    <input type="text" id="main-input-search"name="search" placeholder="Buscar...">
+                                        
+                    <a href="{{ route('products.search') }}">
+                        <button>
+                            <span class="icon-search"></span>
+                        </button>
+                    </a>
+                </form>
+            </div>
+
+            <!-- Cards of Products -->
             <section id="grid-cards">
-                @foreach ($products as $product)
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
-                        </div>
+                @if ($products === null) 
+                    <h3 id="grid-message">No se encontraron coincidencia, trata realizando otra búsqueda</h3>
+                @else
+                    @foreach ($products as $product)
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
+                            </div>
 
-                        <div class="card-content">
-                            <h3>{{ $product->name }}</h3>
-                            
-                            <a href="/productos/{{ $product->id }}" class="card-button">Detalles</a>
+                            <div class="card-content">
+                                <h3>{{ $product->name }}</h3>
+                                
+                                <a href="/productos/{{ $product->id }}" class="card-button">Detalles</a>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
             </section>
         </main>
 
