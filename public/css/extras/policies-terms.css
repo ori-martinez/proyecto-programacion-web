@@ -24,131 +24,121 @@
     font-style: normal;
 }
 
+/* GENERALS */
 
-/*estilos de los div extrenos*/
-
-.common-policy{
-    color: #240b34;
+.common-policy {
+    color: #240B34;
     word-wrap: break-word;
-
-
 }
 
-.contenido{
+.content {
     animation: fadeInAnimation 2s ease;
-    animation-iteration-count: 1;
     animation-fill-mode: forwards;
-
+    animation-iteration-count: 1;
 }
-/*div encabezador*/
-.cont-encabezado{
 
-    text-align: center;
-    background-color: #f8f8f8;
-    display: grid;
+/* HEADING CONTENT */
+
+.heading-content {
     align-items: center;
-    width: 100%;
+    background-color: #f8f8f8;
     background-size: cover;
-    position: relative;
+    display: grid;
     grid-template-columns: 20% 1fr 20%;
     padding: 8px 0;
-
-}
-.cont-encabezado .izq{
-
-    justify-self: end;
-}
-.cont-encabezado .derech{
-    justify-self: start;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
-.cont-encabezado .espacio{
+/* Space */
+
+.heading-content .space {
+    display: grid;
     grid-column-gap: 32px;
-
     grid-template-columns: 64px;
     grid-template-rows: 64px;
     grid-row-gap: 24px;
-
-    display: grid;
 }
-.cont-encabezado .centro{
 
+.heading-content .left {
+    justify-self: end;
+}
+
+.heading-content .center {
     padding: 0 8px;
     position: relative;
 }
 
-.cont-encabezado .contenido-centro{
-    padding-bottom: 16px;
-
-    font-size: 18px;
-    line-height: 22px;
-
-    font-family: 'AmbraSans';
-    font-style: oblique;
-    text-transform: uppercase;
+.heading-content .content-center {
     color: var(--wine);
+    font-family: 'AmbraSans';
+    font-size: 44px;
+    font-style: oblique;
+    line-height: 22px;
+    padding: 40px 0 16px;
+    text-transform: uppercase;
 }
-/*contenido del cuerpo */
-.Cuerpo{
+
+.heading-content .right {
+    justify-self: start;
+}
+
+/* BODY CONTENT */
+
+.body-content {
+    margin: 24px 0;
     padding-left: 142px;
     padding-right: 142px;
-
-    margin-top: 24px;
 }
- div{
+
+.body-content div {
     display: block;
- }
- .common-policy h2{
+}
 
-    margin-top: 40px;
-    font-size: 43px;
+/* Texts */
 
-    margin-bottom: 16px;
-
+.body-content div h2 {
+    display: block;
     font-family: 'AmbraSans';
-
+    font-size: 32px;
+    font-weight: bold;
     line-height: 1.22;
-}
-h1 , h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-h2{
-    display: block;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
+    margin-bottom: 16px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+    margin-top: 40px;
 }
- .common-policy p {
-    font-size: 18px;
 
-    line-height: 1.57;
- }
- p{
-
+.body-content div p {
     display: block;
+    font-size: 18px;
+    line-height: 1.57;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
- }
- .common-policy a {
+}
+
+.body-content div span {
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.body-content div a {
     align-items: center;
-    font-family: Rakuten Sans UI Bold,sans-serif;
     color: var(--golden);
+    font-style: oblique;
+    font-weight: bold;
     text-decoration: none;
     cursor: pointer;
- }
- b{
-    font-weight: bold;
- }
-.common-policy ul{
-
-    padding-left: 32px;
 }
-ul{
+
+/* Lists */
+
+.body-content div ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -156,12 +146,15 @@ ul{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    padding-left: 64px;
 }
-li{
+
+.body-content div ul li{
     display: list-item;
     text-align: -webkit-match-parent;
 }
-ol{
+
+.body-content div ol{
     display: block;
     list-style-type: decimal;
     margin-block-start: 1em;

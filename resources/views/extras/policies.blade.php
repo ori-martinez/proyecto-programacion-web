@@ -7,7 +7,7 @@
 
         <link rel="icon" type="image/ico" href="../img/favicon.ico" />
         <link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/extras/policies.css">
+        <link rel="stylesheet" href="../css/extras/policies-terms.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
@@ -134,25 +134,26 @@
 
         <!-- Body -->
         <main>
-               <!--mini cabecera  -->
             <div class="privacy-policy">
                 <div class="common-policy contenido">
-                    <div class="cont-encabezado">
-                        <div class="espacio izq"></div>
-                        <div class="centro">
-                         <div class="contenido-centro">Política de Privacidad</div>
+                    <!-- Heading Content -->
+                    <div class="heading-content">
+                        <div class="space left"></div>
+                        <div class="center">
+                            <div class="content-center">Políticas de Privacidad</div>
                         </div>
-                        <div class="espacio derch"></div>
-                    </div >
-                    <!-- contenido <div ></div> <h2></h2> <b></b>  <p></p>-->
-                    <div class="Cuerpo">
+                        <div class="space right"></div>
+                    </div>
+                    
+                    <!-- Body Content -->
+                    <div class="body-content">
                         <div >
-                            <h2>Política de Privacidad</h2>
+                            <h2>DESCRIPCIÓN</h2>
+
                             <p>
                                 <b>Fecha de entrada en vigor: 3 de mayo de 2023</b>
                             </p>
-                            <p>
-                            Esta Política de Privacidad describe cómo ReyRey sports ("ReyRey sports", "nosotros", "nuestro", “nos”) recopila y procesa datos personales sobre usted ("usted" o "su"), cómo usamos y protegemos esos datos, y sus derechos en relación con ellos cuando utiliza el sitio web <b>poner link</b> (o su sucesor) y cualquier servicio relacionado (el/los “Servicio(s)”).
+                            <p>Estas política de privacidad describen cómo <span>ReyRey Sports</span> recopila y procesa datos personales sobre Usted ("Usuario" o "Usted"), cómo usam y protege los mismos, y sus derechos en relación con ellos cuando utiliza el sitio web <a href="/">ReyRey Sports</a> y cualquier servicio relacionado.
                             </p>
                             <p>El Servicio es un programa de fidelización gratificante que le permite comprar artículos y prendas entre usted y la tienda afiliada que figura en el Servicio.
                             </p>
