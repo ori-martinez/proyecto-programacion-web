@@ -76,7 +76,7 @@
     font-size: 44px;
     font-style: oblique;
     line-height: 22px;
-    padding: 40px 0 16px;
+    padding: 32px 0 16px;
     text-transform: uppercase;
 }
 
@@ -138,28 +138,63 @@
 
 /* Lists */
 
-.body-content div ul {
+.body-content div ul, .body-content div ol {
     display: block;
-    list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+}
+
+.body-content div ul {
+    list-style-type: disc;
     padding-left: 64px;
 }
 
-.body-content div ul li{
+.body-content div ol {
+    list-style-type: decimal;
+}
+
+.body-content div ul li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
 
-.body-content div ol{
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* HEADING CONTENT */
+
+    .heading-content {
+        grid-template-columns: 0 1fr 0;
+        padding: 8px 0;
+    }
+ 
+    /* Space */
+
+    .heading-content .content-center {
+        font-size: 32px;
+        line-height: 32px;
+        padding: 16px 0 8px;
+    }
+
+    /* BODY CONTENT */
+
+    .body-content {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /* Texts */
+
+    .body-content div h2 {
+        font-size: 24px;
+    }
+
+    /* Lists */
+
+    .body-content div ul {
+        padding-left: 32px;
+    }
 }

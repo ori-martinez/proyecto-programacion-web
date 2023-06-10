@@ -27,7 +27,7 @@
             <nav class="navbar">
                 <!-- Logo -->
                 <div id="navbar-logo">
-                    <a href="/">
+                    <a href="{{ route('welcome') }}">
                         <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                     </a>
                 </div>
@@ -35,19 +35,19 @@
                 <!-- Links -->
                 <ul class="navbar-links">
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/hombres') }}">HOMBRES</a>
+                        <a href="{{ route('products.men') }}">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/mujeres') }}">MUJERES</a>
+                        <a href="{{ route('products.women') }}">MUJERES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/articulos') }}">ARTÍCULOS</a>
+                        <a href="{{ route('products.articles') }}">ARTÍCULOS</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/blog') }}">BLOG</a>
+                        <a href="{{ route('blog.blog') }}">BLOG</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/ayuda') }}">AYUDA</a>
+                        <a href="{{ route('extras.help') }}">AYUDA</a>
                     </li>
                 </ul>
 
@@ -80,7 +80,7 @@
                         
                         @auth
                             <!-- Dashboard -->
-                            <a href="{{ url('/dashboard') }}">
+                            <a href="{{ route('dashboard') }}">
                                 <button class="navbar-button-icon">
                                     @if (Auth::user()->rol_id === 1)
                                         <span class="icon-dashboard"></span>
@@ -100,7 +100,7 @@
                                     <li class="user-menu-name">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</li>
                                     
                                     <li class="user-menu-link">
-                                        <a href="{{ url('/profile') }}">Editar Perfil</a>
+                                        <a href="{{ route('profile.edit') }}">Editar Perfil</a>
                                     </li>
                                     <li class="user-menu-link">
                                         <form id="navbar-form" method="POST" action="{{ route('logout') }}">
@@ -150,9 +150,7 @@
                         <div>
                             <h2>TÉRMINOS DEL SERVICIO DE USUARIO</h2>
 
-                            <p>
-                                <b>Fecha de entrada en vigor: 3 de mayo de 2023</b>
-                            </p>
+                            <p><b>Fecha de entrada en vigor: 3 de mayo de 2023</b></p>
                             <p>Por favor, lea lo siguiente detenidamente. Los términos siguientes forman un contrato vinculante entre usuarios de este servicio (“Usuario” o “Usted”) y <span>ReyRey Sports</span>, que rige el uso de los servicios de este último. Se empezará a prestarle servicios de inmediato contra su aceptación del presente acuerdo. Usted de forma expresa certifica y pacta que no podrá retirarse de este acuerdo de un modo distinto al especificado a continuación una vez se hayan iniciado los servicios.</p>
                         </div>
 
@@ -172,7 +170,7 @@
                         <div>
                             <h2>PROPIEDAD INTELECTUAL Y OTROS DERECHOS</h2>
 
-                            <p>Tenga en cuenta que todo el contenido, incluyendo, entre otros, gráficos, logos, iconos, texto, imágenes, clips de audio, descargas digitales, compilaciones de datos y software publicado por <span>ReyRey Sports</span> en o a través de los servicios es propiedad del <span>Grupo de ReyRey Sports & CO.</span> o sus cedentes de licencias. <span>ReyRey Sports</span> u otras marcas comerciales registradas y no registradas y las marcas utilizadas en relación con los servicios son propiedad del <span>Grupo de ReyRey Sports</span> y no podrán utilizarse sin disponer del permiso previo.</p>
+                            <p>Tenga en cuenta que todo el contenido, incluyendo, entre otros, gráficos, logos, iconos, texto, imágenes, clips de audio, descargas digitales, compilaciones de datos y software publicado por <span>ReyRey Sports</span> en o a través de los servicios es propiedad del <span>Grupo de ReyRey & CO.</span> o sus cedentes de licencias. <span>ReyRey Sports</span> u otras marcas comerciales registradas y no registradas y las marcas utilizadas en relación con los servicios son propiedad del <span>Grupo de ReyRey & CO.</span> y no podrán utilizarse sin disponer del permiso previo.</p>
                             <p><span>ReyRey Sports</span> otorga una licencia limitada, personal, no exclusiva, no transferible y revocable para acceder y realizar un uso personal y no comercial de los servicios. Cualquier derecho no expresamente otorgado queda expresamente reservado. Sin limitación de esta reserva de derechos, esta licencia excluye de forma expresa la modificación, distribución, copiado, reproducción, nueva publicación, venta, obtención de cualquier obra derivada, extracción o utilización de partes de los servicios; un enlace profundo a los wervicios sin contar con el consentimiento expreso por escrito de <span>ReyRey Sports</span>, cualquier trama o técnicas similares de los servicios. El uso de cualesquiera metaetiquetas u otras etiquetas; o cualquier extracción o depuración de datos. Esta licencia queda automáticamente rescindida si usted incumple este acuerdo.</p>
                             <p>Se prohíbe expresamente el uso de depuración de datos, robots, rastreadores, cualquier software o herramienta similar de recopilación y extracción de datos para obtener datos de los servicios sin contar con el correspondiente consentimiento previo.</p>
                         </div>
@@ -192,17 +190,8 @@
                             <p>Por favor, asegúrese de que la información que proporcioné en su cuenta sea exacta, completa y esté actualizada. Es su responsabilidad. También, es su responsable de adoptar todas las medidas razonables para salvaguardar la seguridad de su cuenta, incluyendo la conservación de la confidencialidad de su contraseña.</p>
                             <p><span>ReyRey Sports</span> se comunicará principalmente con usted por correo electrónico, lo cual usted acepta que pasará. Usted está conforme con recibir cualquier comunicación electrónicamente y con que todos los acuerdos, notificaciones, publicaciones y demás comunicaciones cursadas entre <span>ReyRey Sports</span> y usted electrónicamente satisfagan cualquier requisito legal y que dichas notificaciones consten por escrito. Usted asume la responsabilidad de asegurar a <span>ReyRey Sports</span> que pueda recibir correos electrónicos. Cualquier comunicación estará sujeta a las <a href="{{ route('extras.policies') }}">Políticas de Privacidad</a>.</p>
                             <p>
-                                <span>ReyRey Sports</span> se reserva el derecho a suspender o finalizar su cuenta de inmediato si usted incumple el presente acuerdo. Usted puede cancelar su cuenta en el módulo de 
-                                
-                                @auth
-                                    <a href="{{ route('profile.edit') }}">
-                                @else
-                                    <a href="{{ route('register') }}">
-                                @endauth
-                                    Edición de Perfil
-                                </a>
-
-                                , habilitado para cualquier cuenta registrada. De requerir asistencia extra, siempre puede redactar un correo en el módulo de <a href="{{ route('extras.contact') }}">Contacto</a> de <span>ReyRey Sports</span>. Igualmente, este último se reserva el derecho de cancelar cuentas que hayan permanecido inactivas durante más de doce (12) meses
+                                <span>ReyRey Sports</span> se reserva el derecho a suspender o finalizar su cuenta de inmediato si usted incumple el presente acuerdo. Usted puede cancelar su cuenta en el módulo de <a href="{{ route('profile.edit') }}">Edición de Perfil
+                                </a>, habilitado para cualquier cuenta registrada. De requerir asistencia extra, siempre puede redactar un correo en el módulo de <a href="{{ route('extras.contact') }}">Contacto</a> de <span>ReyRey Sports</span>. Igualmente, este último se reserva el derecho de cancelar cuentas que hayan permanecido inactivas durante más de doce (12) meses
                             </p>
                         </div>
                         <div>
@@ -247,13 +236,13 @@
                 <!-- Links -->
                 <ul id="footer-links">
                     <li class="footer-link">
-                        <a href="{{ url('/terminos') }}">Términos de Uso</a>
+                        <a href="{{ route('extras.terms') }}">Términos de Uso</a>
                     </li>
                     <li class="footer-link">
-                        <a href="{{ url('/politicas') }}">Políticas de Privacidad</a>
+                        <a href="{{ route('extras.policies') }}">Políticas de Privacidad</a>
                     </li>
                     <li class="footer-link">
-                        <a href="{{ url('/contacto') }}">Contáctanos</a>
+                        <a href="{{ route('extras.contact') }}">Contáctanos</a>
                     </li>
                 </ul>
 
@@ -266,6 +255,6 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="../../js/extras/terms.js"></script>
+        <script src="../../js/extras/policies-terms.js"></script>
     </body>
 </html>

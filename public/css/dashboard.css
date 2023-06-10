@@ -59,6 +59,8 @@
     font-size: 1.2rem;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media all and (max-width: 1024px) {
     /* GREETING */
 

@@ -28,7 +28,7 @@
             <nav class="navbar">
                 <!-- Logo -->
                 <div id="navbar-logo">
-                    <a href="/">
+                    <a href="{{ route('welcome') }}">
                         <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                     </a>
                 </div>
@@ -36,19 +36,19 @@
                 <!-- Links -->
                 <ul class="navbar-links">
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/hombres') }}">HOMBRES</a>
+                        <a href="{{ route('products.men') }}">HOMBRES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/mujeres') }}">MUJERES</a>
+                        <a href="{{ route('products.women') }}">MUJERES</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/productos/articulos') }}">ARTÍCULOS</a>
+                        <a href="{{ route('products.articles') }}">ARTÍCULOS</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/blog') }}">BLOG</a>
+                        <a href="{{ route('blog.blog') }}">BLOG</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ url('/ayuda') }}">AYUDA</a>
+                        <a href="{{ route('extras.help') }}">AYUDA</a>
                     </li>
                 </ul>
 
@@ -81,7 +81,7 @@
 
                         @auth
                             <!-- Dashboard -->
-                            <a href="{{ url('/dashboard') }}">
+                            <a href="{{ route('dashboard') }}">
                                 <button class="navbar-button-icon">
                                     @if (Auth::user()->rol_id === 1)
                                         <span class="icon-dashboard"></span>
@@ -101,7 +101,7 @@
                                     <li class="user-menu-name">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</li>
 
                                     <li class="user-menu-link">
-                                        <a href="{{ url('/profile') }}">Editar Perfil</a>
+                                        <a href="{{ route('profile.edit') }}">Editar Perfil</a>
                                     </li>
                                     <li class="user-menu-link">
                                         <form id="navbar-form" method="POST" action="{{ route('logout') }}">
@@ -324,13 +324,13 @@
                 <!-- Links -->
                 <ul id="footer-links">
                     <li class="footer-link">
-                        <a href="{{ url('/terminos') }}">Términos de Uso</a>
+                        <a href="{{ route('extras.terms') }}">Términos de Uso</a>
                     </li>
                     <li class="footer-link">
-                        <a href="{{ url('/politicas') }}">Políticas de Privacidad</a>
+                        <a href="{{ route('extras.policies') }}">Políticas de Privacidad</a>
                     </li>
                     <li class="footer-link">
-                        <a href="{{ url('/contacto') }}">Contáctanos</a>
+                        <a href="{{ route('extras.contact') }}">Contáctanos</a>
                     </li>
                 </ul>
 
