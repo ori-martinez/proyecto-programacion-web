@@ -69,4 +69,27 @@ class ProductsController extends Controller
  
         return view('products.search', ['products' => $products]);
     }
+
+    /* CRUD */
+
+    /**
+     * Create new a product.
+     */
+    public function create() {
+
+    }
+
+    /**
+     * Create update a product.
+     */
+    public function update() {
+
+    }
+
+    /**
+     * Create delete a product.
+     */
+    public function delete() {
+
+    }
 }

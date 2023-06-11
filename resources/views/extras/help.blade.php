@@ -45,7 +45,7 @@
                         <a href="{{ route('products.articles') }}">ARTÍCULOS</a>
                     </li>
                     <li class="navbar-link">
-                        <a href="{{ route('blog.blog') }}">BLOG</a>
+                        <a href="{{ route('extras.blog') }}">BLOG</a>
                     </li>
                     <li class="navbar-link">
                         <a href="{{ route('extras.help') }}">AYUDA</a>

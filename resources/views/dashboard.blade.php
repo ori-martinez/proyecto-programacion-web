@@ -124,13 +124,69 @@
             <!-- Dashboard -->
             <div class="dashboard">
                 @if (Auth::user()->rol_id === 1)
-                    <h2>Productos</h2>
-
-                    <p>PRÓXIMAMENTE: Lista de productos</p>
+                    <div class="heading-dashboard">
+                        <h2>PRODUCTOS</h2>
+                        
+                        <button class="heading-button">Nuevo</button>
+                    </div>
+                    
+                    <!-- Admin Table -->
+                    <div class="table-dashboard">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Categoría</th>
+                                    <th>Deporte</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                @foreach($products as $product)
+                                    <tr>
+                                        <td>
+                                            <b>{{ $product->id }}</b>
+                                        </td>
+                                        <td class="name-cell">{{ $product->name }}</td>
+                                        <td>{{ $product->price }}$</td>
+                                        <td>
+                                            @if ($product->category_id === 1)
+                                                Hombres
+                                            @elseif ($product->category_id === 2)
+                                                Mujeres
+                                            @else
+                                                Artículos
+                                            @endif 
+                                        </td>
+                                        <td>
+                                            @if ($product->sport_id === 1)
+                                                Todos
+                                            @elseif ($product->sport_id === 2)
+                                                Fútbol
+                                            @elseif ($product->sport_id === 3)
+                                                Básquetbol
+                                            @else
+                                                Béisbol
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <button>
+                                                <span class="icon-edit"></span>
+                                            </button>
+                                            <button>
+                                                <span class="icon-delete"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>    
+                        </table>
+                    </div>
                 @else
                     <h2>CARRITO DE COMPRAS</h2>
-
-                    <p>No hay artículos en el carrito</p>
                 @endif
             </div>
         </main>

@@ -42,8 +42,60 @@
 .dashboard {
     background: var(--light);
     border-radius: 1rem;
-    margin: 0 3rem ;
+    margin: 0 3rem 2rem;
     padding: 2rem;
+}
+
+.heading-dashboard {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4rem 0;
+    width: 100%;
+}
+
+.table-dashboard {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Table */
+
+table {
+    border: solid .1rem var(--dark);
+    border-radius: .6rem;
+    border-spacing: 0;
+    margin: 1.5rem 3rem;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+thead {
+    background: var(--golden);
+    color: var(--dark);
+}
+
+tbody {
+    background: #FFFFFF;
+}
+
+th, td {
+    border: solid .1rem var(--dark);
+}
+
+th {
+    padding: .6rem .4rem;
+}
+
+td {
+    padding: .2rem .4rem;
+}
+
+.name-cell {
+    text-align: left;
 }
 
 /* Texts */
@@ -57,6 +109,48 @@
 
 .dashboard p {
     font-size: 1.2rem;
+}
+
+/* Buttons */
+
+.heading-button {
+    background: transparent;
+    border: solid .2rem var(--wine);
+    border-radius: 2rem;
+    color: var(--wine);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem 2.2rem;
+    outline: none;
+    transition: all 300ms;
+}
+
+.heading-button:hover {
+    background-color: var(--wine);
+    color: var(--light);
+}
+
+td button {
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+}
+
+td button:first-child {
+    color: #60A5FA;
+}
+
+td button:first-child:hover {
+    color: #5089CE;
+}
+
+td button:last-child {
+    color: #FD4747;
+}
+
+td button:last-child:hover {
+    color: #D14040;
 }
 
 /* RESPONSIVE DESIGN */
@@ -78,8 +172,25 @@
     /* DASHBOARD */
 
     .dashboard {
-        margin: 0;
+        margin: 0 0 2rem;
         padding: 1.2rem;
+    }
+
+    .heading-dashboard {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 2rem 1.5rem;
+    }
+
+    .table-dashboard {
+        justify-content: start;
+        overflow-x: scroll;
+    }
+
+    /* Table */
+
+    table {
+        margin: 0 0 1rem;
     }
 
     /* Texts */

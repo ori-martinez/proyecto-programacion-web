@@ -2,10 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ViewsController extends Controller
 {
+    /**
+     * Show the dashboard.
+     */
+    public function __invoke()
+    {
+        if (Auth::user()->rol_id === 1) {
+            return view('dashboard', ['products' => Product::all()]);
+        }
+        else {
+            return view('dashboard');
+        }
+    }
+
     /**
      * Show the view with FAQ.
      */
@@ -43,6 +58,6 @@ class ViewsController extends Controller
      */
     public function indexBlog()
     {
-        return view('blog.blog');
+        return view('extras.blog');
     }
 }

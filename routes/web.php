@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome'); })->name('welcome');
+Route::get('/', function () {
+    return view('welcome'); 
+})->name('welcome');
 
 Route::get('/productos/hombres', [ProductsController::class, 'indexMen'])->name('products.men');
 Route::get('/productos/mujeres', [ProductsController::class, 'indexWomen'])->name('products.women');
@@ -27,16 +29,13 @@ Route::get('/productos', [ProductsController::class, 'search'])->name('products.
 Route::post('/productos', [ProductsController::class, 'search'])->name('products.search');
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
 
+Route::get('/blog', [ViewsController::class, 'indexBlog'])->name('extras.blog');
+Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');
 Route::get('/ayuda', [ViewsController::class, 'indexHelp'])->name('extras.help');
 Route::get('/terminos', [ViewsController::class, 'indexTerms'])->name('extras.terms');
 Route::get('/politicas', [ViewsController::class, 'indexPolicies'])->name('extras.policies');
-Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');
 
-Route::get('/blog', [ViewsController::class, 'indexBlog'])->name('blog.blog');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', ViewsController::class, '__invoke')->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
