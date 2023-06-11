@@ -14,7 +14,11 @@ class ViewsController extends Controller
     public function __invoke()
     {
         if (Auth::user()->rol_id === 1) {
-            return view('dashboard', ['products' => Product::all()]);
+            $products = Product::all();
+        
+            if ($products->isEmpty()) $products = null;
+
+            return view('dashboard', ['products' => $products]);
         }
         else {
             return view('dashboard');
