@@ -144,50 +144,6 @@
                         </div>
                         <div class="espacio derch"></div>
                     </div >
-                    <!-- intento de acerca de nosotros-->
-                    <div class="content-general">
-                        <div class="global">
-                            <div class="global-coco">
-                                <h2 class="content-header">Acerca de ReyRey sports  </h2 >
-                            </div >
-
-                            <div class="global-cuerpo">
-                                <div class="gcuerpoA">
-                                    <div class="acuerdo-item">
-                                        <h3 class="acuerdo-coco">¿Quién es ReyRey sports? <img src="../img/suma.svg" alt="abrir respuesta" >
-                                            <i class="menu-icon">  </i >
-                                        </h3 >
-                                        <div class="acuerdo-cuerpo">
-                                            <div class="cuerpo-item">
-                                                <div class=""> ReyRey sports es una empresa Venezolana con sede en La Guaira y ofrece una amplia gama de servicios en muchas áreas diferentes. ReyRey sports es una plataforma , que te permite comprar online una gama de artículos deportivos. </div >
-                                            </div >
-                                        </div >
-                                    </div >
-                                    <div class="acuerdo-item">
-                                        <h3 class="acuerdo-coco" >¿Cómo funciona ReyRey sports? <img src="../img/suma.svg" alt="abrir respuesta" >
-                                            <i class="menu-icon">  </i >
-                                        </h3 >
-                                        <div class="acuerdo-cuerpo">
-                                            <div class="cuerpo-item">
-                                                <div class=""> Por cada compra que realices a través de Rakuten.es en una de nuestras tiendas asociadas, recibimos una comisión de la tienda. Te pasamos parte de la comisión en forma de cashback - ¡así es como recuperas el dinero de tus compras con Rakuten! </div >
-                                            </div >
-                                        </div >
-                                    </div >
-                                    <div class="acuerdo-item">
-                                        <h3 class="acuerdo-coco">¿Es ReyRey sports un servicio gratuito? <img src="../img/suma.svg" alt="abrir respuesta" >
-                                            <i class="menu-icon">  </i >
-                                        </h3 >
-                                        <div class="acuerdo-cuerpo">
-                                            <div class="cuerpo-item">
-                                                <div class=""> Sí, ReyRey es un servicio completamente gratuito. </div >
-                                            </div >
-                                        </div >
-                                    </div >
-                                </div >
-                            </div >
-                        </div >
-                    </div >
-                    <!-- Fin de el intento -->
                     <!-- intento de sección de ayuda-->
                     <div class="Contenido-principal">
                         <h2 class="content-header">Una ayuda de como iniciar sesión </h2>
@@ -254,11 +210,17 @@
 			<div class="contenedor-preguntas activo" data-categoria="metodos-pago">
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Que metodos de pago disponibles tienen? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit.</p>
+					<p class="respuesta">En ReyRey sports aceptamos diferentes medios de pagos, para que tu compra sea aún más fácil: Efectivo, Zelle, Venmo, Paypal, Tranferencia bancaria y Pago Móvil. <br>
+
+                    Pagos en efectivo únicamente en La Guaira. <br>
+
+                    Transferencia Bancaria o Pago Móvil: si seleccionas uno de estos dos métodos de pago, en los próximos minutos el departamento de atención al cliente se comunicará con el cliente, para indicarle los datos bancarios y el monto para que proceda a realizar la transferencia. <br>
+
+                    La selección del método de pago, es la última fase del proceso para concretar la compra.</p>
 				</div>
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Tienen plazo de pago? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">Por los momentos la opción de plazo de pago no se encuentra habilitada.</p>
 				</div>
 			</div>
 
@@ -266,11 +228,13 @@
 			<div class="contenedor-preguntas" data-categoria="entregas">
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Tienen entregas a domicilio? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">¡Ahora ReyRey sports llega a todos los rincones de Venezuela! Para realizar compras con envios fuera de La Guaira haz tu pedido por nuestra web y retiralo en tu agencia de MRW o zoom más cercana. Los pedidos generalmente tardan entre 24 y 72 horas. (Aplican excepciones).  El precio del envío de lo indicará la agencia de MRW o zoom en el momento del retiro. <br>
+                    Para pedidos hechos dentro del estado La Guaira se cuenta con delivery y le será entregado en un punto céntrico de la vía principal 
+                    </p>
 				</div>
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿En cuanto sale el envio a mi país? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">Por los momento ReyRey Sports no cuenta con servicios de envio internacionales, mas si vives en Venezuela los envios seran a través de las agencias de MRW o zoom </p>
 				</div>
 			</div>
 
@@ -278,11 +242,12 @@
 			<div class="contenedor-preguntas" data-categoria="seguridad">
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Como puedo saber si son confiables? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">ReyRey sports una compañía líder en la industria deportiva de la Estado La Guaira, contamos con el mejor surtido de implementos deportivos, de la más alta calidad y un excelente servicio, apoyado en el asesoramiento asertivo para cada deporte que practiquen nuestros clientes. Por eso, estamos comprometidos para que cada una de las personas alcancen su más alto rendimiento y viva la mejor experiencia al momento de desempeñarse en su respectiva actividad. Además pueden verificar la información con otras fuentes confiables como revisar las credenciales de la empresa. 
+                    </p>
 				</div>
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Que pasa con mis datos personales? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">El tratamiento de datos personales se adopta en base a la ley de la siguente manera, se garantizan los derechos de la privacidad, intimidad y el buen nombre, en el tratamiento de datos personales; y en consecuencia todas las actuaciones serán regidas por los principios de legalidad, finalidad, libertad, veracidad o calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad.</p>
 				</div>
 			</div>
 
@@ -290,11 +255,11 @@
 			<div class="contenedor-preguntas" data-categoria="cuenta">
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Como puedo acceder a mis pedidos? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">Ingresa al carrito de compra . Donde se mostrará tus artículos favoritos que han sido seleccionados</p>
 				</div>
 				<div class="contenedor-pregunta">
 					<p class="pregunta">¿Como puedo cambiar mi contraseña? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.adipisicing elit. Voluptatum laborum porro voluptates, sequi aliquam mollitia! Nostrum eius iure sapiente, voluptates soluta adipisci, perferendis voluptatibus eligendi vel saepe harum. Consectetur, doloribus.</p>
+					<p class="respuesta">Para cambiar la contraseña de usuario que ha colocado, ingrese a la opción de "editar perfil", en ella busque la opción que diga "ingresar nueva contraseña", guarde los cambios y su contraseña ya estará cambiada. </p>
 				</div>
 			</div>
 
