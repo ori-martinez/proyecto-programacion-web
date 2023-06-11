@@ -130,11 +130,11 @@
                     <li style="background-image: url('./img/banners/2.svg');">
                         <div class="content-banner" >
                             <div>
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+                                <p class="banner-high-text-2">¡SúPER OFERTAS !</p>
 
-                                <h2 id="banner-title-2">Están en pleno apogeo</h2>
+                                <h2 id="banner-title-2">Estamos en pleno apogeo</h2>
 
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+                                <p class="banner-high-text-2">¡SúPER OFERTAS !</p>
                             </div>
                         </div>
                     </li>
@@ -196,7 +196,50 @@
                     </div>
                 </div>
 
+             </section>
 
+             <!-- sección de divición contenido para pag principal-->
+
+             <section class="seccion ancho-estandar">
+                <div class="contenedor-g contenido-center">
+                    <div class="icon-con-text one-at-fourth columnas ">
+                        <div class="img-block">
+                            <img src="{{ url('./img/trust.png')}}" alt="imagenes mini" class="marco">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-tittle"></h3>
+                            <p> productos 100% originales </p>
+                        </div>
+                    </div>
+                    <div class="icon-con-text one-at-fourth columnas ">
+                        <div class="img-block">
+                            <img src="{{ url('./img/time.webp')}}" alt="imagenes mini" class="marco">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-tittle"></h3>
+                            <p>recibe tu pedido en 48hrs</p>
+                        </div>
+                    </div>
+                    <div class="icon-con-text one-at-fourth columnas ">
+                        <div class="img-block">
+                            <img src="{{ url('./img/shipped_1.png')}}" alt="imagenes mini" class="marco">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-tittle"></h3>
+                            <p>delivery gratis en La Guaira </p>
+                        </div>
+                    </div>
+                    <div class="icon-con-text one-at-fourth columnas ">
+                        <div class="img-block">
+                            <img src="{{ url('./img/countries_1.webp')}}" alt="imagenes mini" class="marco">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-tittle"></h3>
+                            <p>envíos a todo el país</p>
+                        </div>
+                    </div>
+
+                </div>
 
              </section>
         </main>
