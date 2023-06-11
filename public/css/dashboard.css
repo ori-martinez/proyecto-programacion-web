@@ -107,8 +107,12 @@ td {
     margin-bottom: 2rem;
 }
 
-.dashboard p {
-    font-size: 1.2rem;
+.table-message {
+    color: var(--golden);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1.5rem 2rem 0;
+    text-align: center;
 }
 
 /* Buttons */
@@ -200,7 +204,8 @@ td button:last-child:hover {
         margin-bottom: 1.6rem;
     }
 
-    .dashboard p {
-        font-size: 1rem;
+    .table-message {
+        font-size: 1.4rem;
+        padding: .4rem 0 1rem;
     }
 }

@@ -132,61 +132,69 @@
                     
                     <!-- Admin Table -->
                     <div class="table-dashboard">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Producto</th>
-                                    <th>Precio</th>
-                                    <th>Categoría</th>
-                                    <th>Deporte</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                    
-                            <tbody>
-                                @foreach($products as $product)
+                        @if ($products !== null)
+                            <table>
+                                <thead>
                                     <tr>
-                                        <td>
-                                            <b>{{ $product->id }}</b>
-                                        </td>
-                                        <td class="name-cell">{{ $product->name }}</td>
-                                        <td>{{ $product->price }}$</td>
-                                        <td>
-                                            @if ($product->category_id === 1)
-                                                Hombres
-                                            @elseif ($product->category_id === 2)
-                                                Mujeres
-                                            @else
-                                                Artículos
-                                            @endif 
-                                        </td>
-                                        <td>
-                                            @if ($product->sport_id === 1)
-                                                Todos
-                                            @elseif ($product->sport_id === 2)
-                                                Fútbol
-                                            @elseif ($product->sport_id === 3)
-                                                Básquetbol
-                                            @else
-                                                Béisbol
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <button>
-                                                <span class="icon-edit"></span>
-                                            </button>
-                                            <button>
-                                                <span class="icon-delete"></span>
-                                            </button>
-                                        </td>
+                                        <th>ID</th>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Categoría</th>
+                                        <th>Deporte</th>
+                                        <th>Acciones</th>
                                     </tr>
-                                @endforeach
-                            </tbody>    
-                        </table>
+                                </thead>
+                        
+                                <tbody>
+                                    @foreach($products as $product)
+                                        <tr>
+                                            <td>
+                                                <b>{{ $product->id }}</b>
+                                            </td>
+                                            <td class="name-cell">{{ $product->name }}</td>
+                                            <td>{{ $product->price }}$</td>
+                                            <td>
+                                                @if ($product->category_id === 1)
+                                                    Hombres
+                                                @elseif ($product->category_id === 2)
+                                                    Mujeres
+                                                @else
+                                                    Artículos
+                                                @endif 
+                                            </td>
+                                            <td>
+                                                @if ($product->sport_id === 1)
+                                                    Todos
+                                                @elseif ($product->sport_id === 2)
+                                                    Fútbol
+                                                @elseif ($product->sport_id === 3)
+                                                    Básquetbol
+                                                @else
+                                                    Béisbol
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <button>
+                                                    <span class="icon-edit"></span>
+                                                </button>
+                                                <button>
+                                                    <span class="icon-delete"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>    
+                            </table>
+                        @else
+                            <p class="table-message">No hay productos, sé el primero en agregar uno a la tienda</p>
+                        @endif
                     </div>
                 @else
-                    <h2>CARRITO DE COMPRAS</h2>
+                    <div class="heading-dashboard">
+                        <h2>CARRITO DE COMPRAS</h2>
+                    </div>
+
+
                 @endif
             </div>
         </main>
