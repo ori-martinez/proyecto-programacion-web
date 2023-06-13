@@ -180,33 +180,41 @@
                                     <input type="number" id="quantity-input" name="quantity" placeholder="Número...">
                                 </div>
                                 <div class="form-select">
-                                    <label for="select-size">Talla:</label>
+                                    @if ($product->category_id === 3)
+                                        <label for="select-size">Tamaño:</label>
+
+                                        <select id="select-size" name="size" disabled>
+                                            <option value="U" selected>Único</option>
+                                        </select>
+                                    @else
+                                        <label for="select-size">Talla:</label>
                                     
-                                    <select id="select-size" name="size">
-                                        @if (str_contains($product->name, 'Zapatos'))
-                                            <option value="0">Seleccione...</option>
-                                            <option value="35">35</option>
-                                            <option value="36">36</option>
-                                            <option value="37">37</option>
-                                            <option value="38">38</option>
-                                            <option value="39">39</option>
-                                            <option value="40">40</option>
-                                            <option value="41">41</option>
-                                            <option value="42">42</option>
-                                            <option value="43">43</option>
-                                            <option value="44">44</option>
-                                            <option value="45">45</option>
-                                            <option value="46">46</option>
-                                        @else
-                                            <option value="0">Seleccione...</option>
-                                            <option value="XS">XS</option>
-                                            <option value="S">S</option>
-                                            <option value="M">M</option>
-                                            <option value="L">L</option>
-                                            <option value="XL">XL</option>
-                                            <option value="XXL">XXL</option>                
-                                        @endif
-                                    </select>  
+                                        <select id="select-size" name="size">
+                                            @if (str_contains($product->name, 'Zapatos'))
+                                                <option value="0">Seleccione...</option>
+                                                <option value="35">35</option>
+                                                <option value="36">36</option>
+                                                <option value="37">37</option>
+                                                <option value="38">38</option>
+                                                <option value="39">39</option>
+                                                <option value="40">40</option>
+                                                <option value="41">41</option>
+                                                <option value="42">42</option>
+                                                <option value="43">43</option>
+                                                <option value="44">44</option>
+                                                <option value="45">45</option>
+                                                <option value="46">46</option>
+                                            @else
+                                                <option value="0">Seleccione...</option>
+                                                <option value="XS">XS</option>
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                                <option value="XXL">XXL</option>                
+                                            @endif
+                                        </select>  
+                                    @endif
                                 </div>
                                 <div class="form-select">
                                     <label for="select-delivery">Días de Entrega:</label>
@@ -340,7 +348,10 @@
                     else if (selectDelivery.value === '5') total = products + (products * 0.3)
                     else if (selectDelivery.value === '7') total = products + (products * 0.1)
                     
-                    if (confirm(`Tome en cuenta que menos días de entrega aumentan el precio. \n Entonces, el total a pagar es ${total}$. Desea realizar la compra?`)) shopForm.submit();
+                    if (confirm(`Tome en cuenta que menos días de entrega aumentan el precio. \n Entonces, el total a pagar es ${total}$. Desea realizar la compra?`)) {
+                        shopForm.submit();
+                        alert('Compra realizada con éxito');
+                    }
                 }
             }
 

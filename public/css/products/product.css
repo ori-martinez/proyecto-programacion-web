@@ -34,7 +34,7 @@
     transition: all 300ms;
 }
 
-.error-message, .info-message {
+.error-message, .info-message, .success-message {
     color: #FFFFFF;
     display: block;
     font-weight: bold;
@@ -48,6 +48,10 @@
 
 .info-message {
     background: #60A5FA;
+}
+
+.success-message {
+    background: #73AA25;
 }
 
 /* PRODUCT SECTION */

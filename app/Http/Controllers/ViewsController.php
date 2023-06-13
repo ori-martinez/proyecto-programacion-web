@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\CartProduct;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +23,23 @@ class ViewsController extends Controller
             return view('dashboard', ['products' => $products]);
         }
         else {
-            return view('dashboard');
+            $products = array();
+            $cartId = Cart::where('user_id', Auth::user()->id)->value('id');
+
+            if ($cartId !== null) {
+                $shops = CartProduct::where('cart_id', $cartId)->get();
+
+                if ($shops->isEmpty()) $products = null;
+                else {
+                    for ($i = 0; $i < count($shops); $i ++) {
+                        $data = Product::where('id', $shops[$i]->id)->get();
+                        $products[$i] = [ $shops[$i], $data ];
+                    }
+                }
+            }
+            else $products = null;
+
+            return view('dashboard', ['products' => $products]);
         }
     }
 

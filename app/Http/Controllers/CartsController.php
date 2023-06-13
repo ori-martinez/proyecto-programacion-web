@@ -42,10 +42,7 @@ class CartsController extends Controller
         $cartProduct->delivery = $date->addDays($request->get('delivery') - 1)->format('Y-m-d');
         $cartProduct->save();
 
-        return redirect()->route('products.product', [
-            'id' => $request->product_id,
-            'message' => 'Compra efectuada con éxito'
-        ]);
+        return redirect()->route('products.product', ['id' => $request->product_id]);
     }
 
     /**
