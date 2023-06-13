@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartsController;
 use App\Http\Controllers\CommentaryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
@@ -28,6 +29,8 @@ Route::get('/productos/{id}', [ProductsController::class, 'show'])->name('produc
 Route::get('/productos', [ProductsController::class, 'search'])->name('products.search');
 Route::post('/productos', [ProductsController::class, 'search'])->name('products.search');
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
+Route::post('/compra', [CartsController::class, 'store'])->name('shop');
+Route::post('/compra/delete', [CartsController::class, 'delete'])->name('shop.delete');
 
 Route::get('/blog', [ViewsController::class, 'indexBlog'])->name('extras.blog');
 Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');

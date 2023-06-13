@@ -144,18 +144,94 @@
                     <div class="product-info">
                         <h2>{{ $product->name }}</h2>
 
-                        <p>
-                            <span>Deporte:</span> 
-                            
-                            @if ($product->sport_id === 2) Fútbol 
-                            @elseif ($product->sport_id === 3) Básquetbol 
-                            @elseif ($product->sport_id === 4) Béisbol 
-                            @else Fútbol / Básquetbol / Béisbol 
-                            @endif 
-                        </p>
-                        <p><span>Precio:</span> {{ $product->price }} $</p>
+                        <!-- Grid Info -->
+                        <div class="grid-info">
+                            <p>
+                                <span>Deporte:</span> 
+                                
+                                @if ($product->sport_id === 2) Fútbol 
+                                @elseif ($product->sport_id === 3) Básquetbol 
+                                @elseif ($product->sport_id === 4) Béisbol 
+                                @else Fútbol / Básquetbol / Béisbol 
+                                @endif 
+                            </p>
+                            <p>
+                                <span>Precio:</span> {{ $product->price }} $
+                            </p>
+                        </div>
 
-                        <button>Agregar al <span class="icon-shopping-cart"></span></button>
+                        <!-- Error Message -->
+                        <div id="div-error-shop"></div>
+
+                        <!-- Shop Form -->
+                        <form id="shop-form" method="POST" action="{{ route('shop') }}">
+                            @csrf
+
+                            @auth
+                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                            @endauth
+                            
+                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                            <div id="form-grid">
+                                <div class="form-select">
+                                    <label for="quantity-input">Cantidad</label>
+
+                                    <input type="number" id="quantity-input" name="quantity" placeholder="Número...">
+                                </div>
+                                <div class="form-select">
+                                    <label for="select-size">Talla:</label>
+                                    
+                                    <select id="select-size" name="size">
+                                        @if (str_contains($product->name, 'Zapatos'))
+                                            <option value="0">Seleccione...</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                        @else
+                                            <option value="0">Seleccione...</option>
+                                            <option value="XS">XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L">L</option>
+                                            <option value="XL">XL</option>
+                                            <option value="XXL">XXL</option>                
+                                        @endif
+                                    </select>  
+                                </div>
+                                <div class="form-select">
+                                    <label for="select-delivery">Días de Entrega:</label>
+                                    
+                                    <select id="select-delivery" name="delivery">
+                                        <option value="0">Seleccione...</option>
+                                        <option value="2">2 días</option>
+                                        <option value="5">5 días</option>
+                                        <option value="7">7 días</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            @auth
+                                <button id="shop-form-button" type="submit">
+                                    Agregar al <span class="icon-shopping-cart"></span>
+                                </button>
+                            @else
+                                <a href="{{ route('login') }}">
+                                    <button type="button">
+                                        Agregar al <span class="icon-shopping-cart"></span>
+                                    </button>
+                                </a>
+                            @endauth
+                        </form>
                     </div>
                 </div>
             </section>
@@ -240,5 +316,35 @@
 
         <!-- Scripts -->
         <script src="../../js/products/product.js"></script>
+        <script type="text/javascript">
+            <?php
+                echo "let price = $product->price"
+            ?>
+            
+            const buttonShop = d.querySelector('#shop-form-button');
+            
+            const submitShop = (e) => {
+                e.preventDefault();
+
+                if (
+                    inputQty.value.length === 0 || Number(inputQty.value) <= 0 ||
+                    selectSize.value === '0' || selectDelivery === '0'
+                ) {
+                    errorDivShop.innerHTML = '<span class="error-message">Completa correctamente todos los campos para la compra</span>';
+                }
+                else {
+                    let products = price * Number(inputQty.value);
+                    let total = 1;
+
+                    if (selectDelivery.value === '2') total = products + (products * 0.5)
+                    else if (selectDelivery.value === '5') total = products + (products * 0.3)
+                    else if (selectDelivery.value === '7') total = products + (products * 0.1)
+                    
+                    if (confirm(`Tome en cuenta que menos días de entrega aumentan el precio. \n Entonces, el total a pagar es ${total}$. Desea realizar la compra?`)) shopForm.submit();
+                }
+            }
+
+            buttonShop.addEventListener('click', (e) => submitShop(e), false);
+        </script>
     </body>
 </html>
