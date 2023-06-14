@@ -165,11 +165,11 @@
                     <li style="background-image: url('./img/banners/2.svg');">
                         <div class="content-banner" >
                             <div>
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+                                <p class="banner-high-text-2">¡SUPER OFERTAS !</p>
 
-                                <h2 id="banner-title-2">Están en pleno apogeo</h2>
+                                <h2 id="banner-title-2">Estamos en pleno apogeo</h2>
 
-                                <p class="banner-high-text-2">¡SUPER OFERTAS DE SEMANA SANTA!</p>
+                                <p class="banner-high-text-2">¡SUPER OFERTAS !</p>
                             </div>
                         </div>
                     </li>
