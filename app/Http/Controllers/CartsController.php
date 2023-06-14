@@ -33,13 +33,13 @@ class CartsController extends Controller
 
             $cart = Cart::where('user_id', $request->get('user_id'))->first();
         }
-            
+        
         $cartProduct = new CartProduct();
         $cartProduct->cart_id = $cart->id;
         $cartProduct->product_id = $request->get('product_id');
         $cartProduct->quantity = $request->get('quantity');
         $cartProduct->size = $request->get('size');
-        $cartProduct->delivery = $date->addDays($request->get('delivery') - 1)->format('Y-m-d');
+        $cartProduct->delivery = $date->addDays($request->get('delivery'))->format('Y-m-d');
         $cartProduct->save();
 
         return redirect()->route('products.product', ['id' => $request->product_id]);
@@ -57,6 +57,6 @@ class CartsController extends Controller
 
         $cartProduct = CartProduct::where('id', '=', $request->get('cart_product_id'))->delete();
 
-        return redirect()->route('dashboard', ['message' => 'Compra cancelada con éxito']);
+        return redirect()->route('dashboard');
     }
 }

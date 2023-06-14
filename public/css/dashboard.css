@@ -67,6 +67,7 @@ table {
     border: solid .1rem var(--dark);
     border-radius: .6rem;
     border-spacing: 0;
+    box-shadow: .6rem .6rem .6rem var(--dark-opacity);
     margin: 1.5rem 3rem;
     text-align: center;
     width: 100%;

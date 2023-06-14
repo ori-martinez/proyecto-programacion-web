@@ -32,7 +32,7 @@ class ViewsController extends Controller
                 if ($shops->isEmpty()) $products = null;
                 else {
                     for ($i = 0; $i < count($shops); $i ++) {
-                        $data = Product::where('id', $shops[$i]->id)->get();
+                        $data = Product::where('id', $shops[$i]->product_id)->first();
                         $products[$i] = [ $shops[$i], $data ];
                     }
                 }

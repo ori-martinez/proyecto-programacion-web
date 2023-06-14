@@ -194,7 +194,77 @@
                         <h2>CARRITO DE COMPRAS</h2>
                     </div>
 
+                    <!-- Client Table -->
+                    <div class="table-dashboard">
+                        @if ($products !== null)
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Talla</th>
+                                        <th>Fecha de Entrega</th>
+                                        <th>Total</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+                                    @foreach($products as $index => $product)
+                                        <tr>
+                                            <td>
+                                                <b>{{ $index + 1 }}</b>
+                                            </td>
+                                            <td class="name-cell">{{ $product[1]['name']}}</td>
+                                            <td>{{ $product[0]['quantity'] }}</td>
+                                            <td>{{ $product[0]['size'] }}</td>
+                                            <td>{{ $product[0]['delivery'] }}</td>
+
+                                            <?php
+                                                $date1 = new DateTime($product[0]['created_at']);
+                                                $date2 = new DateTime($product[0]['delivery']);
+                                                $diff = $date1->diff($date2);
+                                                
+                                                $shop = $product[1]['price'] * $product[0]['quantity'];
+                                                $total = 1;
+
+                                                if ($diff->days + 1 === 2) $total = $shop + ($shop * 0.5);
+                                                else if ($diff->days + 1 === 5) $total = $shop + ($shop * 0.3);
+                                                else if ($diff->days + 1 === 7) $total = $shop + ($shop * 0.1);
+                                            ?>
+
+                                            <td>{{ $total }}$</td>
+
+                                            <?php
+                                                $date1 = new DateTime($product[0]['delivery']);
+                                                $date2 = new DateTime('now');
+                                                $diff = $date1->diff($date2);
+                                            ?>
+                                            
+                                            <td>
+                                                @if($diff->days > 1)
+                                                    <form method="POST" action="{{ route('shop.delete', ['id' => $product[0]['id']]) }}" onsubmit="event.preventDefault(); if (confirm('Estás seguro de cancelar la compra?')) event.target.submit();">
+                                                        @csrf
+
+                                                        <input type="hidden" name="cart_product_id" value="{{ $product[0]['id'] }}">
+
+                                                        <button type="submit">
+                                                            <span class="icon-delete"></span>
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <p>No puede cancelar</p>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>    
+                            </table>
+                        @else
+                            <p class="table-message">No hay compras realizadas, ve a la tienda a realizar la primera</p>
+                        @endif
+                    </div>
                 @endif
             </div>
         </main>

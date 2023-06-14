@@ -160,7 +160,7 @@
                             <p>Este contrato, el acuerdo, se suscribe entre usted y <span>ReyRey Sports</span>, inscrita en el Registro Mercantil y Societario de Venezuela con el número B136664 y con RIF número J-22375408-5. Puede ponerse en contacto con <span>ReyRey Sports</span> en:</p>
 
                             <ul>
-                                <li>"DIRECCIÓN"</li>
+                                <li>Av. La Atlántida, Centro Comercial Jardines Plaza, PB, Local L-6, 1162, La Guaira</li>
                                 <li>Puede redactar un correo en el módulo de <a href="{{ route('extras.contact') }}">Contacto</a> de <span>ReyRey Sports</span></li>
                             </ul>
 

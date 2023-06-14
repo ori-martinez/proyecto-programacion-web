@@ -183,7 +183,7 @@
                                     @if ($product->category_id === 3)
                                         <label for="select-size">Tamaño:</label>
 
-                                        <select id="select-size" name="size" disabled>
+                                        <select id="select-size" name="size">
                                             <option value="U" selected>Único</option>
                                         </select>
                                     @else
