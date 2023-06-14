@@ -70,26 +70,19 @@ class ProductsController extends Controller
         return view('products.search', ['products' => $products]);
     }
 
-    /* CRUD */
+    /* CRUD (Simulation) */
 
     /**
      * Create new a product.
      */
     public function create() {
-
+        return view('products.form', ['product' => null]);
     }
 
     /**
      * Create update a product.
      */
-    public function update() {
-
-    }
-
-    /**
-     * Create delete a product.
-     */
-    public function delete() {
-
+    public function update(string $id) {
+        return view('products.form', ['product' => Product::findOrFail($id)]);
     }
 }

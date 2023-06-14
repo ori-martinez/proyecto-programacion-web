@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/ico" href="./img/favicon.ico" />
-        <link rel="stylesheet" href="./css/index.css" />
-        <link rel="stylesheet" href="./css/welcome.css">
-        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" type="image/ico" href="../img/favicon.ico" />
+        <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/login-register.css">
+        <link rel="stylesheet" href="../css/styles.css" />
 
-        <title>ReyRey Sports</title>
+        <title>Register Admin | ReyRey Sports</title>
     </head>
 
     <body>
@@ -19,7 +19,7 @@
             <span class="navbar-toggle">
                 <!-- Toggle Button -->
                 <button class="toggle-button">
-                    <img src="./img/menu-icon.svg" alt="Menú">
+                    <img src="../img/menu-icon.svg" alt="Menú">
                 </button>
             </span>
 
@@ -28,7 +28,7 @@
                 <!-- Logo -->
                 <div id="navbar-logo">
                     <a href="{{ route('welcome') }}">
-                        <img src="./img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
+                        <img src="../img/logo-main-without-bg.svg" alt="Logo de ReyRey Sports">
                     </a>
                 </div>
 
@@ -102,13 +102,13 @@
                                     <li class="user-menu-link">
                                         <a href="{{ route('profile.edit') }}">Editar Perfil</a>
                                     </li>
-                                    
+
                                     @if (Auth::user()->rol_id === 1)
                                         <li class="user-menu-link">
                                             <a href="{{ route('register.admin') }}">Crear Administrador</a>
                                         </li>
                                     @endif
-
+                                    
                                     <li class="user-menu-link">
                                         <form id="navbar-form" method="POST" action="{{ route('logout') }}">
                                             @csrf
@@ -141,59 +141,63 @@
 
         <!-- Body (Start) -->
         <main>
-            <!-- Carousel (Start) -->
-            <section id="section-carousel">
-                <!-- Arrows -->
-                <a href="javascript: executeCarousel('prev');" class="arrow-prev">
-                    <span class="icon-cheveron-left"></span>
-                </a>
-                <a href="javascript: executeCarousel('next');" class="arrow-next">
-                    <span class="icon-cheveron-right"></span>
-                </a>
+            <div class="div-form">
+                <!-- Error Message -->
+                <div id="div-error">
+                    @if ($errors->any())
+                        @foreach($errors->all() as $error)
+                            @if ($error === "The email has already been taken.")
+                                <p class="error-message">El correo electrónico ya esta registrado</p>
+                            @else
+                                <p class="error-message">{{ $error }}</p>
+                            @endif
+                        @endforeach
+                    @endif
+                </div>
 
-                <!-- Selectors -->
-                <ul class="list-carousel">
-                    <li><a itlist="itList_0" href="#" class="item-selected"></a></li>
-                    <li><a itlist="itList_1" href="#"></a></li>
-                    <li><a itlist="itList_2" href="#"></a></li>
-                </ul>
+                <h2></h2>
 
-                <!-- Banners -->
-                <ul id="banners">
-                    <li style="background-image: url('./img/banners/1.svg'); z-index:0; opacity: 1;">
-                        <div class="content-banner" >
-                            <div>
-                                <p id="banner-title-1">HASTA <span>30</span>% DE DESCUENTO</p>
+                <!-- Session Status -->
+                <x-auth-session-status :status="session('status')" />
 
-                                <span class="banner-high-text-1">¡No dejes pasar estas ofertas!</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url('./img/banners/2.svg');">
-                        <div class="content-banner" >
-                            <div>
-                                <p class="banner-high-text-2">¡SUPER OFERTAS !</p>
+                <!-- Login Form -->
+                <form id="register-form" method="POST" action="{{ route('register.admin') }}">
+                    @csrf
+                    <input type="hidden" name="rol_id" value=1>
 
-                                <h2 id="banner-title-2">Estamos en pleno apogeo</h2>
+                    <input id="input-name" type="text" name="name" placeholder="Nombre">
+                    <input id="input-lastname" type="text" name="last_name" placeholder="Apellido">
+                    
+                    <input id="input-birthdate" type="date" name="birthdate">
 
-                                <p class="banner-high-text-2">¡SUPER OFERTAS !</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url('./img/banners/3.svg');">
-                        <div class="content-banner" >
-                            <div>
-                                <h2>Encuentra lo mejor en deportes</h2>
+                    <select id="input-gender" name="gender">
+                        <option value="0">Género...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    
+                    <input id="input-address" type="text" name="address" placeholder="Dirección">
+                    <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
 
-                                <p>¡SÉ LO QUE USAS Y USA SIEMPRE LO MEJOR!</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <!-- Carousel (End) -->
+                    <div class="password">
+                        <input id="input-password" type="password" name="password" placeholder="Contraseña">
+
+                        <button type="button" id="toggle-password">
+                            <span class="icon-eye"></span>
+                        </button>
+                    </div>
+                    <div class="password">
+                        <input id="input-password-confirmation" type="password" name="password" placeholder="Confirmación">
+
+                        <button type="button" id="toggle-password-confirmation">
+                            <span class="icon-eye"></span>
+                        </button>
+                    </div>
+                    
+                    <button id="form-button">Register</button>
+                </form>
+            </div>   
         </main>
-        <!-- Body (End) -->
 
         <!-- Footer (Start) -->
         <footer>
@@ -228,66 +232,11 @@
             </div>
 
             <!-- Logo -->
-            <img id="footer-logo" src="./img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
+            <img id="footer-logo" src="../img/logo-second-without-bg.svg" alt="Logo Simple de ReyRey Sports">
         </footer>
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="./js/index.js"></script>
-        <script type="text/javascript">
-            if (document.querySelector('#section-carousel')) setInterval('executeCarousel("next")', 10000);
-
-            if (document.querySelector('.list-carousel')) {
-                let links = document.querySelectorAll('.list-carousel li a');
-
-                links.forEach((link) => {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault();
-
-                        let list = this.getAttribute('itlist');
-                        let arrayList = list.split("_");
-
-                        executeCarousel(arrayList[1]);
-
-                        return false;
-                    });
-                });
-            }
-
-            function executeCarousel (side) {
-                let banners = document.getElementById('banners');
-                let items = banners.getElementsByTagName('li');
-                let currentItem, nextItem;
-
-                for (let i = 0; i < items.length; i++) {
-                    if (items[i].style.opacity === '1'){
-                        currentItem = i;
-                        break;
-                    }
-                }
-
-                if (side === 'prev' || side === 'next') {
-                    if (side === 'prev') {
-                        nextItem = (currentItem === 0) ? items.length - 1 : currentItem - 1;
-                    }
-                    else {
-                        nextItem = (currentItem === items.length - 1) ? 0 : currentItem + 1;
-                    }
-                }
-                else {
-                    nextItem = side;
-                    side = (currentItem > nextItem) ? 'prev' : 'next';
-                }
-
-                let selectedItem = document.getElementsByClassName('list-carousel')[0].getElementsByTagName('a');
-
-                selectedItem[currentItem].classList.remove('item-selected');
-                selectedItem[nextItem].classList.add('item-selected');
-                items[currentItem].style.opacity = 0;
-                items[currentItem].style.zIndex = 0;
-                items[nextItem].style.opacity = 1;
-                items[nextItem].style.zIndex = 1;
-            }
-        </script>
+        <script src="../js/register.js"></script>
     </body>
 </html>

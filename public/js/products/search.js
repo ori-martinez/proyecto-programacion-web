@@ -56,3 +56,35 @@ const submitSearchForm = (e) => {
 
 inputSearch.addEventListener('change', (e) => validSearch(e), false);
 buttonSearch.addEventListener('click', (e) => submitSearchForm(e), false);
+
+/* Validations (Searcher) */
+
+const mainSearchForm = d.querySelector('#main-search-form');
+const mainErrorSearch = d.querySelector('#main-div-error-search');
+const mainInputSearch = d.querySelector('#main-input-search');
+const mainButtonSearch = d.querySelector('#main-search-form a');
+
+const validMainSearch = (e) => {
+    mainErrorSearch.innerHTML = '';
+
+    if (e.target.value.length === 0) {
+        mainErrorSearch.innerHTML = '<span class="error-message">Ingresa un valor para la búsqueda</span>';
+    }
+    else if (e.target.value.length < 4) {
+        mainErrorSearch.innerHTML = '<span class="info-message">Trata con un valor mayor de 3 caracteres</span>';
+    }
+}
+
+const submitMainSearchForm = (e) => {
+    e.preventDefault();
+
+    if (mainInputSearch.value.length === 0 || mainInputSearch.value.length < 4) {
+        mainErrorSearch.innerHTML = '<span class="error-message">Ingresa un valor válido para la búsqueda</span>';
+    }
+    else {
+        mainSearchForm.submit();
+    }
+}
+
+mainInputSearch.addEventListener('change', (e) => validMainSearch(e), false);
+mainButtonSearch.addEventListener('click', (e) => submitMainSearchForm(e), false);
