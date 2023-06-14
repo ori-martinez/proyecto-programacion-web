@@ -244,7 +244,7 @@
                                                                     </div>
                                                                 </div>
                                                             </label>
-                                                            <textarea aria-invalid="false" classP="mensaje" placeholder></textarea>
+                                                            <textarea aria-invalid="false" class="mensaje" placeholder id="mensaje"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-boton boton-form">

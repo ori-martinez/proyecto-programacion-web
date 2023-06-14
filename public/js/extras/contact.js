@@ -26,6 +26,9 @@ const searcherInput = d.querySelector('#searcher-input');
 searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);
 /* sms de mensaje ennviado */
 function enviar(){
-    window.alert('envio exitoso'),
-    icon
+    var sms = document.getElementById('mensaje');
+    if(sms.value.length==0)
+    {window.alert('No hay mensaje ')}
+    else{window.alert('envio exitoso')}
+    
 }
