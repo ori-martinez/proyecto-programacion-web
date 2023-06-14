@@ -109,7 +109,7 @@ td {
 }
 
 .table-message {
-    color: var(--golden);
+    color: var(--dark);
     font-size: 1.8rem;
     font-weight: bold;
     padding: 1.5rem 2rem 0;

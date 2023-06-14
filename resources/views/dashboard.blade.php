@@ -269,7 +269,7 @@
                                 </tbody>    
                             </table>
                         @else
-                            <p class="table-message">No hay compras realizadas, ve a la tienda a realizar la primera</p>
+                            <p class="table-message">No hay pedidos realizados, ve a la tienda a comprar</p>
                         @endif
                     </div>
                 @endif
