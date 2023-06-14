@@ -7,10 +7,10 @@
 
         <link rel="icon" type="image/ico" href="../img/favicon.ico" />
         <link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/products/index.css">
+        <link rel="stylesheet" href="../css/login-register.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
-        <title>ReyRey Sports</title>
+        <title>Register Admin | ReyRey Sports</title>
     </head>
 
     <body>
@@ -138,26 +138,65 @@
             </nav>
         </header>
         <!-- Header (End) -->
-        
-        <!-- Body -->
+
+        <!-- Body (Start) -->
         <main>
-            <h1 id="title-products">Productos para Mujeres</h1>
+            <div class="div-form">
+                <!-- Error Message -->
+                <div id="div-error">
+                    @if ($errors->any())
+                        @foreach($errors->all() as $error)
+                            @if ($error === "The email has already been taken.")
+                                <p class="error-message">El correo electrónico ya esta registrado</p>
+                            @else
+                                <p class="error-message">{{ $error }}</p>
+                            @endif
+                        @endforeach
+                    @endif
+                </div>
 
-            <section id="grid-cards">
-                @foreach ($products as $product)
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="../img/{{ $product->img }}" alt="Imagen de {{ $product->name }}">
-                        </div>
+                <h2></h2>
 
-                        <div class="card-content">
-                            <h3>{{ $product->name }}</h3>
-                            
-                            <a href="{{ route('products.product', ['id' => $product->id ]) }}" class="card-button">Detalles</a>
-                        </div>
+                <!-- Session Status -->
+                <x-auth-session-status :status="session('status')" />
+
+                <!-- Login Form -->
+                <form id="register-form" method="POST" action="{{ route('register.admin') }}">
+                    @csrf
+                    <input type="hidden" name="rol_id" value=1>
+
+                    <input id="input-name" type="text" name="name" placeholder="Nombre">
+                    <input id="input-lastname" type="text" name="last_name" placeholder="Apellido">
+                    
+                    <input id="input-birthdate" type="date" name="birthdate">
+
+                    <select id="input-gender" name="gender">
+                        <option value="0">Género...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    
+                    <input id="input-address" type="text" name="address" placeholder="Dirección">
+                    <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
+
+                    <div class="password">
+                        <input id="input-password" type="password" name="password" placeholder="Contraseña">
+
+                        <button type="button" id="toggle-password">
+                            <span class="icon-eye"></span>
+                        </button>
                     </div>
-                @endforeach
-            </section>
+                    <div class="password">
+                        <input id="input-password-confirmation" type="password" name="password" placeholder="Confirmación">
+
+                        <button type="button" id="toggle-password-confirmation">
+                            <span class="icon-eye"></span>
+                        </button>
+                    </div>
+                    
+                    <button id="form-button">Register</button>
+                </form>
+            </div>   
         </main>
 
         <!-- Footer (Start) -->
@@ -198,6 +237,6 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="../js/products/index.js"></script>
+        <script src="../js/register.js"></script>
     </body>
 </html>

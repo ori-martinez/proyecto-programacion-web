@@ -102,6 +102,13 @@
                                     <li class="user-menu-link">
                                         <a href="{{ route('profile.edit') }}">Editar Perfil</a>
                                     </li>
+
+                                    @if (Auth::user()->rol_id === 1)
+                                        <li class="user-menu-link">
+                                            <a href="{{ route('register.admin') }}">Crear Administrador</a>
+                                        </li>
+                                    @endif
+
                                     <li class="user-menu-link">
                                         <form id="navbar-form" method="POST" action="{{ route('logout') }}">
                                             @csrf
@@ -214,6 +221,6 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="../js/products/index.js"></script>
+        <script src="../js/products/search.js"></script>
     </body>
 </html>

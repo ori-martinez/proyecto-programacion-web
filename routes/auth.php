@@ -36,6 +36,11 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('register/admin', [RegisteredUserController::class, 'createAdmin'])
+                ->name('register.admin');
+
+    Route::post('register/admin', [RegisteredUserController::class, 'storeAdmin']);
+    
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');
 
