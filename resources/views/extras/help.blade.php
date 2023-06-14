@@ -7,8 +7,9 @@
 
         <link rel="icon" type="image/ico" href="../img/favicon.ico" />
         <link rel="stylesheet" href="../css/index.css" />
+        <link rel="stylesheet" href="../css/extras/index.css">
         <link rel="stylesheet" href="../css/extras/help.css">
-        <link rel="stylesheet" href="../css/extras/estilos.css">
+        <link rel="stylesheet" href="../css/extras/styles.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
@@ -140,142 +141,157 @@
         </header>
         <!-- Header (End) -->
 
-        <!-- Body -->
+        <!-- Body (Start) -->
         <main>
             <div class="privacy-policy">
-                <div class="common-policy contenido">
-                    <div class="cont-encabezado">
-                        <div class="espacio izq"></div>
-                        <div class="centro">
-                         <div class="contenido-centro">Ayuda y preguntas frecuentes</div>
+                <div class="common-policy content">
+                    <!-- Heading Content -->
+                    <div class="heading-content">
+                        <div class="space left"></div>
+                        <div class="center">
+                            <div class="content-center">Ayuda</div>
                         </div>
-                        <div class="espacio derch"></div>
-                    </div >
-                    <!-- intento de sección de ayuda-->
-                    <div class="Contenido-principal">
-                        <h2 class="content-header">Una ayuda de como iniciar sesión </h2>
-                        <div class="content-step">
-                            <div class="content-stepU">
-                                <div class="stepHeader">
-                                    <div class="StepHeader-numb">
+                        <div class="space right"></div>
+                    </div>
+
+                    <!-- Login Help (Start) -->
+                    <div class="main-content-steps">
+                        <h2 class="content-steps-title">Iniciar Sesión</h2>
+                        
+                        <div class="content-steps">
+                            <div class="step">
+                                <div class="step-header">
+                                    <div class="step-header-numb">
                                         <div class="numb">1</div>
                                     </div>
-                                    <div class="StepHeader-tex">registro</div>
+                                    <div class="step-header-title">Registro</div>
                                 </div>
-                                <div class="undefined">Da click en el botón register y completa los datos solicitados</div>
+                                <div>Dentro de la página de registro, completa los datos solicitados y hace click en el botón Register.</div>
                             </div>
-                            <div class="content-stepU">
-                                <div class="stepHeader">
-                                    <div class="StepHeader-numb">
+                            <div class="step">
+                                <div class="step-header">
+                                    <div class="step-header-numb">
                                         <div class="numb">2</div>
                                     </div>
-                                    <div class="StepHeader-tex"> registro verificado</div>
+                                    <div class="step-header-title">Registro Verificado</div>
                                 </div>
-                                <div class="undefined">Después de llenar los datos toca el register y sus datos serán validados si son correctos </div>
+                                <div>Después de clickear el bóton, sus datos serán validados. De ser correcto, su registro será procesado.</div>
                             </div>
-                            <div class="content-stepU">
-                                <div class="stepHeader">
-                                    <div class="StepHeader-numb">
+                            <div class="step">
+                                <div class="step-header">
+                                    <div class="step-header-numb">
                                         <div class="numb">3</div>
                                     </div>
-                                    <div class="StepHeader-tex">inicio de sesión</div>
+                                    <div class="step-header-title">Inicio de Sesión</div>
                                 </div>
-                                <div class="undefined">Ya con ello se tendrá un usuario dando click al botón login y llenar los datos preveiamente validados iniciara sesión</div>
+                                <div>Al procesar el registro, será redirigido al panel de usuario. Al hacer login, debe ingresar el correo y contraseña de su registro.</div>
                             </div>
                         </div>
-                        <div class="pie-step"></div>
-                    </div >
-                    <!-- fin del intento -->
-
+                    </div>
+                    <!-- Login Help (End) -->
                 </div >
             </div >
-               <!--  intento de adaptación-->
 
-               <h1 class="titulo">Preguntas Frecuentes</h1>
-		<div class="categorias" id="categorias">
-			<div class="categoria activa" data-categoria="metodos-pago">
-				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.19 7h2.81v15h-21v-5h-2.81v-15h21v5zm1.81 1h-19v13h19v-13zm-9.5 1c3.036 0 5.5 2.464 5.5 5.5s-2.464 5.5-5.5 5.5-5.5-2.464-5.5-5.5 2.464-5.5 5.5-5.5zm0 1c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm.5 8h-1v-.804c-.767-.16-1.478-.689-1.478-1.704h1.022c0 .591.326.886.978.886.817 0 1.327-.915-.167-1.439-.768-.27-1.68-.676-1.68-1.693 0-.796.573-1.297 1.325-1.448v-.798h1v.806c.704.161 1.313.673 1.313 1.598h-1.018c0-.788-.727-.776-.815-.776-.55 0-.787.291-.787.622 0 .247.134.497.957.768 1.056.344 1.663.845 1.663 1.746 0 .651-.376 1.288-1.313 1.448v.788zm6.19-11v-4h-19v13h1.81v-9h17.19z"/></svg>
-				<p>Métodos de pago</p>
-			</div>
-			<div class="categoria" data-categoria="entregas">
-				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M7 24h-5v-9h5v1.735c.638-.198 1.322-.495 1.765-.689.642-.28 1.259-.417 1.887-.417 1.214 0 2.205.499 4.303 1.205.64.214 1.076.716 1.175 1.306 1.124-.863 2.92-2.257 2.937-2.27.357-.284.773-.434 1.2-.434.952 0 1.751.763 1.751 1.708 0 .49-.219.977-.627 1.356-1.378 1.28-2.445 2.233-3.387 3.074-.56.501-1.066.952-1.548 1.393-.749.687-1.518 1.006-2.421 1.006-.405 0-.832-.065-1.308-.2-2.773-.783-4.484-1.036-5.727-1.105v1.332zm-1-8h-3v7h3v-7zm1 5.664c2.092.118 4.405.696 5.999 1.147.817.231 1.761.354 2.782-.581 1.279-1.172 2.722-2.413 4.929-4.463.824-.765-.178-1.783-1.022-1.113 0 0-2.961 2.299-3.689 2.843-.379.285-.695.519-1.148.519-.107 0-.223-.013-.349-.042-.655-.151-1.883-.425-2.755-.701-.575-.183-.371-.993.268-.858.447.093 1.594.35 2.201.52 1.017.281 1.276-.867.422-1.152-.562-.19-.537-.198-1.889-.665-1.301-.451-2.214-.753-3.585-.156-.639.278-1.432.616-2.164.814v3.888zm3.79-19.913l3.21-1.751 7 3.86v7.677l-7 3.735-7-3.735v-7.719l3.784-2.064.002-.005.004.002zm2.71 6.015l-5.5-2.864v6.035l5.5 2.935v-6.106zm1 .001v6.105l5.5-2.935v-6l-5.5 2.83zm1.77-2.035l-5.47-2.848-2.202 1.202 5.404 2.813 2.268-1.167zm-4.412-3.425l5.501 2.864 2.042-1.051-5.404-2.979-2.139 1.166z"/></svg>
-				<p>Entregas</p>
-			</div>
-			<div class="categoria" data-categoria="seguridad">
-				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 1.292c2.942 2.31 5.12 2.655 8 2.701v10.542c0 3.891-2.638 4.943-8 8.284-5.375-3.35-8-4.414-8-8.284v-10.542c2.88-.046 5.058-.391 8-2.701zm5 7.739l-5.992 6.623-3.672-3.931.701-.683 3.008 3.184 5.227-5.878.728.685z"/></svg>
-				<p>Seguridad</p>
-			</div>
-			<div class="categoria" data-categoria="cuenta">
-				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M9.484 15.696l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm10.516 11.304h-8v1h8v-1zm0-5h-8v1h8v-1zm0-5h-8v1h8v-1zm4-5h-24v20h24v-20zm-1 19h-22v-18h22v18z"/></svg>
-				<p>Cuenta</p>
-			</div>
-		</div>
+            <!-- FQA (Start) -->
+                <h1 class="titulo">Preguntas Frecuentes</h1>
 
-		<div class="preguntas">
+                <!-- Categories -->
+                <div class="categorias" id="categorias">
+                    <div class="categoria activa" data-categoria="metodos-pago">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.19 7h2.81v15h-21v-5h-2.81v-15h21v5zm1.81 1h-19v13h19v-13zm-9.5 1c3.036 0 5.5 2.464 5.5 5.5s-2.464 5.5-5.5 5.5-5.5-2.464-5.5-5.5 2.464-5.5 5.5-5.5zm0 1c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm.5 8h-1v-.804c-.767-.16-1.478-.689-1.478-1.704h1.022c0 .591.326.886.978.886.817 0 1.327-.915-.167-1.439-.768-.27-1.68-.676-1.68-1.693 0-.796.573-1.297 1.325-1.448v-.798h1v.806c.704.161 1.313.673 1.313 1.598h-1.018c0-.788-.727-.776-.815-.776-.55 0-.787.291-.787.622 0 .247.134.497.957.768 1.056.344 1.663.845 1.663 1.746 0 .651-.376 1.288-1.313 1.448v.788zm6.19-11v-4h-19v13h1.81v-9h17.19z"/></svg>
+                        <p>Métodos de Pago</p>
+                    </div>
+                    <div class="categoria" data-categoria="entregas">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M7 24h-5v-9h5v1.735c.638-.198 1.322-.495 1.765-.689.642-.28 1.259-.417 1.887-.417 1.214 0 2.205.499 4.303 1.205.64.214 1.076.716 1.175 1.306 1.124-.863 2.92-2.257 2.937-2.27.357-.284.773-.434 1.2-.434.952 0 1.751.763 1.751 1.708 0 .49-.219.977-.627 1.356-1.378 1.28-2.445 2.233-3.387 3.074-.56.501-1.066.952-1.548 1.393-.749.687-1.518 1.006-2.421 1.006-.405 0-.832-.065-1.308-.2-2.773-.783-4.484-1.036-5.727-1.105v1.332zm-1-8h-3v7h3v-7zm1 5.664c2.092.118 4.405.696 5.999 1.147.817.231 1.761.354 2.782-.581 1.279-1.172 2.722-2.413 4.929-4.463.824-.765-.178-1.783-1.022-1.113 0 0-2.961 2.299-3.689 2.843-.379.285-.695.519-1.148.519-.107 0-.223-.013-.349-.042-.655-.151-1.883-.425-2.755-.701-.575-.183-.371-.993.268-.858.447.093 1.594.35 2.201.52 1.017.281 1.276-.867.422-1.152-.562-.19-.537-.198-1.889-.665-1.301-.451-2.214-.753-3.585-.156-.639.278-1.432.616-2.164.814v3.888zm3.79-19.913l3.21-1.751 7 3.86v7.677l-7 3.735-7-3.735v-7.719l3.784-2.064.002-.005.004.002zm2.71 6.015l-5.5-2.864v6.035l5.5 2.935v-6.106zm1 .001v6.105l5.5-2.935v-6l-5.5 2.83zm1.77-2.035l-5.47-2.848-2.202 1.202 5.404 2.813 2.268-1.167zm-4.412-3.425l5.501 2.864 2.042-1.051-5.404-2.979-2.139 1.166z"/></svg>
+                        <p>Entregas</p>
+                    </div>
+                    <div class="categoria" data-categoria="seguridad">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 1.292c2.942 2.31 5.12 2.655 8 2.701v10.542c0 3.891-2.638 4.943-8 8.284-5.375-3.35-8-4.414-8-8.284v-10.542c2.88-.046 5.058-.391 8-2.701zm5 7.739l-5.992 6.623-3.672-3.931.701-.683 3.008 3.184 5.227-5.878.728.685z"/></svg>
+                        <p>Seguridad</p>
+                    </div>
+                    <div class="categoria" data-categoria="cuenta">
+                        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M9.484 15.696l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm10.516 11.304h-8v1h8v-1zm0-5h-8v1h8v-1zm0-5h-8v1h8v-1zm4-5h-24v20h24v-20zm-1 19h-22v-18h22v18z"/></svg>
+                        <p>Cuenta</p>
+                    </div>
+                </div>
 
-			<!-- Preguntas Metodos de pago -->
-			<div class="contenedor-preguntas activo" data-categoria="metodos-pago">
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Que metodos de pago disponibles tienen? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">En ReyRey sports aceptamos diferentes medios de pagos, para que tu compra sea aún más fácil: Efectivo, Zelle, Venmo, Paypal, Tranferencia bancaria y Pago Móvil. <br>
+                <!-- Questions & Answers -->
+                <div class="preguntas">
+                    <!-- Payment Method -->
+                    <div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Qué metodos de pago están disponibles? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">
+                                En <span>ReyRey Sports</span> se aceptan diferentes medios de pagos, para que tu compra sea aún más fácil: Efectivo, Zelle, Venmo, Paypal, Tranferencia Bancaria y Pago Móvil. <br>
+                                Pagos en efectivo únicamente en La Guaira. <br>
+                                Transferencia Bancaria o Pago Móvil: Si selecciona uno de estos dos métodos de pago, en los próximos minutos el departamento de atención al cliente se comunicará con el cliente, para indicarle los datos bancarios y el monto para que proceda a realizar la transferencia. <br>
+                                La selección del método de pago, es la última fase del proceso para concretar la compra.
+                            </p>
+                        </div>
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Tienen plazo de pago? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">Por los momentos, la opción de plazo de pago no se encuentra habilitada.</p>
+                        </div>
+                    </div>
 
-                    Pagos en efectivo únicamente en La Guaira. <br>
+                    <!-- Delivery -->
+                    <div class="contenedor-preguntas" data-categoria="entregas">
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Tienen entregas a domicilio? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">
+                                ¡Ahora <span>ReyRey Sports</span> llega a todos los rincones de Venezuela! Para realizar compras con envíos fuera de La Guaira. Haz tu pedido por esta web y retiralo en tu agencia de MRW o Zoom más cercana. Los pedidos como mínimo tardan entre 48 y 72 horas. (Aplican excepciones). <br>
+                                Para pedidos hechos dentro del estado La Guaira, se cuenta con delivery y le será entregado en un punto céntrico de la vía principal. 
+                            </p>
+                        </div>
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿En cuánto sale el envío a mi país? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">Por los momentos, <span>ReyRey Sports</span> no cuenta con servicios de envio internacionales. Más si vives en Venezuela, los envíos seran a través de las agencias de MRW o Zoom.</p>
+                        </div>
+                    </div>
 
-                    Transferencia Bancaria o Pago Móvil: si seleccionas uno de estos dos métodos de pago, en los próximos minutos el departamento de atención al cliente se comunicará con el cliente, para indicarle los datos bancarios y el monto para que proceda a realizar la transferencia. <br>
+                    <!-- Security -->
+                    <div class="contenedor-preguntas" data-categoria="seguridad">
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Cómo puedo saber si son confiables? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta"><span>ReyRey Sports</span> es una compañía líder en la industria deportiva del Estado La Guaira, contando con el mejor surtido de implementos deportivos, de la más alta calidad y un excelente servicio, apoyado en el asesoramiento asertivo para cada deporte que practiquen los clientes. Por eso, <span>ReyRey Sports</span> está comprometido para que cada una de las personas alcancen su más alto rendimiento y viva la mejor experiencia al momento de desempeñarse en su respectiva actividad. Además, se puede verificar la información con otras fuentes confiables como al revisar las credenciales de la empresa.</p>
+                        </div>
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Qué pasa con mis datos personales? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">El tratamiento de datos personales se adopta en base a la ley de la siguente manera, se garantizan los derechos de la privacidad, intimidad y el buen nombre, en el tratamiento de datos personales; y en consecuencia todas las actuaciones serán regidas por los principios de legalidad, finalidad, libertad, veracidad o calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad.</p>
+                        </div>
+                    </div>
 
-                    La selección del método de pago, es la última fase del proceso para concretar la compra.</p>
-				</div>
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Tienen plazo de pago? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Por los momentos la opción de plazo de pago no se encuentra habilitada.</p>
-				</div>
-			</div>
-
-			<!-- Preguntas Entregas -->
-			<div class="contenedor-preguntas" data-categoria="entregas">
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Tienen entregas a domicilio? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">¡Ahora ReyRey sports llega a todos los rincones de Venezuela! Para realizar compras con envios fuera de La Guaira haz tu pedido por nuestra web y retiralo en tu agencia de MRW o zoom más cercana. Los pedidos generalmente tardan entre 24 y 72 horas. (Aplican excepciones).  El precio del envío de lo indicará la agencia de MRW o zoom en el momento del retiro. <br>
-                    Para pedidos hechos dentro del estado La Guaira se cuenta con delivery y le será entregado en un punto céntrico de la vía principal 
-                    </p>
-				</div>
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿En cuanto sale el envio a mi país? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Por los momento ReyRey Sports no cuenta con servicios de envio internacionales, mas si vives en Venezuela los envios seran a través de las agencias de MRW o zoom </p>
-				</div>
-			</div>
-
-			<!-- Preguntas Seguridad -->
-			<div class="contenedor-preguntas" data-categoria="seguridad">
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Como puedo saber si son confiables? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">ReyRey sports una compañía líder en la industria deportiva de la Estado La Guaira, contamos con el mejor surtido de implementos deportivos, de la más alta calidad y un excelente servicio, apoyado en el asesoramiento asertivo para cada deporte que practiquen nuestros clientes. Por eso, estamos comprometidos para que cada una de las personas alcancen su más alto rendimiento y viva la mejor experiencia al momento de desempeñarse en su respectiva actividad. Además pueden verificar la información con otras fuentes confiables como revisar las credenciales de la empresa. 
-                    </p>
-				</div>
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Que pasa con mis datos personales? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">El tratamiento de datos personales se adopta en base a la ley de la siguente manera, se garantizan los derechos de la privacidad, intimidad y el buen nombre, en el tratamiento de datos personales; y en consecuencia todas las actuaciones serán regidas por los principios de legalidad, finalidad, libertad, veracidad o calidad, transparencia, acceso y circulación restringida, seguridad y confidencialidad.</p>
-				</div>
-			</div>
-
-			<!-- Preguntas Cuenta -->
-			<div class="contenedor-preguntas" data-categoria="cuenta">
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Como puedo acceder a mis pedidos? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Ingresa al carrito de compra . Donde se mostrará tus artículos favoritos que han sido seleccionados</p>
-				</div>
-				<div class="contenedor-pregunta">
-					<p class="pregunta">¿Como puedo cambiar mi contraseña? <img src="./img/suma.svg" alt="Abrir Respuesta" /></p>
-					<p class="respuesta">Para cambiar la contraseña de usuario que ha colocado, ingrese a la opción de "editar perfil", en ella busque la opción que diga "ingresar nueva contraseña", guarde los cambios y su contraseña ya estará cambiada. </p>
-				</div>
-			</div>
-
-
-
-
-		</div>
-                    <!-- fin del intento de adaptaciónc -->
+                    <!-- Account -->
+                    <div class="contenedor-preguntas" data-categoria="cuenta">
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Cómo puedo acceder a mis pedidos? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">En la barra de navegación, haga click al icono de carrito de compras. Así, será redirigido al panel de usuario, donde se desplegarán en una tabla las compras realizadas.</p>
+                        </div>
+                        <div class="contenedor-pregunta">
+                            <p class="pregunta">
+                                ¿Cómo puedo cambiar mi contraseña? <img src="./img/suma.svg" alt="Abrir Respuesta" />
+                            </p>
+                            <p class="respuesta">Para cambiar la contraseña de usuario ingresada en el registro, haga click a la opción de <b>Editar Perfil</b> del menú de usuario. En ella, busque la sección de <b>Gestión de Contraseña</b> y complete el formulario. Guarde los cambios y su contraseña ya estará cambiada.</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- FQA (End) -->
         </main>
+        <!-- Body (End) -->
 
         <!-- Footer (Start) -->
         <footer>

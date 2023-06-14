@@ -7,7 +7,7 @@
 
         <link rel="icon" type="image/ico" href="../img/favicon.ico" />
         <link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/extras/policies-terms.css">
+        <link rel="stylesheet" href="../css/extras/index.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
         <title>ReyRey Sports</title>
