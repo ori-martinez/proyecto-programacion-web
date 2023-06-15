@@ -193,97 +193,93 @@
             </section>
             <!-- Carousel (End) -->
 
-               <br>
-
-             <!-- contenido dividido -->
-
-             <section class="cajas-pimg animated fadeInDown ">
-                 <!-- contenedor -->
-                <div class="selec-general">
-                     <!-- caja de mujeres  -->
-                    <div class="imagen-columna">
-
-                        <div class="cus-text">
+            <!-- Women/Men Section -->
+            <section class="div-general animated fadeInDown">
+                <div class="general">
+                    <!-- Women Content -->
+                    <div class="img-col">
+                        <div class="col-text">
                             <h1>MUJERES</h1>
-                            <a href="{{ url('/productos/mujeres') }}" class="boton"> Comprar</a>
+
+                            <a href="{{ route('products.women') }}">
+                                <button class="col-button">Comprar</button>
+                            </a>
                         </div>
-                        <!-- link de la imagen -->
-                        <a href="{{ url('/productos/mujeres') }}"       class="imagen-link">
-                            <div class="imagen-elemento">
-                                <img alt="imagen deportivas" class="redireccion" src="{{ url('./img/deporte1.png')}}" sizes="582px">
+ 
+                        <a href="{{ route('products.women') }}" class="img-link">
+                            <div class="img-element">
+                                <img alt="Imagen Deportivas" src="{{ url('./img/deporte1.jpg')}}">
                             </div>
-                            <noscript class="noscript">
 
-                            </noscript>
+                            <noscript class="noscript"></noscript>
                         </a>
-
-
                     </div>
-                    <!-- Caja de hombres -->
-                    <div class="imagen-columna">
 
-                        <div class="cus-text">
+                    <!-- Men Content -->
+                    <div class="img-col">
+                        <div class="col-text">
                             <h1>HOMBRES</h1>
-                            <a href="{{ url('/productos/hombres') }}" class="boton"> Comprar</a>
-                        </div>
-                        <!-- link de la imagen -->
-                        <a href="{{ url('/productos/hombres') }}" class="imagen-link">
-                            <div class="imagen-elemento">
-                                <img alt="imagen deportiva" class="redireccion" src
-                                ="{{ url('./img/deporte.png')}}" sizes="582px">
-                            </div>
-                            <noscript class="noscript">
 
-                            </noscript>
+                            <a href="{{ route('products.men') }}">
+                                <button class="col-button">Comprar</button>
+                            </a>
+                        </div>
+                        
+                        <a href="{{ route('products.men') }}" class="imG-link">
+                            <div class="img-element">
+                                <img alt="imagen Deportiva" src="{{ url('./img/deporte.jpg')}}">
+                            </div>
+
+                            <noscript class="noscript"></noscript>
                         </a>
                     </div>
                 </div>
-
              </section>
+  
+            <!-- Qualities Section -->
+            <section class="qualities">
+                <div class="qualities-div">
+                    <div class="icon-div">
+                        <div class="img-block">
+                            <img src="{{ url('./img/trust.png')}}" alt="Imagen Mini">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-title"></h3>
 
-             <!-- sección de divición contenido para pag principal-->
+                            <p>Productos 100% originales</p>
+                        </div>
+                    </div>
+                    <div class="icon-div">
+                        <div class="img-block">
+                            <img src="{{ url('./img/time.webp')}}" alt="Imagen Mini">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-title"></h3>
 
-             <section class="seccion ancho-estandar">
-                <div class="contenedor-g contenido-center">
-                    <div class="icon-con-text one-at-fourth columnas ">
-                        <div class="img-block">
-                            <img src="{{ url('./img/trust.png')}}" alt="imagenes mini" class="marco">
-                        </div>
-                        <div class="icon-text">
-                            <h3 class="icon-tittle"></h3>
-                            <p> productos 100% originales </p>
+                            <p>Recibe tu pedido en 48hrs</p>
                         </div>
                     </div>
-                    <div class="icon-con-text one-at-fourth columnas ">
+                    <div class="icon-div">
                         <div class="img-block">
-                            <img src="{{ url('./img/time.webp')}}" alt="imagenes mini" class="marco">
+                            <img src="{{ url('./img/shipped_1.png')}}" alt="Imagen Mini">
                         </div>
                         <div class="icon-text">
-                            <h3 class="icon-tittle"></h3>
-                            <p>recibe tu pedido en 48hrs</p>
-                        </div>
-                    </div>
-                    <div class="icon-con-text one-at-fourth columnas ">
-                        <div class="img-block">
-                            <img src="{{ url('./img/shipped_1.png')}}" alt="imagenes mini" class="marco">
-                        </div>
-                        <div class="icon-text">
-                            <h3 class="icon-tittle"></h3>
-                            <p>delivery gratis en La Guaira </p>
-                        </div>
-                    </div>
-                    <div class="icon-con-text one-at-fourth columnas ">
-                        <div class="img-block">
-                            <img src="{{ url('./img/countries_1.webp')}}" alt="imagenes mini" class="marco">
-                        </div>
-                        <div class="icon-text">
-                            <h3 class="icon-tittle"></h3>
-                            <p>envíos a todo el país</p>
-                        </div>
-                    </div>
+                            <h3 class="icon-title"></h3>
 
+                            <p>Delivery gratis en La Guaira</p>
+                        </div>
+                    </div>
+                    <div class="icon-div">
+                        <div class="img-block">
+                            <img src="{{ url('./img/countries_1.webp')}}" alt="Imagen Mini">
+                        </div>
+                        <div class="icon-text">
+                            <h3 class="icon-title"></h3>
+
+                            <p>Envíos a todo el país</p>
+                        </div>
+                    </div>
                 </div>
-
              </section>
         </main>
         <!-- Body (End) -->
