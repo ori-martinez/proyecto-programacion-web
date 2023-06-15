@@ -6,6 +6,7 @@ use App\Models\Commentary;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductsController extends Controller
 {
@@ -76,13 +77,23 @@ class ProductsController extends Controller
      * Create new a product.
      */
     public function create() {
-        return view('products.form', ['product' => null]);
+        if (Auth::user()->rol_id === 1) { 
+            return view('profile.register-product');
+        }
+        else {
+            return redirect()->route('welcome');
+        }
     }
 
     /**
      * Create update a product.
      */
     public function update(string $id) {
-        return view('products.form', ['product' => Product::findOrFail($id)]);
+        if (Auth::user()->rol_id === 1) { 
+            return view('profile.update-product', ['product' => Product::findOrFail($id)]);
+        }
+        else {
+            return redirect()->route('welcome');
+        }
     }
 }

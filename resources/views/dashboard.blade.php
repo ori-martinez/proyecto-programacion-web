@@ -134,7 +134,9 @@
                     <div class="heading-dashboard">
                         <h2>PRODUCTOS</h2>
                         
-                        <button class="heading-button">Nuevo</button>
+                        <a href="{{ route('products.register') }}">
+                            <button class="heading-button">Nuevo</button>
+                        </a>
                     </div>
                     
                     <!-- Admin Table -->
@@ -181,10 +183,13 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <button>
-                                                    <span class="icon-edit"></span>
-                                                </button>
-                                                <button>
+                                                <a href="{{ route('products.update', ['id' => $product->id]) }}">
+                                                    <button>
+                                                        <span class="icon-edit"></span>
+                                                    </button>
+                                                </a>
+
+                                                <button onclick="if(confirm('Esta seguro de eliminar este producto?')) alert('El producto fue eliminado con éxito')">
                                                     <span class="icon-delete"></span>
                                                 </button>
                                             </td>

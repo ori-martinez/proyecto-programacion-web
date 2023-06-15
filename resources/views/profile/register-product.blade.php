@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/login-register.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
-        <title>Register Admin | ReyRey Sports</title>
+        <title>Register Producto | ReyRey Sports</title>
     </head>
 
     <body>
@@ -155,46 +155,38 @@
                     @endif
                 </div>
 
+                <h2></h2>
+
                 <!-- Session Status -->
                 <x-auth-session-status :status="session('status')" />
 
                 <!-- Login Form -->
-                <form id="register-form" method="POST" action="{{ route('register.admin') }}">
-                    @csrf
-                    <h2>Admin</h2>
-
-                    <input type="hidden" name="rol_id" value=1>
+                <form id="register-form"">
+                    <h2>Producto</h2>
 
                     <input id="input-name" type="text" name="name" placeholder="Nombre">
-                    <input id="input-lastname" type="text" name="last_name" placeholder="Apellido">
+                    <input id="input-price" type="text" name="price" placeholder="Precio">
                     
-                    <input id="input-birthdate" type="date" name="birthdate">
-
-                    <select id="input-gender" name="gender">
-                        <option value="0">Género...</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Femenino</option>
+                    <select id="input-category" name="category">
+                        <option value="0">Categoría...</option>
+                        <option value="1">Hombres</option>
+                        <option value="2">Mujeres</option>
+                        <option value="3">Artículos</option>
                     </select>
+                    <select id="input-sport" name="sport">
+                        <option value="0">Deporte...</option>
+                        <option value="2">Fútbol</option>
+                        <option value="3">Básquetbol</option>
+                        <option value="4">Béisbol</option>
+                        <option value="1">Todos</option>
+                    </select>
+
+                    <input accept="image/png" id="input-img" type="file" name="img" placeholder="Imagen...">
                     
-                    <input id="input-address" type="text" name="address" placeholder="Dirección">
-                    <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
-
-                    <div class="password">
-                        <input id="input-password" type="password" name="password" placeholder="Contraseña">
-
-                        <button type="button" id="toggle-password">
-                            <span class="icon-eye"></span>
-                        </button>
-                    </div>
-                    <div class="password">
-                        <input id="input-password-confirmation" type="password" name="password" placeholder="Confirmación">
-
-                        <button type="button" id="toggle-password-confirmation">
-                            <span class="icon-eye"></span>
-                        </button>
-                    </div>
+                    <a href="{{ route('dashboard') }}">
+                        <button id="form-button">Register</button>
+                    </a>
                     
-                    <button id="form-button">Register</button>
                 </form>
             </div>   
         </main>
@@ -237,6 +229,6 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="../js/register.js"></script>
+        <script src="../js/profile/product.js"></script>
     </body>
 </html>

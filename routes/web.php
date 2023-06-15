@@ -28,7 +28,11 @@ Route::get('/productos/articulos', [ProductsController::class, 'indexArticles'])
 Route::get('/productos/{id}', [ProductsController::class, 'show'])->name('products.product');
 Route::get('/productos', [ProductsController::class, 'search'])->name('products.search');
 Route::post('/productos', [ProductsController::class, 'search'])->name('products.search');
+Route::get('/producto/create', [ProductsController::class, 'create'])->middleware(['auth', 'verified'])->name('products.register');
+Route::get('/producto/{id}', [ProductsController::class, 'update'])->middleware(['auth', 'verified'])->name('products.update');
+
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
+
 Route::post('/compra', [CartsController::class, 'store'])->name('shop');
 Route::post('/compra/delete', [CartsController::class, 'delete'])->name('shop.delete');
 

@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/login-register.css">
         <link rel="stylesheet" href="../css/styles.css" />
 
-        <title>Register Admin | ReyRey Sports</title>
+        <title>Update Producto | ReyRey Sports</title>
     </head>
 
     <body>
@@ -155,46 +155,67 @@
                     @endif
                 </div>
 
+                <h2></h2>
+
                 <!-- Session Status -->
                 <x-auth-session-status :status="session('status')" />
 
                 <!-- Login Form -->
-                <form id="register-form" method="POST" action="{{ route('register.admin') }}">
-                    @csrf
-                    <h2>Admin</h2>
+                <form id="register-form"">
+                    <h2>Producto</h2>
 
-                    <input type="hidden" name="rol_id" value=1>
-
-                    <input id="input-name" type="text" name="name" placeholder="Nombre">
-                    <input id="input-lastname" type="text" name="last_name" placeholder="Apellido">
+                    <input id="input-name" type="text" name="name" placeholder="Nombre" value="{{ $product->name }}">
+                    <input id="input-price" type="text" name="price" placeholder="Precio" value="{{ $product->price }}">
                     
-                    <input id="input-birthdate" type="date" name="birthdate">
+                    <select id="input-category" name="category">
+                        <option value="0">Categoría...</option>
 
-                    <select id="input-gender" name="gender">
-                        <option value="0">Género...</option>
-                        <option value="M">Masculino</option>
-                        <option value="F">Femenino</option>
+                        @if ($product->category_id === 1)
+                            <option value="1" selected>Hombres</option>
+                            <option value="2">Mujeres</option>
+                            <option value="3">Artículos</option>
+                        @elseif ($product->category_id === 2)
+                            <option value="1">Hombres</option>
+                            <option value="2" selected>Mujeres</option>
+                            <option value="3">Artículos</option>
+                        @else
+                            <option value="1">Hombres</option>
+                            <option value="2">Mujeres</option>
+                            <option value="3" selected>Artículos</option>
+                        @endif
                     </select>
+                    <select id="input-sport" name="sport">
+                        <option value="0">Deporte...</option>
+
+                        @if ($product->sport_id === 1)
+                            <option value="2">Fútbol</option>
+                            <option value="3">Básquetbol</option>
+                            <option value="4">Béisbol</option>
+                            <option value="1" selected>Todos</option>
+                        @elseif ($product->sport_id === 2)
+                            <option value="2" selected>Fútbol</option>
+                            <option value="3">Básquetbol</option>
+                            <option value="4">Béisbol</option>
+                            <option value="1">Todos</option>
+                        @elseif ($product->sport_id === 3)
+                            <option value="2">Fútbol</option>
+                            <option value="3" selected>Básquetbol</option>
+                            <option value="4">Béisbol</option>
+                            <option value="1">Todos</option>
+                        @else
+                            <option value="2">Fútbol</option>
+                            <option value="3">Básquetbol</option>
+                            <option value="4" selected>Béisbol</option>
+                            <option value="1">Todos</option>
+                        @endif
+                    </select>
+
+                    <input accept="image/png" id="input-img" type="file" name="img" placeholder="Imagen...">
                     
-                    <input id="input-address" type="text" name="address" placeholder="Dirección">
-                    <input id="input-email" type="text" name="email" placeholder="Correo Electrónico">
-
-                    <div class="password">
-                        <input id="input-password" type="password" name="password" placeholder="Contraseña">
-
-                        <button type="button" id="toggle-password">
-                            <span class="icon-eye"></span>
-                        </button>
-                    </div>
-                    <div class="password">
-                        <input id="input-password-confirmation" type="password" name="password" placeholder="Confirmación">
-
-                        <button type="button" id="toggle-password-confirmation">
-                            <span class="icon-eye"></span>
-                        </button>
-                    </div>
+                    <a href="{{ route('dashboard') }}">
+                        <button id="form-button">Actualizar</button>
+                    </a>
                     
-                    <button id="form-button">Register</button>
                 </form>
             </div>   
         </main>
@@ -237,6 +258,6 @@
         <!-- Footer (End) -->
 
         <!-- Scripts -->
-        <script src="../js/register.js"></script>
+        <script src="../js/profile/product.js"></script>
     </body>
 </html>

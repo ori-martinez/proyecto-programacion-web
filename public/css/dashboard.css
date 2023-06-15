@@ -42,6 +42,7 @@
 .dashboard {
     background: var(--light);
     border-radius: 1rem;
+    box-shadow: .6rem .6rem .6rem var(--dark-opacity);
     margin: 0 3rem 2rem;
     padding: 2rem;
 }
@@ -67,7 +68,7 @@ table {
     border: solid .1rem var(--dark);
     border-radius: .6rem;
     border-spacing: 0;
-    box-shadow: .6rem .6rem .6rem var(--dark-opacity);
+    box-shadow: .3rem .3rem .3rem var(--dark-opacity);
     margin: 1.5rem 3rem;
     text-align: center;
     width: 100%;
@@ -142,19 +143,19 @@ td button {
     font-size: 1.4rem;
 }
 
-td button:first-child {
+td a button {
     color: #60A5FA;
 }
 
-td button:first-child:hover {
+td a button:hover {
     color: #5089CE;
 }
 
-td button:last-child {
+td button {
     color: #FD4747;
 }
 
-td button:last-child:hover {
+td button:hover {
     color: #D14040;
 }
 
