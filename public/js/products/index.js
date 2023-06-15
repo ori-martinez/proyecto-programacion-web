@@ -1,19 +1,58 @@
 const d = document;
 
-/* Responsive Navbar */
+// FUNCTIONS
+/* Active Menu */
+const activeMenu = (menu) => menu.classList.toggle('active');
 
-const toggle = d.querySelector('.navbar-toggle');
-const navbar = d.querySelector('#navbar');
+/* Toggle Navbar */
 
-const toggleNavbar = () => {
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        toggle.innerHTML = '<img id="open" src="../img/menu-open-icon.svg" alt="Menú">';
+const toggleButton = d.querySelector('.toggle-button');
+const navbar = d.querySelector('.navbar');
+
+toggleButton.addEventListener('click', () => activeMenu(navbar), false);
+
+/* Toggle User Menu */
+
+const userButton = d.querySelector('#user-menu-button');
+const userMenu = d.querySelector('#user-menu');
+
+if (userButton) userButton.addEventListener('click', () => activeMenu(userMenu), false);
+
+/* Toggle Searcher Input */
+
+const searcherButton = d.querySelector('#searcher-button');
+const searcherInput = d.querySelector('#searcher-input');
+
+searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);
+
+/* Validations (Searcher) */
+
+const searchForm = d.querySelector('#search-form');
+const errorSearch = d.querySelector('#div-error-search');
+const inputSearch = d.querySelector('#input-search');
+const buttonSearch = d.querySelector('#search-form a');
+
+const validSearch = (e) => {
+    errorSearch.innerHTML = '';
+
+    if (e.target.value.length === 0) {
+        errorSearch.innerHTML = '<span class="error-message">Ingresa un valor para la búsqueda</span>';
     }
-    else {
-        navbar.classList.add('active');
-        toggle.innerHTML = '<img id="close" src="../img/menu-close-icon.svg" alt="Menú">';
+    else if (e.target.value.length < 4) {
+        errorSearch.innerHTML = '<span class="info-message">Trata con un valor mayor de 3 caracteres</span>';
     }
 }
 
-toggle.addEventListener('click', toggleNavbar, false);
+const submitSearchForm = (e) => {
+    e.preventDefault();
+
+    if (inputSearch.value.length === 0 || inputSearch.value.length < 4) {
+        errorSearch.innerHTML = '<span class="error-message">Ingresa un valor válido para la búsqueda</span>';
+    }
+    else {
+        searchForm.submit();
+    }
+}
+
+inputSearch.addEventListener('change', (e) => validSearch(e), false);
+buttonSearch.addEventListener('click', (e) => submitSearchForm(e), false);

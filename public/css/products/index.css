@@ -24,7 +24,7 @@
     font-style: normal;
 }
 
-/* GENERALES */
+/* GENERALS */
 
 #title-products {
     color: var(--dark);
@@ -41,6 +41,79 @@
     grid-template-columns: 33% 33% 33%;
     justify-items: center;
     margin: 2rem;
+}
+
+/* SEARCHER */
+
+#main-div-error-search {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+#div-search-form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#main-search-form {
+    background: var(--golden);
+    border-radius: 3rem;
+    padding: 1.2rem 1.8rem;
+    position: relative;
+}
+
+/* Messages */
+
+.error-message, .info-message, .success-message {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    padding: .3rem;
+    text-align: center;
+}
+
+.error-message {
+    background: #EF4444;
+}
+
+.info-message {
+    background: #60A5FA;
+}
+
+#grid-message {
+    color: var(--wine);
+    font-family: 'AmbraSans';
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Input */
+
+#main-search-form input {
+    border: solid .2rem var(--dark);
+    border-radius: 2rem;
+    font-family: Arial;
+    font-size: 1rem;
+    outline: none;
+    padding: .4rem .8rem;
+    width: 24rem;
+}
+
+#main-search-form button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 3.2rem;
+    top: 1.7rem;
+}
+
+#main-search-form button span {
+    font-size: 1.1rem;
 }
 
 /* CARD */
@@ -102,7 +175,7 @@
 .card-content h3 {
     color: white;
     font-family: 'AmbraSans';
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .card-content a {
@@ -122,4 +195,53 @@
 .card-content a:hover {
     background-color: var(--golden);
     color: #FFFFFF;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* GENERALS */
+
+    #title-products {
+        font-size: 1.8rem;
+    }
+        
+    #grid-cards {
+        gap: 1.2rem 0;
+        grid-template-columns: 100%;
+        margin: 1rem;
+    }
+
+
+    /* SEARCHER */
+
+    #main-search-form {
+        border-radius: 0;
+    }
+
+    /* Input */
+
+    #main-search-form input {
+        width: 14rem;
+    }
+
+    /* CARD */
+
+    .card {
+        height: 27.4rem;
+        width: 16.8rem;
+    }
+
+    /* Image */
+
+    .card-img img {
+        height: 16.8rem;
+        width: auto;
+    }
+
+    /* Content */
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
 }

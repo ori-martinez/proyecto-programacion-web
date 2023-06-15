@@ -31,9 +31,9 @@
 #update-profile, #update-password, #delete-profile {
     background: var(--light);
     border-radius: 1rem;
+    box-shadow: .6rem .6rem .6rem var(--dark-opacity-1);
     margin: 3rem 5rem 2rem;
     padding: 2rem;
-    box-shadow: .6rem .6rem .6rem var(--dark-opacity-1);
 }
 
 .header-section {
@@ -123,7 +123,7 @@ input {
     color: #FFFFFF;
     display: block;
     font-weight: bold;
-    padding: .3rem 0;
+    padding: .3rem;
     text-align: center;
 }
 
@@ -184,7 +184,7 @@ input {
     align-content: center;
     display: flex;
     justify-content: flex-end;
-    margin-top: -1rem;
+    margin-top: -.6rem;
 }
 
 /* Texts */
@@ -262,7 +262,7 @@ input {
 @media all and (max-width: 1024px) {
     /* GENERAL */
 
-    #update-profile, #update-password {
+    #update-profile, #update-password, #delete-profile {
         margin: 3rem 0 1.6rem;
         padding: 1rem;
     }
@@ -280,5 +280,60 @@ input {
     /* UPDATE INFO PROFILE  */
     #div-update-profile-form {
         grid-template-columns: 100%;
+    }
+
+    /* DELETE PROFILE */
+
+    #delete-modal {
+        padding-top: 14rem;
+    }
+
+    #content-delete-modal {
+        padding: 2.4rem;
+        width: 80%;
+    }
+
+    /* Input */
+
+    #input-password-delete {
+        width: 15.5rem;
+    }
+
+    #toggle-password-delete {
+        left: 13.5rem;
+    }
+
+    /* Buttons */
+    
+    #modal-buttons {
+        flex-wrap: wrap;
+        margin-top: 1.8rem;
+    }
+
+    #cancel-modal, .delete-profile-button {
+        margin-top: .6rem;
+    }
+}
+
+@media all and (max-width: 400px) {
+    /* DELETE PROFILE */
+
+    #delete-modal {
+        padding-top: 6rem;
+    }
+
+    #content-delete-modal {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    /* Input */
+
+    #input-password-delete {
+        width: 15.5rem;
+    }
+
+    #toggle-password-delete {
+        left: 13.5rem;
     }
 }

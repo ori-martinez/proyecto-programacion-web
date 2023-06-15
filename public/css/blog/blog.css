@@ -1,0 +1,130 @@
+/* COLORS */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+/* BLOG */
+
+.blog-articles {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem 10rem;
+    width: 100%;
+}
+
+/* Images */
+
+.article-img {
+    box-shadow: .6rem .6rem .6rem var(--dark-opacity);
+    height: 35rem;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.article-img img {
+    width: 100%;
+}
+
+/* Articles */
+
+article {
+    margin: 3rem 0 1rem;
+    padding: 0 3rem;
+}
+
+.article-title {
+    color: var(--wine);
+    font-family: 'AmbraSans';
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+article p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+article p span {
+    color: var(--wine);
+    font-family: 'Vanem';
+    font-size: 1.7rem;
+    margin-right: 1rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* BLOG */
+
+    .blog-articles {
+        padding: 1rem 2rem;
+    }
+
+    /* Images */
+
+    .article-img {
+        height: 15rem;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* BLOG */
+
+    .blog-articles {
+        padding: 1rem 1.2rem;
+    }
+
+    /* Images */
+
+    .article-img {
+        height: 8rem;
+    }
+
+    /* Articles */
+
+    article {
+        padding: 0;
+    }
+
+    .article-title {
+        color: var(--wine);
+        font-family: 'AmbraSans';
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    article p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    article p span {
+        font-size: 1.3rem;
+    }
+}

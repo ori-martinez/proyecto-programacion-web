@@ -1,0 +1,156 @@
+/* COLORS */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CONTACT FORM */
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 4rem 8rem 0;
+}
+
+/* Info */
+
+.grid-info h1 {
+    color: var(--golden);
+    font-family: 'AmbraSans';
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.grid-info ul {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.grid-info li, p {
+    font-size: 1.3rem;
+}
+
+.grid-info li span {
+    color: var(--wine);
+    font-family: 'Vanem';
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+hr {
+    border: solid .2rem var(--golden);
+    margin: 1.4rem 0;
+}
+
+/* Form */
+
+.grid-form, .grid-form form, .input-message {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-form form, .input-message {
+    flex-direction: column;
+}
+
+.grid-form form {
+    width: 80%;
+}
+
+/* Inputs */
+
+input, textarea {
+    border: solid .1rem var(--dark);
+    border-radius: .4rem;
+    color: var(--dark);
+    font-size: 1.2rem;
+    margin-top: .6rem;
+    outline: none;
+    padding: .2rem .4rem;
+    width: 20rem;
+}
+
+.input-message label {
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.input-message textarea {
+    height: 8rem;
+    max-height: 10rem;
+    max-width: 24rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* CONTACT FORM */
+
+    .grid-contact {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        margin: 2rem 1rem;
+    }
+
+    /* Info */
+
+    .grid-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .grid-info ul {
+        margin-left: 1.4rem;
+    }
+
+    .grid-info li, p {
+        font-size: 1.1rem;
+    }
+
+    .grid-info li span {
+        font-size: 1.2rem;
+    }
+
+    /* Form */
+
+    .grid-form form {
+        width: 100%;
+    }
+
+    /* Inputs */
+
+    input, textarea {
+        width: 14rem;
+    }
+
+    .input-message textarea {
+        max-height: 10rem;
+        max-width: 14rem;
+    }
+}

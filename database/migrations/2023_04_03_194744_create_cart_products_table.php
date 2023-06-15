@@ -15,6 +15,8 @@ return new class extends Migration {
             $table->unsignedBigInteger('cart_id');
             $table->unsignedBigInteger('product_id');
             $table->integer('quantity');
+            $table->string('size');
+            $table->date('delivery');
             $table->timestamps();
         });
     }

@@ -1,0 +1,108 @@
+/* COLORS */
+
+:root {
+    --dark: #15121A;
+    --dark-opacity: #15121A66;
+    --light: #DFDDD5;
+    --wine: #860038;
+    --golden: #FDBB30;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Vanem';
+    src: url('../fonts/VanemNonCommercial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmbraSans';
+    src: url('../fonts/Ambra-Sans-Text-Bold-trial.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* LOGIN HELP */
+
+.main-content-steps {
+    margin: 20px 0;
+    padding-left: 142px;
+    padding-right: 142px;
+    text-align: center;
+}
+
+.content-steps {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+/* Text */
+
+.content-steps-title {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* Step */
+
+.step {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px 0 rgba(36,11,52,.1);
+    flex-grow: 1;
+    height: 100%;
+    padding: 12px;
+    text-align: left;
+    width: 100%;
+}
+
+.step-header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.step-header-numb {
+    margin-right: 12px;
+}
+
+.numb {
+    align-items: center;
+    background: var(--wine);
+    border-radius: 28px;
+    color: #FFFFFF;
+    display: flex;
+    font-family: 'Vanem';
+    font-size: 20px;
+    height: 28px;
+    justify-content: center;
+    line-height: 22px;
+    width: 28px;
+}
+
+.step-header-title {
+    font-family: 'AmbraSans';
+}
+
+/* RESPONSIVE DESIGN */
+
+@media all and (max-width: 1024px) {
+    /* LOGIN HELP */
+
+    .main-content-steps {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .content-steps {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,23 +1,30 @@
 const d = document;
 const w = window;
 
-/* Responsive Navbar */
+// FUNCTIONS
+/* Active Menu */
+const activeMenu = (menu) => menu.classList.toggle('active');
 
-const toggle = d.querySelector('.navbar-toggle');
-const navbar = d.querySelector('#navbar');
+/* Toggle Navbar */
 
-const toggleNavbar = () => {
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        toggle.innerHTML = '<img id="open" src="./img/menu-open-icon.svg" alt="Menú">';
-    }
-    else {
-        navbar.classList.add('active');
-        toggle.innerHTML = '<img id="close" src="./img/menu-close-icon.svg" alt="Menú">';
-    }
-}
+const toggleButton = d.querySelector('.toggle-button');
+const navbar = d.querySelector('.navbar');
 
-toggle.addEventListener('click', toggleNavbar, false);
+toggleButton.addEventListener('click', () => activeMenu(navbar), false);
+
+/* Toggle User Menu */
+
+const userButton = d.querySelector('#user-menu-button');
+const userMenu = d.querySelector('#user-menu');
+
+if (userButton) userButton.addEventListener('click', () => activeMenu(userMenu), false);
+
+/* Toggle Searcher Input */
+
+const searcherButton = d.querySelector('#searcher-button');
+const searcherInput = d.querySelector('#searcher-input');
+
+searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);
 
 /* Toggle Password */
 
@@ -43,6 +50,38 @@ const togglePassword = () => {
 
 togglePass.addEventListener('click', togglePassword, false);
 togglePassCon.addEventListener('click', togglePassword, false);
+
+/* Validations (Searcher) */
+
+const searchForm = d.querySelector('#search-form');
+const errorSearch = d.querySelector('#div-error-search');
+const inputSearch = d.querySelector('#input-search');
+const buttonSearch = d.querySelector('#search-form a');
+
+const validSearch = (e) => {
+    errorSearch.innerHTML = '';
+
+    if (e.target.value.length === 0) {
+        errorSearch.innerHTML = '<span class="error-message">Ingresa un valor para la búsqueda</span>';
+    }
+    else if (e.target.value.length < 4) {
+        errorSearch.innerHTML = '<span class="info-message">Trata con un valor mayor de 3 caracteres</span>';
+    }
+}
+
+const submitSearchForm = (e) => {
+    e.preventDefault();
+
+    if (inputSearch.value.length === 0 || inputSearch.value.length < 4) {
+        errorSearch.innerHTML = '<span class="error-message">Ingresa un valor válido para la búsqueda</span>';
+    }
+    else {
+        searchForm.submit();
+    }
+}
+
+inputSearch.addEventListener('change', (e) => validSearch(e), false);
+buttonSearch.addEventListener('click', (e) => submitSearchForm(e), false);
 
 /* Validations (Update Info Profile) */
 
@@ -84,7 +123,7 @@ const validAddress = (e) => {
     if (e.target.value.length === 0) {
         errorProfile.innerHTML = '<span class="error-message">El campo Dirección es requerido</span>';
     } 
-    else if (e.target.value.lenght > 255) {
+    else if (e.target.value.length > 255) {
         errorProfile.innerHTML = '<span class="info-message">La dirección no debe sobrepasar los 255 caracteres</span>';
     }
 }
@@ -105,7 +144,7 @@ const submitProfileForm = (e) => {
     if (
         inputName.value.length === 0 || !inputName.value.match(regexName) || 
         inputLastname.value.length === 0 || !inputLastname.value.match(regexName) ||
-        inputAddress.value.length === 0 || inputAddress.value.lenght > 255 ||
+        inputAddress.value.length === 0 || inputAddress.value.length > 255 ||
         inputEmail.value.length === 0 || !inputEmail.value.match(regexEmail)
     ) {
         errorProfile.innerHTML = '<span class="error-message">Completa correctamente todos los campos</span>';
@@ -200,7 +239,3 @@ const togglePasswordDelete = () => {
 }
 
 togglePassDelete.addEventListener('click', togglePasswordDelete, false);
-
-/* Validations (Update Password Profile) */
-
-

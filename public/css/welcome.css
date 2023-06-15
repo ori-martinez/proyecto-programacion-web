@@ -46,14 +46,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
-    left: 0 !important;
+    left: 0;
     height: 100%;
     opacity: 0;
-    position: absolute !important;
-    top: 0 !important;
+    position: absolute;
+    top: 0;
     transition: opacity 1s;
     width: 100%;
-    z-index: -1;
+    z-index: 700;
     -moz-transition: opacity 1s;
     -ms-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -128,7 +128,7 @@
     font-size: 2.5rem;
     position: absolute;
     top: 50%;
-    z-index: 2; 
+    z-index: 800; 
 }
 
 #section-carousel .arrow-prev {
@@ -155,7 +155,7 @@
     list-style: none;
     position: absolute;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 900;
 }
 
 .list-carousel li {
@@ -175,7 +175,196 @@
 }
 
 .item-selected {
-    background: var(--dark)  !important;
+    background: var(--dark);
+}
+
+/* WOMEN/MEN SECTION */
+
+.div-general {
+    animation-delay: .2s;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 1200px;
+    opacity: 1;
+    width: 95%;
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.img-col {
+    align-items: center;
+    display: flex;
+    margin: 0 !important;
+    padding: 0 4px;
+    position: relative;
+    width: calc(50% - 10px);
+}
+
+/* Content */
+
+.col-text {
+    bottom: 40px;
+    left: 80px;
+    position: absolute;
+    text-align: left;
+    width: 50%;
+}
+
+.col-text h1 {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 58px;
+    margin-bottom: 10px;
+    text-transform: unset;
+}
+
+.col-button{
+    background: var(--wine) !important;
+    border: none;
+    border-radius: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px !important;
+    font-weight: bold;
+    font-style: normal;
+    justify-content: center;
+    letter-spacing: 0px;
+    line-height: 24px !important;
+    max-width: 190px !important;
+    outline: none;
+    padding-bottom: calc(.375em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(.375em - 1px);
+    text-align: center;
+    text-transform: none;
+    transition: background .2s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Image */
+
+.img-link {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+
+.img-element {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.img-element img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    width: 100%;
+}
+
+/* Animation */
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown{
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-20px,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+/* QUALITIES SECTION */
+
+.qualities {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 1300px;
+    width: 95%;
+}
+
+.qualities-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Icons */
+
+.icon-div {
+    background-color: transparent !important;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(0,0,0,0));
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+}
+
+.img-block {
+    height: 60px;
+}
+
+.icon-text {
+    margin-top: 15px;
+}
+
+/* Texts */
+
+.icon-title{
+    color: var(--dark);
+    font-size: 23px;
+    line-height: 1.125;
+    margin-bottom: 0 !important;
+    overflow-wrap: break-word;
+}
+
+.icon-text p {
+    color: var(--dark);
+    display: block;
+    font-family: Arial;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 24px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center; 
 }
 
 /* RESPONSIVE DESIGN */
@@ -247,5 +436,29 @@
     .list-carousel li {
         height: .6rem;
         width: .6rem;
+    }
+
+    /* WOMEN/MEN SECTION */
+
+    .general {
+        flex-direction: column;
+    }
+
+    .img-col {
+        width: 100%;
+    }
+
+    /* QUALITIES SECTION */
+
+    /* Icons */
+
+    .icon-div {
+        width: 100%;
+    }
+
+    /* Texts */
+
+    .icon-text p {
+        font-size: 1.2rem;
     }
 }

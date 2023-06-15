@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\CartsController;
 use App\Http\Controllers\CommentaryController;
-use App\Http\Controllers\ProductArticlesController;
-use App\Http\Controllers\ProductMenController;
-use App\Http\Controllers\ProductWomenController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ViewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,21 +19,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome'); 
+})->name('welcome');
 
-Route::get('/productos/hombres', [ProductMenController::class, 'index'])->name('products.men');
-Route::get('/productos/hombres/{id}', [ProductMenController::class, 'show'])->name('products.product');
-Route::get('/productos/mujeres', [ProductWomenController::class, 'index'])->name('products.women');
-Route::get('/productos/mujeres/{id}', [ProductMenController::class, 'show'])->name('products.product');
-Route::get('/productos/articulos', [ProductArticlesController::class, 'index'])->name('products.articles');
-Route::get('/productos/articulos/{id}', [ProductArticlesController::class, 'show'])->name('products.product');
+Route::get('/productos/hombres', [ProductsController::class, 'indexMen'])->name('products.men');
+Route::get('/productos/mujeres', [ProductsController::class, 'indexWomen'])->name('products.women');
+Route::get('/productos/articulos', [ProductsController::class, 'indexArticles'])->name('products.articles');
+Route::get('/productos/{id}', [ProductsController::class, 'show'])->name('products.product');
+Route::get('/productos', [ProductsController::class, 'search'])->name('products.search');
+Route::post('/productos', [ProductsController::class, 'search'])->name('products.search');
+Route::get('/producto/create', [ProductsController::class, 'create'])->middleware(['auth', 'verified'])->name('products.register');
+Route::get('/producto/{id}', [ProductsController::class, 'update'])->middleware(['auth', 'verified'])->name('products.update');
 
 Route::post('/productos/comentario', [CommentaryController::class, 'store'])->name('commentary');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/compra', [CartsController::class, 'store'])->name('shop');
+Route::post('/compra/delete', [CartsController::class, 'delete'])->name('shop.delete');
+
+Route::get('/blog', [ViewsController::class, 'indexBlog'])->name('extras.blog');
+Route::get('/contacto', [ViewsController::class, 'indexContact'])->name('extras.contact');
+Route::get('/ayuda', [ViewsController::class, 'indexHelp'])->name('extras.help');
+Route::get('/terminos', [ViewsController::class, 'indexTerms'])->name('extras.terms');
+Route::get('/politicas', [ViewsController::class, 'indexPolicies'])->name('extras.policies');
+
+Route::get('/dashboard', ViewsController::class, '__invoke')->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

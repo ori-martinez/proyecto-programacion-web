@@ -1,24 +1,61 @@
 const d = document;
 
-/* Responsive Navbar */
+// FUNCTIONS
+/* Active Menu */
+const activeMenu = (menu) => menu.classList.toggle('active');
 
-const toggle = d.querySelector('.navbar-toggle');
-const navbar = d.querySelector('#navbar');
+/* Toggle Navbar */
 
-const toggleNavbar = () => {
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        toggle.innerHTML = '<img id="open" src="../../img/menu-open-icon.svg" alt="Menú">';
+const toggleButton = d.querySelector('.toggle-button');
+const navbar = d.querySelector('.navbar');
+
+toggleButton.addEventListener('click', () => activeMenu(navbar), false);
+
+/* Toggle User Menu */
+
+const userButton = d.querySelector('#user-menu-button');
+const userMenu = d.querySelector('#user-menu');
+
+if (userButton) userButton.addEventListener('click', () => activeMenu(userMenu), false);
+
+/* Toggle Searcher Input */
+
+const searcherButton = d.querySelector('#searcher-button');
+const searcherInput = d.querySelector('#searcher-input');
+
+searcherButton.addEventListener('click', () => activeMenu(searcherInput), false);
+
+/* Validations (Shop) */
+
+const shopForm = d.querySelector('#shop-form');
+const errorDivShop = d.querySelector('#div-error-shop');
+const inputQty = d.querySelector('#quantity-input');
+const selectSize = d.querySelector('#select-size');
+const selectDelivery = d.querySelector('#select-delivery');
+
+const validQty = (e) => {
+    errorDivShop.innerHTML = '';
+
+    if (e.target.value.length === 0) {
+        errorDivShop.innerHTML = '<span class="error-message">El Campo Cantidad no puede estar vacío</span>';
     }
-    else {
-        navbar.classList.add('active');
-        toggle.innerHTML = '<img id="close" src="../../img/menu-close-icon.svg" alt="Menú">';
+    else if (Number(e.target.value) <= 0) {
+        errorDivShop.innerHTML = '<span class="info-message">La cantidad no puede ser menor o igual que cero</span>';
+    }
+}
+const selectedItem = (e, message) => {
+    errorDivShop.innerHTML = '';
+
+    if (e.target.value === '0') {
+        errorDivShop.innerHTML = `<span class="info-message">Debe seleccionar ${message}</span>`;
     }
 }
 
-toggle.addEventListener('click', toggleNavbar, false);
+inputQty.addEventListener('change', (e) => validQty(e), false);
+selectSize.addEventListener('change', (e) => selectedItem(e, 'una talla'), false);
+selectDelivery.addEventListener('change', (e) => selectedItem(e, 'los días que tomará la entrega'), false);
 
-/* Validations */
+/* Validations (Commentaries) */
 
 const commentaryForm = d.querySelector('#commentaries-section form');
 const errorDiv = d.querySelector('#div-error');
