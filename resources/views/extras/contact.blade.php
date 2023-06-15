@@ -141,139 +141,38 @@
 
         <!-- Body -->
         <main>
-        <div id="" class="content-wrapper">
-                <div id="" class="content">
-                    <div id="" class="sesions">
-                        <div id="" class="sesion page-sesion">
-                            <div id="" class="col sesion-1">
-                                <div id="" class="u-1 bloque bloque-texto">
-                                    <div id="" class="bloque-texto-content">
-                                        <div id="" class="u-1-texto">
-                                        <h1>CONTACTO</h1>
-                                        <p>Puede encontrar nuestro número de centralita a continuación. Desplácese hacia abajo para ponerse en contacto con el equipo responsable para preguntas más específicas.</p>
-                                        <ul>
-                                            <li> <p>Nuestro equipo de atención al cliente está haciendo lo mejor que puede para ayudarlo.</p></li>
-                                            <li> <p>Le pedimos que espere de 7 a 10 días después de haber enviado su pregunta para recibir una respuesta</p></li>
-                                            <li> <p>Ponte en contacto con nuestro dedicado equipo de atención al cliente social en nuestras redes sociales </p></li>
-                                        </ul>
-                                        <p>¡Esperamos conectarnos!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="" class="u-2 bloque bloque-separador">
-                                    <div class="separador-u2">
-                                        <hr>
-                                    </div>
-                                </div>
-                                <div id="" class="u-3 bloque bloque-texto">
-                                    <div class="separador-u3">
-                                        <div class="datos-u3">
-                                            <p>
-                                                Envíenos un correo electrónico a
-                                                <strong _istranslate="1">reyrey.sports.web@gmail.com
-                                                <br _istranslate="1">
-                                                </strong>
-                                                 O llámenos al
-                                                 <strong _istranslate="1">+58 (414) 260-3391
-                                                <br _istranslate="1">
-                                                </strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="" class="col sesion-2">
-                                <div id="" class="bloque bloque-space">
-                                    <div id="" class="bloque-space-content">kdlsladjkl</div>
-                            </div>
-                            </div>
-                            <div id="" class="col sesion-3">
-                                <div id="" class="bloque bloque-formulario">
-                                    <div>
-                                        <div>
-                                            <div class="content-content">
-                                            </div>
-                                            <div class="content-form">
-                                                <form class="form-contents">
-                                                    <div class="field-list">
-                                                        <fieldset class="item-form fields ">
-                                                            <legend class="titulo">
-                                                                <div class="ZZZ">
-                                                                    <span>Nombre</span>
-                                                                    <span class="descripcion">(requerido)</span>
-                                                                </div>
-                                                            </legend>
-                                                            <div class="field name">
-                                                                <label class="caption divisor">
-                                                                    <div class="title-sub">
-                                                                        <div class="sub">
-                                                                            <span class="caption-text">Nombre</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <input type="text" class="nombre" aria-invalid="false" aria-required="true" autocomplete="given-name">
-                                                                </label>
-                                                            </div>
-                                                            <div class="field apellido">
-                                                                <label class="caption divisor">
-                                                                    <div class="title-sub">
-                                                                        <div class="sub">
-                                                                            <span class="caption-text">Apellido</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <input type="text" class="nombre" aria-invalid="false" aria-required="true" autocomplete="family-name">
-                                                                </label>
-                                                            </div>
-                                                        </fieldset>
-                                                        <div class="item-form field emails">
-                                                            <label class="title direcciones" aria-label="Correo electrónico">
-                                                                <div class="sub-direccion">
-                                                                    <div class="direccion">
-                                                                        <span>Correo electrónico</span>
-                                                                        <span class="descripcion">(requerido)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </label>
-                                                            <input type="email" class="nombre" aria-invalid="false" aria-label="Correo electrónico" aria-required="true" autocomplete="false">
-                                                        </div>
-                                                        <div class="item-form field textareas">
-                                                            <label class="title direcciones" aria-label="Área de texto">
-                                                                <div class="sub-direccion">
-                                                                    <div class="direccion">
-                                                                        <span>Motivo de contacto</span>
-                                                                        <span class="descripcion">(requerido)</span>
-                                                                    </div>
-                                                                </div>
-                                                            </label>
-                                                            <textarea aria-invalid="false" class="mensaje" placeholder id="mensaje"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-boton boton-form">
-                                                        <input type="submit" class="boton sistema-boton" value="enviar" id="boton" onclick=" enviar()">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- completado de reedirección hacia ayuda -->
-            <div class="contenido-principal principal">
-                <div class="divisores-principales principales">
-                    <div class="contenedor-exterior exterior">
-                        <div class="contenedor-interior interior">
-                            <img src="../img/golden.png" alt="mini fondo" class="fondo object-cover" />
-                            <div class="interior-contenido contedino">
-                                <h2 class="texto-contenido indicador">SERVICIO AL CLIENTE</h2>
-                                <h2 class="texto-contenido definicion">Tiene preguntas sobre nuestros servicios? Nuestra línea directa al cliente puede ayudar.</h2>
-                                <a class="enlace" href="{{ route('extras.help') }}" target="_blank">reyrey sport/AYUDA</a>
-                            </div>
+            <!-- Contact Form -->
+            <div class="grid-contact">
+                <div class="grid-info">
+                    <h1>CONTACTO</h1>
+                    
+                    <ul>
+                        <li><span>1.</span> Nuestro equipo de atención al cliente está haciendo lo mejor que puede para ayudarlo.</li>
+                        <li><span>2.</span> Le pedimos que espere de 5 a 7 días después de haber enviado su pregunta para recibir una respuesta.</li>
+                        <li><span>3.</span> Además, puede ponerse en contacto a través de nuestras redes sociales.</li>
+                    </ul>
+                                        
+                    <p>¡Esperamos tu mensaje!</p>
+                
+                    <hr>
 
+                    <p>Envía un correo electrónico a <b>reyrey.sports.web@gmail.com</b> mediante el formulario.</p>
+                    <p>También, puede llamar al <b>+58 (414) 260-3391</b></p>
+                </div>
+                <div class="grid-form">
+                    <form>
+                        <input id="input-name" type="text" name="name" placeholder="Nombre">
+
+                        <input id="input-email" type="email" name="email" placeholder="Email">
+
+                        <div class="input-message">
+                            <label>Mensaje</label>
+
+                            <textarea aria-invalid="false" name="message" placeholder="Escribe tu consulta..."></textarea>
                         </div>
-                    </div>
+
+                        <button type="button">Enviar</button>
+                    </form>
                 </div>
             </div>
         </main>
