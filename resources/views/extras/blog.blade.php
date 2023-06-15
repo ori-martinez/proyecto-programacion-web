@@ -142,30 +142,54 @@
         <!-- Body (Start) -->
         <main>
             <section class="blog-articles">
-                <img src="" alt="">
+                <div class="article-img">
+                    <img src="{{ url('/img/blog1.jpg') }}" alt="Imagen">
+                </div>
 
                 <article>
-                    <h2 class="article-title">BIENVENIDOS AMANTES DEL DEPORTES</h2>
+                    <h2 class="article-title">TIPS PARA EMPEZAR A PRACTICAR UN DEPORTE</h2>
 
-                    <p></p>
-                </article>
-            </section>
-            <section class="blog-articles color">
-                <img src="" alt="">
-
-                <article>
-                    <h2 class="article-title">CONSEJOS DE HIDRATACIÓN</h2>
-
-                    <p></p>
+                    <p><span>1.</span> <b>Elige un deporte que te guste:</b> La motivación es clave para mantener una práctica deportiva constante.</p>
+                    <p><span>2.</span> <b>Fija un horario:</b> Es importante establecer una rutina de entrenamiento para que se convierta en un hábito.</p>
+                    <p><span>3.</span> <b>Empieza poco a poco:</b> No es recomendable empezar con intensidad máxima, ya que puede provocar lesiones.</p>
+                    <p><span>4.</span> <b>Busca un instructor o entrenador:</b> Un buen entrenador puede ayudarte a mejorar tu técnica y prevenir lesiones.</p>
+                    <p><span>5.</span> <b>No te saltes el calentamiento:</b> Un buen calentamiento previene lesiones y mejora el rendimiento.</p>
+                    <p><span>6.</span> <b>Usa el equipamiento adecuado:</b> Utiliza ropa y calzado deportivo adecuado para prevenir lesiones y mejorar el rendimiento.</p>
+                    <p><span>7.</span> <b>Combina diferentes tipos de entrenamiento:</b> La variedad en el entrenamiento ayuda a mejorar el rendimiento y evitar el aburrimiento.</p>
+                    <p><span>8.</span> <b>Escucha a tu cuerpo:</b> Si sientes dolor o molestias, detente y descansa.</p>
+                    <p><span>9.</span> <b>Establece metas realistas:</b> Fijar metas alcanzables ayuda a mantener la motivación.</p>
+                    <p><span>10.</span> <b>Diviértete:</b> Disfruta del deporte y no te centres solo en los resultados. La diversión es la clave para mantener una práctica deportiva constante.</p>
                 </article>
             </section>
             <section class="blog-articles">
-                <img src="" alt="">
+                <div class="article-img">
+                    <img src="{{ url('/img/blog2.jpg') }}" alt="Imagen">
+                </div>
 
                 <article>
-                    <h2 class="article-title">TOP 3 DE TENDENCIAS DEPORTIVAS</h2>
+                    <h2 class="article-title">FÚTBOL, UN SENTIMIENTO QUE CONECTA...</h2>
 
-                    <p></p>
+                    <p>El fútbol es un deporte universal que ha capturado el corazón de millones de personas en todo el mundo. Desde su origen en Inglaterra en el siglo XIX, el fútbol se ha expandido a todos los rincones del planeta, convirtiéndose en el deporte más popular y practicado en la actualidad.</p>
+                    <p>En la actualidad, el fútbol es más que un simple deporte, es un fenómeno cultural que trasciende las fronteras nacionales y conecta a personas de diferentes culturas, idiomas y religiones. El fútbol es capaz de crear un sentido de comunidad y unión entre personas de todo el mundo, lo que lo convierte en una poderosa herramienta para la construcción de la paz y la inclusión social.</p>
+                    <p>Además de su valor cultural y social, el fútbol es también un deporte que exige un alto nivel de habilidad, estrategia y resistencia física. Los jugadores deben ser capaces de combinar velocidad, agilidad y fuerza para superar a sus oponentes y llevar a su equipo a la victoria.</p>
+                    <p>En el fútbol moderno, los equipos se enfrentan en competiciones nacionales e internacionales en busca de la gloria y el reconocimiento. Las ligas de fútbol más importantes del mundo, como la Premier League inglesa, La Liga española y la Serie A italiana, atraen a los mejores jugadores y equipos de todo el mundo, lo que convierte cada partido en un espectáculo emocionante y lleno de adrenalina.</p>
+                    <p>Además de las ligas nacionales, los equipos también compiten en torneos internacionales como la Copa del Mundo y la Liga de Campeones de la UEFA. Estos torneos reúnen a los mejores equipos y jugadores del mundo en una competencia épica por el título de campeón mundial.</p>
+                    <p>En conclusión, el fútbol es mucho más que un deporte. Es una forma de conectar a las personas de todo el mundo, promover la inclusión social y la construcción de la paz, y un espectáculo emocionante que combina habilidad, estrategia y resistencia física. El fútbol es un fenómeno cultural que seguirá siendo una parte importante de la sociedad durante muchos años más.</p>
+                </article>
+            </section>
+            <section class="blog-articles">
+                <div class="article-img">
+                    <img src="{{ url('/img/blog3.jpg') }}" alt="Imagen">
+                </div>
+
+                <article>
+                    <h2 class="article-title">EL IMPACTO FEMENINO EN EL DEPORTE</h2>
+
+                    <p>El impacto de las mujeres en el deporte es cada vez más evidente. A lo largo de los años, las mujeres han demostrado ser capaces de competir al más alto nivel en una variedad de disciplinas deportivas. Sin embargo, todavía hay mucho camino por recorrer en términos de igualdad de género en el deporte.</p>
+                    <p>Una de las mayores diferencias entre hombres y mujeres en el deporte es la disparidad en la compensación y el patrocinio. Las mujeres a menudo reciben menos dinero y menos oportunidades de patrocinio que los hombres, incluso cuando compiten a un nivel similar. Esto ha llevado a un aumento en la lucha por la igualdad salarial y la visibilidad de las mujeres en el deporte.</p> 
+                    <p>A pesar de estos desafíos, las mujeres han alcanzado grandes logros en el deporte. En los Juegos Olímpicos de 2016, las mujeres ganaron más medallas que los hombres por primera vez en la historia de los Juegos. Además, el número de mujeres en deportes tradicionalmente dominados por hombres, como el fútbol americano y el boxeo, ha aumentado significativamente en las últimas décadas.</p>
+                    <p>Además de los logros deportivos, las mujeres en el deporte también han sido líderes en la lucha por la igualdad de género y la justicia social. Muchas atletas han utilizado su plataforma para abogar por cuestiones importantes, como la igualdad salarial y la igualdad de oportunidades para las mujeres en el deporte. Esto ha tenido un impacto significativo en la forma en que se percibe a las mujeres en el deporte y ha ayudado a avanzar en la lucha por la igualdad de género en todo el mundo.</p>
+                    <p>Entonces, el impacto de las mujeres en el deporte ha sido significativo y seguirá creciendo en el futuro. A medida que se abren más oportunidades para las mujeres en el deporte y se aborda la desigualdad de género, esperamos ver aún más logros y avances en el mundo del deporte.</p>
                 </article>
             </section>
         </main>
