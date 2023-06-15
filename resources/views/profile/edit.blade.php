@@ -281,7 +281,7 @@
                 <a class="footer-social-media-icon" href="https://www.instagram.com/reyreysports/" target="_blank">
                     <span class="icon-instagram"></span>
                 </a>
-                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports/following" target="_blank">
+                <a class="footer-social-media-icon" href="https://twitter.com/reyreysports" target="_blank">
                     <span class="icon-twitter"></span>
                 </a>
             </div>
